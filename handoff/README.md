@@ -12,7 +12,7 @@
 
 | 部分 | 在哪 | 内容 |
 |---|---|---|
-| 镜像 | `__IMAGE__` | 运行环境、基础模型、软件工程类任务用到的 30 个代码库及其环境。约 45 GB |
+| 镜像 | `docker.io/yujun0017/verifierscientist-train:2026-11-11` | 运行环境、基础模型、软件工程类任务用到的 30 个代码库及其环境。约 45 GB |
 | 这个 Git 仓库 | 你已经克隆的这个 | 训练代码、题库、配置、那 20 条规则、运行脚本、本文档。约 0.6 GB |
 | 输出目录 | 你机器上自己选的一个目录 | 训练产出、API 账本、密钥文件。运行时挂进容器 |
 
@@ -33,12 +33,17 @@
 
 API 花费由程序强制封顶在 25 美元，预计实际 10–15 美元。密钥由项目负责人单独给你。
 
+另外需要两个访问权限，都由项目负责人给你开：这个 GitHub 仓库（私有），和 Docker Hub 上的镜像仓库 `yujun0017/verifierscientist-train`（私有）。
+
 ## 3. 准备
 
 ```bash
 git clone git@github.com:YujunZhou/VerifierScientist.git
 cd VerifierScientist
-docker pull __IMAGE__
+
+# 镜像仓库是私有的：先用你自己的 Docker Hub 账号登录（需要项目负责人先把你的账号加为该仓库的协作者）
+docker login
+docker pull docker.io/yujun0017/verifierscientist-train:2026-11-11
 
 export OUT=/你的/大磁盘/vs_frozen28_out      # 至少 350 GB 可用
 mkdir -p "$OUT"
@@ -140,7 +145,7 @@ python3 handoff/checks/status.py "$OUT"
 |---|---|---|
 | `OUT` | 输出目录，必填 | 无 |
 | `GPUS` | 使用主机上的哪四张卡 | `0,1,2,3` |
-| `IMAGE` | 镜像名 | `__IMAGE__` |
+| `IMAGE` | 镜像名 | `docker.io/yujun0017/verifierscientist-train:2026-11-11` |
 | `SHM` | 容器共享内存大小 | `64g` |
 | `HTTPS_PROXY` 等 | 代理设置，原样传进容器 | 不设 |
 | `DOCKER_EXTRA` | 需要额外加的 `docker run` 参数 | 空 |

@@ -3,7 +3,7 @@
 这个仓库用来把"固定规则库"这一组训练交给有显卡的同学运行，并在两边同步代码。内容未公开，请勿转发。
 
 - **要跑训练的同学：直接看 [`handoff/README.md`](handoff/README.md)。** 里面是完整的操作步骤、每一步怎么算通过、出问题该发回什么。
-- 运行环境在 Docker 镜像里（`__IMAGE__`），代码、题库、配置在这个仓库里；镜像是怎么做的见 [`docker/README.md`](docker/README.md)。
+- 运行环境在 Docker 镜像里（`docker.io/yujun0017/verifierscientist-train:2026-11-11`），代码、题库、配置在这个仓库里；镜像是怎么做的见 [`docker/README.md`](docker/README.md)。
 
 | 目录 | 内容 |
 |---|---|

@@ -2,7 +2,7 @@
 # Host-side launcher. Usage:  OUT=/path/with/space  ./handoff/run.sh <step>
 # Steps, in order: gpucheck envcheck verify netcheck workercheck smoke train   (then: status, pack)
 set -euo pipefail
-IMAGE=${IMAGE:-__IMAGE__}
+IMAGE=${IMAGE:-docker.io/yujun0017/verifierscientist-train:2026-11-11}
 REPO=$(cd "$(dirname "$0")/.." && pwd)
 : "${OUT:?Set OUT to an output directory on a disk with at least 350 GB free}"
 GPUS=${GPUS:-0,1,2,3}            # host indices of the four GPUs to use
