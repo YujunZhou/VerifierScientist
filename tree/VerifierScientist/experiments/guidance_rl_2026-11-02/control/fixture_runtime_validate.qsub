@@ -1,0 +1,21 @@
+#!/bin/bash
+#$ -N vs_fixture_verify
+#$ -cwd
+#$ -j y
+#$ -pe smp 2
+#$ -l h_rt=08:00:00
+#$ -l h_vmem=8G
+#$ -o /groups/xzhang33/tguo2taicheng/VerifierScientist/experiments/guidance_rl_2026-11-02/audit/fixture_runtime/cpu_validate.log
+set -euo pipefail
+cd /groups/xzhang33/tguo2taicheng
+export OMP_NUM_THREADS=1 OPENBLAS_NUM_THREADS=1 MKL_NUM_THREADS=1 MAX_JOBS=2 MAKEFLAGS=-j2
+export PYTHONDONTWRITEBYTECODE=1
+/users/yzhou25/miniconda3/bin/python3 - <<'PYJOB'
+import importlib.util, pathlib, subprocess, sys
+p = pathlib.Path('VerifierScientist/experiments/guidance_rl_2026-11-02/control/fixture_runtime_recover.py').resolve()
+s = importlib.util.spec_from_file_location('runtime_validation', p)
+m = importlib.util.module_from_spec(s); s.loader.exec_module(m)
+subprocess.run([sys.executable, str(p), '--only', *sorted(m.records()),
+                '--resume', '--validate', '--publish', '--fixture-timeout', '900'], check=True)
+subprocess.run([sys.executable, str(p.with_name('merge_fixture_readiness.py'))], check=True)
+PYJOB

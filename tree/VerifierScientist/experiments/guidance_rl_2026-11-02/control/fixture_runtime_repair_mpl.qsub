@@ -1,0 +1,14 @@
+#!/bin/bash
+#$ -N vs_fixture_mpl
+#$ -cwd
+#$ -j y
+#$ -pe smp 2
+#$ -l h_rt=00:40:00
+#$ -l h_vmem=8G
+#$ -hold_jid 1673094
+#$ -o /groups/xzhang33/tguo2taicheng/VerifierScientist/experiments/guidance_rl_2026-11-02/audit/fixture_runtime/cpu_repair_mpl.log
+set -euo pipefail
+cd /groups/xzhang33/tguo2taicheng
+export OMP_NUM_THREADS=1 OPENBLAS_NUM_THREADS=1 MKL_NUM_THREADS=1 PYTHONDONTWRITEBYTECODE=1
+/groups/xzhang33/tguo2taicheng/VerifierScientist/experiments/guidance_rl_2026-11-02/fixture_envs/matplotlib-matplotlib-23476/repos/matplotlib-matplotlib-23476/.venv/bin/python -m pip uninstall -y vcs-versioning
+/users/yzhou25/miniconda3/bin/python3 /groups/xzhang33/tguo2taicheng/VerifierScientist/experiments/guidance_rl_2026-11-02/control/fixture_runtime_recover.py --only matplotlib-matplotlib-23476 --resume --validate --publish --fixture-timeout 900

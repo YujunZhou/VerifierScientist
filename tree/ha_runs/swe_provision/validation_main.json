@@ -1,0 +1,1445 @@
+[
+ {
+  "instance_id": "astropy__astropy-12907",
+  "fixture": "astropy-astropy-12907",
+  "usable": true,
+  "tests": [
+   "astropy/modeling/tests/test_separable.py::test_separable[compound_model6-result6]"
+  ],
+  "base": [
+   [
+    1,
+    4
+   ]
+  ],
+  "gold": [
+   [
+    [
+     0,
+     3
+    ]
+   ],
+   [
+    [
+     0,
+     3
+    ]
+   ]
+  ],
+  "base_tail": "ner\n    return func(*args, **kwds)\nE   AssertionError: \nE   Not equal to tolerance rtol=1e-07, atol=0\nE   \nE   Mismatched elements: 2 / 4 (50%)\nE    x: array([False, False, False, False])\nE    y: array([False, False,  True,  True])\n=========================== short test summary info ============================\nFAILED astropy/modeling/tests/test_separable.py::test_separable[compound_model6-result6]\n1 failed in 0.32s\n\n--- stderr ---\n<frozen importlib._bootstrap>:228: RuntimeWarning: numpy.ndarray size changed, may indicate binary incompatibility. Expected 80 from C header, got 96 from PyObject\n",
+  "gold_tail": "exit_code=0\n--- stdout ---\nInternet access disabled\n.                                                                        [100%]\n1 passed in 0.31s\n\n--- stderr ---\n<frozen importlib._bootstrap>:228: RuntimeWarning: numpy.ndarray size changed, may indicate binary incompatibility. Expected 80 from C header, got 96 from PyObject\n"
+ },
+ {
+  "instance_id": "astropy__astropy-13453",
+  "fixture": "astropy-astropy-13453",
+  "usable": true,
+  "tests": [
+   "astropy/io/ascii/tests/test_html.py::test_write_table_formatted_columns"
+  ],
+  "base": [
+   [
+    1,
+    3
+   ]
+  ],
+  "gold": [
+   [
+    [
+     0,
+     3
+    ]
+   ],
+   [
+    [
+     0,
+     3
+    ]
+   ]
+  ],
+  "base_tail": "diff, use -v to show\nE       >\nE     -     <td>0001</td>\nE     ?         ---\nE     +     <td>1</td>\nE     -     <td>1.23e-11</td>\nE     +     <td>1.234567e-11</td>...\nE     \nE     ...Full output truncated (12 lines hidden), use '-vv' to show\n=========================== short test summary info ============================\nFAILED astropy/io/ascii/tests/test_html.py::test_write_table_formatted_columns\n1 failed in 0.07s\n\n--- stderr ---\n<frozen importlib._bootstrap>:228: RuntimeWarning: numpy.ndarray size changed, may indicate binary incompatibility. Expected 80 from C header, got 96 from PyObject\n",
+  "gold_tail": "exit_code=0\n--- stdout ---\nInternet access disabled\n.                                                                        [100%]\n1 passed in 0.06s\n\n--- stderr ---\n<frozen importlib._bootstrap>:228: RuntimeWarning: numpy.ndarray size changed, may indicate binary incompatibility. Expected 80 from C header, got 96 from PyObject\n"
+ },
+ {
+  "instance_id": "astropy__astropy-14309",
+  "fixture": "astropy-astropy-14309",
+  "usable": true,
+  "tests": [
+   "astropy/io/fits/tests/test_connect.py::test_is_fits_gh_14305"
+  ],
+  "base": [
+   [
+    1,
+    4
+   ]
+  ],
+  "gold": [
+   [
+    [
+     0,
+     3
+    ]
+   ],
+   [
+    [
+     0,
+     3
+    ]
+   ]
+  ],
+  "base_tail": ".py\u001b[0m:72: in is_fits\n    return isinstance(args[0], (HDUList, TableHDU, BinTableHDU, GroupsHDU))\n\u001b[1m\u001b[31mE   IndexError: tuple index out of range\u001b[0m\n\u001b[36m\u001b[1m=========================== short test summary info ============================\u001b[0m\n\u001b[31mFAILED\u001b[0m astropy/io/fits/tests/test_connect.py::\u001b[1mtest_is_fits_gh_14305\u001b[0m - IndexError: tuple index out of range\n\u001b[31m\u001b[31m\u001b[1m1 failed\u001b[0m\u001b[31m in 0.24s\u001b[0m\u001b[0m\n\n--- stderr ---\n<frozen importlib._bootstrap>:228: RuntimeWarning: numpy.ndarray size changed, may indicate binary incompatibility. Expected 80 from C header, got 96 from PyObject\n",
+  "gold_tail": "exit_code=0\n--- stdout ---\nInternet access disabled\n\u001b[32m.\u001b[0m\u001b[32m                                                                        [100%]\u001b[0m\n\u001b[32m\u001b[32m\u001b[1m1 passed\u001b[0m\u001b[32m in 0.21s\u001b[0m\u001b[0m\n\n--- stderr ---\n<frozen importlib._bootstrap>:228: RuntimeWarning: numpy.ndarray size changed, may indicate binary incompatibility. Expected 80 from C header, got 96 from PyObject\n"
+ },
+ {
+  "instance_id": "astropy__astropy-14539",
+  "fixture": "astropy-astropy-14539",
+  "usable": true,
+  "tests": [
+   "astropy/io/fits/tests/test_diff.py::TestDiff::test_identical_tables"
+  ],
+  "base": [
+   [
+    1,
+    4
+   ]
+  ],
+  "gold": [
+   [
+    [
+     0,
+     3
+    ]
+   ],
+   [
+    [
+     0,
+     3
+    ]
+   ]
+  ],
+  "base_tail": "eError: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()\u001b[0m\n\u001b[36m\u001b[1m=========================== short test summary info ============================\u001b[0m\n\u001b[31mFAILED\u001b[0m astropy/io/fits/tests/test_diff.py::\u001b[1mTestDiff::test_identical_tables\u001b[0m - ValueError: The truth value of an array with more than one element is ambig...\n\u001b[31m\u001b[31m\u001b[1m1 failed\u001b[0m\u001b[31m in 0.17s\u001b[0m\u001b[0m\n\n--- stderr ---\n<frozen importlib._bootstrap>:228: RuntimeWarning: numpy.ndarray size changed, may indicate binary incompatibility. Expected 80 from C header, got 96 from PyObject\n",
+  "gold_tail": "exit_code=0\n--- stdout ---\nInternet access disabled\n\u001b[32m.\u001b[0m\u001b[32m                                                                        [100%]\u001b[0m\n\u001b[32m\u001b[32m\u001b[1m1 passed\u001b[0m\u001b[32m in 0.11s\u001b[0m\u001b[0m\n\n--- stderr ---\n<frozen importlib._bootstrap>:228: RuntimeWarning: numpy.ndarray size changed, may indicate binary incompatibility. Expected 80 from C header, got 96 from PyObject\n"
+ },
+ {
+  "instance_id": "astropy__astropy-7336",
+  "fixture": "astropy-astropy-7336",
+  "usable": false,
+  "tests": [
+   "astropy/units/tests/test_quantity_annotations.py::test_return_annotation_none"
+  ],
+  "base": [
+   [
+    1,
+    69
+   ]
+  ],
+  "gold": [
+   [
+    [
+     1,
+     18
+    ]
+   ],
+   [
+    [
+     1,
+     18
+    ]
+   ]
+  ],
+  "base_tail": "opy-astropy-7336/.venv/lib/python3.8/site-packages/hypothesis/internal/reflection.py\", line 543, in accept\n    return impersonate(target)(wraps(target)(define_function_signature(\n  File \"/users/tguo2/ha_fixtures/astropy-astropy-7336/.venv/lib/python3.8/site-packages/hypothesis/internal/reflection.py\", line 530, in accept\n    f.__code__ = update_code_location(\n  File \"/users/tguo2/ha_fixtures/astropy-astropy-7336/.venv/lib/python3.8/site-packages/hypothesis/internal/compat.py\", line 356, in update_code_location\n    return type(code)(*unpacked)\nTypeError: an integer is required (got type bytes)\n",
+  "gold_tail": "opy-astropy-7336/.venv/lib/python3.8/site-packages/hypothesis/internal/reflection.py\", line 543, in accept\n    return impersonate(target)(wraps(target)(define_function_signature(\n  File \"/users/tguo2/ha_fixtures/astropy-astropy-7336/.venv/lib/python3.8/site-packages/hypothesis/internal/reflection.py\", line 530, in accept\n    f.__code__ = update_code_location(\n  File \"/users/tguo2/ha_fixtures/astropy-astropy-7336/.venv/lib/python3.8/site-packages/hypothesis/internal/compat.py\", line 356, in update_code_location\n    return type(code)(*unpacked)\nTypeError: an integer is required (got type bytes)\n",
+  "reason": "gold patch does not make the test pass"
+ },
+ {
+  "instance_id": "django__django-13406",
+  "fixture": "django-django-13406",
+  "usable": false,
+  "tests": [
+   "queryset_pickle/tests.py::PickleabilityTestCase::test_annotation_values"
+  ],
+  "base": [
+   [
+    4,
+    4
+   ]
+  ],
+  "gold": [
+   [
+    [
+     4,
+     20
+    ]
+   ],
+   [
+    [
+     4,
+     20
+    ]
+   ]
+  ],
+  "base_tail": "exit_code=4\n--- stdout ---\n\nno tests ran in 0.00s\n\n--- stderr ---\nERROR: file or directory not found: queryset_pickle/tests.py::PickleabilityTestCase::test_annotation_values\n\n",
+  "gold_tail": "exit_code=4\n--- stdout ---\n\nno tests ran in 0.00s\n\n--- stderr ---\nERROR: file or directory not found: queryset_pickle/tests.py::PickleabilityTestCase::test_annotation_values\n\n",
+  "reason": "gold patch does not make the test pass"
+ },
+ {
+  "instance_id": "django__django-14089",
+  "fixture": "django-django-14089",
+  "usable": false,
+  "tests": [
+   "utils_tests/test_datastructures.py::OrderedSetTests::test_reversed"
+  ],
+  "base": [
+   [
+    4,
+    3
+   ]
+  ],
+  "gold": [
+   [
+    [
+     4,
+     2
+    ]
+   ],
+   [
+    [
+     4,
+     2
+    ]
+   ]
+  ],
+  "base_tail": "exit_code=4\n--- stdout ---\n\nno tests ran in 0.00s\n\n--- stderr ---\nERROR: file or directory not found: utils_tests/test_datastructures.py::OrderedSetTests::test_reversed\n\n",
+  "gold_tail": "exit_code=4\n--- stdout ---\n\nno tests ran in 0.00s\n\n--- stderr ---\nERROR: file or directory not found: utils_tests/test_datastructures.py::OrderedSetTests::test_reversed\n\n",
+  "reason": "gold patch does not make the test pass"
+ },
+ {
+  "instance_id": "django__django-14534",
+  "fixture": "django-django-14534",
+  "usable": false,
+  "tests": [
+   "If auto_id is provided when initializing the form, the generated ID in"
+  ],
+  "base": [
+   [
+    4,
+    2
+   ]
+  ],
+  "gold": [
+   [
+    [
+     4,
+     3
+    ]
+   ],
+   [
+    [
+     4,
+     3
+    ]
+   ]
+  ],
+  "base_tail": "exit_code=4\n--- stdout ---\n\nno tests ran in 0.00s\n\n--- stderr ---\nERROR: file or directory not found: If auto_id is provided when initializing the form, the generated ID in\n\n",
+  "gold_tail": "exit_code=4\n--- stdout ---\n\nno tests ran in 0.00s\n\n--- stderr ---\nERROR: file or directory not found: If auto_id is provided when initializing the form, the generated ID in\n\n",
+  "reason": "gold patch does not make the test pass"
+ },
+ {
+  "instance_id": "django__django-16082",
+  "fixture": "django-django-16082",
+  "usable": false,
+  "tests": [
+   "expressions/tests.py::CombinedExpressionTests::test_resolve_output_field_number"
+  ],
+  "base": [
+   [
+    4,
+    2
+   ]
+  ],
+  "gold": [
+   [
+    [
+     4,
+     4
+    ]
+   ],
+   [
+    [
+     4,
+     4
+    ]
+   ]
+  ],
+  "base_tail": "exit_code=4\n--- stdout ---\n\nno tests ran in 0.00s\n\n--- stderr ---\nERROR: file or directory not found: expressions/tests.py::CombinedExpressionTests::test_resolve_output_field_number\n\n",
+  "gold_tail": "exit_code=4\n--- stdout ---\n\nno tests ran in 0.00s\n\n--- stderr ---\nERROR: file or directory not found: expressions/tests.py::CombinedExpressionTests::test_resolve_output_field_number\n\n",
+  "reason": "gold patch does not make the test pass"
+ },
+ {
+  "instance_id": "django__django-16429",
+  "fixture": "django-django-16429",
+  "usable": false,
+  "tests": [
+   "utils_tests/test_timesince.py::TZAwareTimesinceTests::test_depth"
+  ],
+  "base": [
+   [
+    4,
+    2
+   ]
+  ],
+  "gold": [
+   [
+    [
+     4,
+     3
+    ]
+   ],
+   [
+    [
+     4,
+     4
+    ]
+   ]
+  ],
+  "base_tail": "exit_code=4\n--- stdout ---\n\nno tests ran in 0.00s\n\n--- stderr ---\nERROR: file or directory not found: utils_tests/test_timesince.py::TZAwareTimesinceTests::test_depth\n\n",
+  "gold_tail": "exit_code=4\n--- stdout ---\n\nno tests ran in 0.00s\n\n--- stderr ---\nERROR: file or directory not found: utils_tests/test_timesince.py::TZAwareTimesinceTests::test_depth\n\n",
+  "reason": "gold patch does not make the test pass"
+ },
+ {
+  "instance_id": "matplotlib__matplotlib-13989",
+  "fixture": "matplotlib-matplotlib-13989",
+  "usable": true,
+  "tests": [
+   "lib/matplotlib/tests/test_axes.py::test_hist_range_and_density"
+  ],
+  "base": [
+   [
+    1,
+    54
+   ]
+  ],
+  "gold": [
+   [
+    [
+     0,
+     58
+    ]
+   ],
+   [
+    [
+     0,
+     53
+    ]
+   ]
+  ],
+  "base_tail": "ml\n    @pytest.mark.baseline_images(baseline_images)\n\n-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html\n=========================== short test summary info ============================\nFAILED lib/matplotlib/tests/test_axes.py::test_hist_range_and_density - asser...\n1 failed, 13 warnings in 0.87s\n\n--- stderr ---\nMatplotlib is not built with the correct FreeType version to run tests.  Set local_freetype=True in setup.cfg and rebuild. Expect many image comparison failures below. Expected freetype version 2.6.1. Found freetype version 2.10.4. Freetype build type is not local\n",
+  "gold_tail": "st.mark.baseline_images - is this a typo?  You can register custom marks to avoid this warning - for details, see https://docs.pytest.org/en/stable/how-to/mark.html\n    @pytest.mark.baseline_images(baseline_images)\n\n-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html\n1 passed, 13 warnings in 0.72s\n\n--- stderr ---\nMatplotlib is not built with the correct FreeType version to run tests.  Set local_freetype=True in setup.cfg and rebuild. Expect many image comparison failures below. Expected freetype version 2.6.1. Found freetype version 2.10.4. Freetype build type is not local\n"
+ },
+ {
+  "instance_id": "matplotlib__matplotlib-23314",
+  "fixture": "matplotlib-matplotlib-23314",
+  "usable": false,
+  "reason": "provision failed"
+ },
+ {
+  "instance_id": "matplotlib__matplotlib-23476",
+  "fixture": "matplotlib-matplotlib-23476",
+  "usable": false,
+  "reason": "provision failed"
+ },
+ {
+  "instance_id": "matplotlib__matplotlib-26113",
+  "fixture": "matplotlib-matplotlib-26113",
+  "usable": false,
+  "tests": [
+   "lib/matplotlib/tests/test_axes.py::test_hexbin_mincnt_behavior_upon_C_parameter[png]"
+  ],
+  "base": [
+   [
+    1,
+    7
+   ]
+  ],
+  "gold": [
+   [
+    [
+     1,
+     5
+    ]
+   ],
+   [
+    [
+     1,
+     5
+    ]
+   ]
+  ],
+  "base_tail": "guo2/ha_fixtures/matplotlib-matplotlib-26113/.venv/lib/python3.11/site-packages/vcs_versioning/_version_schemes/_standard.py:108: in _deprecated_release_branch_semver_version\n    warnings.warn(\nE   DeprecationWarning: Version scheme 'release-branch-semver' has been renamed to 'semver-pep440-release-branch'. Please update your configuration. The old name will be removed in a future version.\n=========================== short test summary info ============================\nFAILED lib/matplotlib/tests/test_axes.py::test_hexbin_mincnt_behavior_upon_C_parameter[png]\n1 failed in 1.81s\n\n--- stderr ---\n",
+  "gold_tail": "guo2/ha_fixtures/matplotlib-matplotlib-26113/.venv/lib/python3.11/site-packages/vcs_versioning/_version_schemes/_standard.py:108: in _deprecated_release_branch_semver_version\n    warnings.warn(\nE   DeprecationWarning: Version scheme 'release-branch-semver' has been renamed to 'semver-pep440-release-branch'. Please update your configuration. The old name will be removed in a future version.\n=========================== short test summary info ============================\nFAILED lib/matplotlib/tests/test_axes.py::test_hexbin_mincnt_behavior_upon_C_parameter[png]\n1 failed in 2.08s\n\n--- stderr ---\n",
+  "reason": "gold patch does not make the test pass"
+ },
+ {
+  "instance_id": "matplotlib__matplotlib-26291",
+  "fixture": "matplotlib-matplotlib-26291",
+  "usable": false,
+  "tests": [
+   "lib/mpl_toolkits/axes_grid1/tests/test_axes_grid1.py::test_inset_axes_tight"
+  ],
+  "base": [
+   [
+    1,
+    6
+   ]
+  ],
+  "gold": [
+   [
+    [
+     1,
+     3
+    ]
+   ],
+   [
+    [
+     1,
+     3
+    ]
+   ]
+  ],
+  "base_tail": "oolkits/axes_grid1/inset_locator.py:73: in __call__\n    bbox = self.get_window_extent(renderer)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n/users/tguo2/ha_fixtures/matplotlib-matplotlib-26291/lib/matplotlib/offsetbox.py:398: in get_window_extent\n    renderer = self.figure._get_renderer()\n               ^^^^^^^^^^^^^^^^^^^^^^^^^\nE   AttributeError: 'NoneType' object has no attribute '_get_renderer'\n=========================== short test summary info ============================\nFAILED lib/mpl_toolkits/axes_grid1/tests/test_axes_grid1.py::test_inset_axes_tight\n1 failed in 0.61s\n\n--- stderr ---\n",
+  "gold_tail": "oolkits/axes_grid1/inset_locator.py:73: in __call__\n    bbox = self.get_window_extent(renderer)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n/users/tguo2/ha_fixtures/matplotlib-matplotlib-26291/lib/matplotlib/offsetbox.py:398: in get_window_extent\n    renderer = self.figure._get_renderer()\n               ^^^^^^^^^^^^^^^^^^^^^^^^^\nE   AttributeError: 'NoneType' object has no attribute '_get_renderer'\n=========================== short test summary info ============================\nFAILED lib/mpl_toolkits/axes_grid1/tests/test_axes_grid1.py::test_inset_axes_tight\n1 failed in 0.39s\n\n--- stderr ---\n",
+  "reason": "gold patch does not make the test pass"
+ },
+ {
+  "instance_id": "mwaskom__seaborn-3069",
+  "fixture": "mwaskom-seaborn-3069",
+  "usable": true,
+  "tests": [
+   "tests/_core/test_plot.py::TestScaling::test_nominal_x_axis_tweaks"
+  ],
+  "base": [
+   [
+    1,
+    4
+   ]
+  ],
+  "gold": [
+   [
+    [
+     0,
+     4
+    ]
+   ],
+   [
+    [
+     0,
+     4
+    ]
+   ]
+  ],
+  "base_tail": "=============================== FAILURES ===================================\n____________________ TestScaling.test_nominal_x_axis_tweaks ____________________\ntests/_core/test_plot.py:652: in test_nominal_x_axis_tweaks\n    assert ax1.get_xlim() == (-.5, 2.5)\nE   assert (-0.055000000...0000000000001) == (-0.5, 2.5)\nE     \nE     At index 0 diff: -0.05500000000000001 != -0.5\nE     Use -v to get more diff\n=========================== short test summary info ============================\nFAILED tests/_core/test_plot.py::TestScaling::test_nominal_x_axis_tweaks - as...\n1 failed in 1.52s\n\n--- stderr ---\n",
+  "gold_tail": "exit_code=0\n--- stdout ---\n.                                                                        [100%]\n1 passed in 1.20s\n\n--- stderr ---\n"
+ },
+ {
+  "instance_id": "mwaskom__seaborn-3187",
+  "fixture": "mwaskom-seaborn-3187",
+  "usable": true,
+  "tests": [
+   "tests/_core/test_plot.py::TestLegend::test_legend_has_no_offset"
+  ],
+  "base": [
+   [
+    1,
+    4
+   ]
+  ],
+  "gold": [
+   [
+    [
+     0,
+     4
+    ]
+   ],
+   [
+    [
+     0,
+     4
+    ]
+   ]
+  ],
+  "base_tail": "=============== FAILURES ===================================\n_____________________ TestLegend.test_legend_has_no_offset _____________________\ntests/_core/test_plot.py:2061: in test_legend_has_no_offset\n    assert float(text.get_text()) > 1e7\nE   AssertionError: assert 1.0 > 10000000.0\nE    +  where 1.0 = float('1')\nE    +    where '1' = get_text()\nE    +      where get_text = Text(0, 0, '1').get_text\n=========================== short test summary info ============================\nFAILED tests/_core/test_plot.py::TestLegend::test_legend_has_no_offset - Asse...\n1 failed in 1.53s\n\n--- stderr ---\n",
+  "gold_tail": "exit_code=0\n--- stdout ---\n.                                                                        [100%]\n1 passed in 1.18s\n\n--- stderr ---\n"
+ },
+ {
+  "instance_id": "pallets__flask-5014",
+  "fixture": "pallets-flask-5014",
+  "usable": true,
+  "tests": [
+   "tests/test_blueprints.py::test_empty_name_not_allowed"
+  ],
+  "base": [
+   [
+    1,
+    2
+   ]
+  ],
+  "gold": [
+   [
+    [
+     0,
+     2
+    ]
+   ],
+   [
+    [
+     0,
+     2
+    ]
+   ]
+  ],
+  "base_tail": "=1\n--- stdout ---\nF                                                                        [100%]\n=================================== FAILURES ===================================\n_________________________ test_empty_name_not_allowed __________________________\ntests/test_blueprints.py:260: in test_empty_name_not_allowed\n    with pytest.raises(ValueError):\nE   Failed: DID NOT RAISE <class 'ValueError'>\n=========================== short test summary info ============================\nFAILED tests/test_blueprints.py::test_empty_name_not_allowed - Failed: DID NO...\n1 failed in 0.10s\n\n--- stderr ---\n",
+  "gold_tail": "exit_code=0\n--- stdout ---\n.                                                                        [100%]\n1 passed in 0.08s\n\n--- stderr ---\n"
+ },
+ {
+  "instance_id": "psf__requests-1766",
+  "fixture": "psf-requests-1766",
+  "usable": true,
+  "tests": [
+   "test_requests.py::RequestsTestCase::test_DIGESTAUTH_QUOTES_QOP_VALUE"
+  ],
+  "base": [
+   [
+    1,
+    4
+   ]
+  ],
+  "gold": [
+   [
+    [
+     0,
+     43
+    ]
+   ],
+   [
+    [
+     0,
+     43
+    ]
+   ]
+  ],
+  "base_tail": "IGESTAUTH_QUOTES_QOP_VALUE\n  /tmp/tguo2-swe-validate-ws/val-74ad0f8a/psf-requests-1766/requests/models.py:156: DeprecationWarning: Using or importing the ABCs from 'collections' instead of from 'collections.abc' is deprecated since Python 3.3, and in 3.10 it will stop working\n    if isinstance(hook, collections.Callable):\n\n-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html\n=========================== short test summary info ============================\nFAILED test_requests.py::RequestsTestCase::test_DIGESTAUTH_QUOTES_QOP_VALUE\n1 failed, 3 warnings in 0.33s\n\n--- stderr ---\n",
+  "gold_tail": "ections.abc' is deprecated since Python 3.3, and in 3.10 it will stop working\n    from collections import Mapping\n\ntest_requests.py::RequestsTestCase::test_DIGESTAUTH_QUOTES_QOP_VALUE\n  /tmp/tguo2-swe-validate-ws/val-0ea82904/psf-requests-1766/requests/models.py:156: DeprecationWarning: Using or importing the ABCs from 'collections' instead of from 'collections.abc' is deprecated since Python 3.3, and in 3.10 it will stop working\n    if isinstance(hook, collections.Callable):\n\n-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html\n1 passed, 3 warnings in 0.22s\n\n--- stderr ---\n"
+ },
+ {
+  "instance_id": "psf__requests-2931",
+  "fixture": "psf-requests-2931",
+  "usable": true,
+  "tests": [
+   "test_requests.py::TestRequests::test_binary_put"
+  ],
+  "base": [
+   [
+    1,
+    4
+   ]
+  ],
+  "gold": [
+   [
+    [
+     0,
+     54
+    ]
+   ],
+   [
+    [
+     0,
+     54
+    ]
+   ]
+  ],
+  "base_tail": "g: invalid escape sequence \\*\n    \"\"\"Sends a PATCH request. Returns :class:`Response` object.\n\nrequests/sessions.py:534\n  /tmp/tguo2-swe-validate-ws/val-ccaa5262/psf-requests-2931/requests/sessions.py:534: DeprecationWarning: invalid escape sequence \\*\n    \"\"\"Sends a DELETE request. Returns :class:`Response` object.\n\n-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html\n=========================== short test summary info ============================\nFAILED test_requests.py::TestRequests::test_binary_put - UnicodeDecodeError: ...\n1 failed, 21 warnings in 0.31s\n\n--- stderr ---\n",
+  "gold_tail": "ests/sessions.py:534: DeprecationWarning: invalid escape sequence \\*\n    \"\"\"Sends a DELETE request. Returns :class:`Response` object.\n\ntest_requests.py::TestRequests::test_binary_put\n  /tmp/tguo2-swe-validate-ws/val-a560cef5/psf-requests-2931/requests/models.py:168: DeprecationWarning: Using or importing the ABCs from 'collections' instead of from 'collections.abc' is deprecated since Python 3.3, and in 3.10 it will stop working\n    if isinstance(hook, collections.Callable):\n\n-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html\n1 passed, 22 warnings in 0.24s\n\n--- stderr ---\n"
+ },
+ {
+  "instance_id": "psf__requests-5414",
+  "fixture": "psf-requests-5414",
+  "usable": true,
+  "tests": [
+   "tests/test_requests.py::TestRequests::test_invalid_url[InvalidURL-http://.example.com]"
+  ],
+  "base": [
+   [
+    1,
+    4
+   ]
+  ],
+  "gold": [
+   [
+    [
+     0,
+     54
+    ]
+   ],
+   [
+    [
+     0,
+     55
+    ]
+   ]
+  ],
+  "base_tail": "on3.9/site-packages/urllib3/connection.py:174: in _new_conn\n    conn = connection.create_connection(\n/users/tguo2/ha_fixtures/psf-requests-5414/.venv/lib/python3.9/site-packages/urllib3/util/connection.py:68: in create_connection\n    return six.raise_from(\n<string>:3: in raise_from\n    ???\nE   urllib3.exceptions.LocationParseError: Failed to parse: '.example.com', label empty or too long\n=========================== short test summary info ============================\nFAILED tests/test_requests.py::TestRequests::test_invalid_url[InvalidURL-http://.example.com]\n1 failed in 0.35s\n\n--- stderr ---\n",
+  "gold_tail": "exit_code=0\n--- stdout ---\n.                                                                        [100%]\n1 passed in 0.24s\n\n--- stderr ---\n"
+ },
+ {
+  "instance_id": "psf__requests-6028",
+  "fixture": "psf-requests-6028",
+  "usable": true,
+  "tests": [
+   "tests/test_utils.py::test_prepend_scheme_if_needed[http://user:pass@example.com/path?query-http://user:pass@example.com/path?query]"
+  ],
+  "base": [
+   [
+    1,
+    8
+   ]
+  ],
+  "gold": [
+   [
+    [
+     0,
+     54
+    ]
+   ],
+   [
+    [
+     0,
+     53
+    ]
+   ]
+  ],
+  "base_tail": "path?query] _\ntests/test_utils.py:615: in test_prepend_scheme_if_needed\n    assert prepend_scheme_if_needed(value, 'http') == expected\nE   AssertionError: assert 'http://examp...om/path?query' == 'http://user:...om/path?query'\nE     \nE     - http://user:pass@example.com/path?query\nE     ?        ----------\nE     + http://example.com/path?query\n=========================== short test summary info ============================\nFAILED tests/test_utils.py::test_prepend_scheme_if_needed[http://user:pass@example.com/path?query-http://user:pass@example.com/path?query]\n1 failed in 0.10s\n\n--- stderr ---\n",
+  "gold_tail": "exit_code=0\n--- stdout ---\n.                                                                        [100%]\n1 passed in 0.07s\n\n--- stderr ---\n"
+ },
+ {
+  "instance_id": "pydata__xarray-2905",
+  "fixture": "pydata-xarray-2905",
+  "usable": true,
+  "tests": [
+   "xarray/tests/test_variable.py::TestAsCompatibleData::test_unsupported_type"
+  ],
+  "base": [
+   [
+    1,
+    9
+   ]
+  ],
+  "gold": [
+   [
+    [
+     0,
+     44
+    ]
+   ],
+   [
+    [
+     0,
+     45
+    ]
+   ]
+  ],
+  "base_tail": "t__.py:59\nxarray/tests/__init__.py:59\nxarray/tests/__init__.py:59\nxarray/tests/__init__.py:59\n  /tmp/tguo2-swe-validate-ws/val-ec50349c/pydata-xarray-2905/xarray/tests/__init__.py:59: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.\n    return version.LooseVersion(vstring)\n\n-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html\n=========================== short test summary info ============================\nFAILED xarray/tests/test_variable.py::TestAsCompatibleData::test_unsupported_type\n1 failed, 9 warnings in 4.42s\n\n--- stderr ---\n",
+  "gold_tail": "ls/version.py:345: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.\n    other = LooseVersion(other)\n\nxarray/tests/__init__.py:59\nxarray/tests/__init__.py:59\nxarray/tests/__init__.py:59\nxarray/tests/__init__.py:59\n  /tmp/tguo2-swe-validate-ws/val-e3f0f7ba/pydata-xarray-2905/xarray/tests/__init__.py:59: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.\n    return version.LooseVersion(vstring)\n\n-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html\n1 passed, 9 warnings in 4.10s\n\n--- stderr ---\n"
+ },
+ {
+  "instance_id": "pydata__xarray-3677",
+  "fixture": "pydata-xarray-3677",
+  "usable": true,
+  "tests": [
+   "xarray/tests/test_merge.py::TestMergeMethod::test_merge_dataarray"
+  ],
+  "base": [
+   [
+    1,
+    29
+   ]
+  ],
+  "gold": [
+   [
+    [
+     0,
+     25
+    ]
+   ],
+   [
+    [
+     0,
+     25
+    ]
+   ]
+  ],
+  "base_tail": "7/.venv/lib/python3.10/site-packages/setuptools/_distutils/version.py:345\n  /users/tguo2/ha_fixtures/pydata-xarray-3677/.venv/lib/python3.10/site-packages/setuptools/_distutils/version.py:345: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.\n    other = LooseVersion(other)\n\n-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html\n=========================== short test summary info ============================\nFAILED xarray/tests/test_merge.py::TestMergeMethod::test_merge_dataarray - At...\n1 failed, 10 warnings in 2.18s\n\n--- stderr ---\n",
+  "gold_tail": "sion classes are deprecated. Use packaging.version instead.\n    if LooseVersion(pd.__version__) < \"0.25.0\":\n\n../../../../users/tguo2/ha_fixtures/pydata-xarray-3677/.venv/lib/python3.10/site-packages/setuptools/_distutils/version.py:345\n  /users/tguo2/ha_fixtures/pydata-xarray-3677/.venv/lib/python3.10/site-packages/setuptools/_distutils/version.py:345: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.\n    other = LooseVersion(other)\n\n-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html\n1 passed, 10 warnings in 1.47s\n\n--- stderr ---\n"
+ },
+ {
+  "instance_id": "pydata__xarray-4094",
+  "fixture": "pydata-xarray-4094",
+  "usable": true,
+  "tests": [
+   "xarray/tests/test_dataset.py::TestDataset::test_to_stacked_array_to_unstacked_dataset"
+  ],
+  "base": [
+   [
+    1,
+    27
+   ]
+  ],
+  "gold": [
+   [
+    [
+     0,
+     46
+    ]
+   ],
+   [
+    [
+     0,
+     46
+    ]
+   ]
+  ],
+  "base_tail": "python3.10/site-packages/setuptools/_distutils/version.py:345\n  /users/tguo2/ha_fixtures/pydata-xarray-4094/.venv/lib/python3.10/site-packages/setuptools/_distutils/version.py:345: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.\n    other = LooseVersion(other)\n\n-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html\n=========================== short test summary info ============================\nFAILED xarray/tests/test_dataset.py::TestDataset::test_to_stacked_array_to_unstacked_dataset\n1 failed, 10 warnings in 2.24s\n\n--- stderr ---\n",
+  "gold_tail": "sion classes are deprecated. Use packaging.version instead.\n    if LooseVersion(pd.__version__) < \"0.25.0\":\n\n../../../../users/tguo2/ha_fixtures/pydata-xarray-4094/.venv/lib/python3.10/site-packages/setuptools/_distutils/version.py:345\n  /users/tguo2/ha_fixtures/pydata-xarray-4094/.venv/lib/python3.10/site-packages/setuptools/_distutils/version.py:345: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.\n    other = LooseVersion(other)\n\n-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html\n1 passed, 10 warnings in 1.54s\n\n--- stderr ---\n"
+ },
+ {
+  "instance_id": "pydata__xarray-4629",
+  "fixture": "pydata-xarray-4629",
+  "usable": true,
+  "tests": [
+   "xarray/tests/test_merge.py::TestMergeFunction::test_merge_attrs_override_copy"
+  ],
+  "base": [
+   [
+    1,
+    27
+   ]
+  ],
+  "gold": [
+   [
+    [
+     0,
+     5
+    ]
+   ],
+   [
+    [
+     0,
+     5
+    ]
+   ]
+  ],
+  "base_tail": "venv/lib/python3.10/site-packages/setuptools/_distutils/version.py:345\n  /users/tguo2/ha_fixtures/pydata-xarray-4629/.venv/lib/python3.10/site-packages/setuptools/_distutils/version.py:345: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.\n    other = LooseVersion(other)\n\n-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html\n=========================== short test summary info ============================\nFAILED xarray/tests/test_merge.py::TestMergeFunction::test_merge_attrs_override_copy\n1 failed, 5 warnings in 1.88s\n\n--- stderr ---\n",
+  "gold_tail": "rsion classes are deprecated. Use packaging.version instead.\n    if LooseVersion(pd.__version__) < \"0.25.0\":\n\n../../../../users/tguo2/ha_fixtures/pydata-xarray-4629/.venv/lib/python3.10/site-packages/setuptools/_distutils/version.py:345\n  /users/tguo2/ha_fixtures/pydata-xarray-4629/.venv/lib/python3.10/site-packages/setuptools/_distutils/version.py:345: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.\n    other = LooseVersion(other)\n\n-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html\n1 passed, 5 warnings in 1.65s\n\n--- stderr ---\n"
+ },
+ {
+  "instance_id": "pydata__xarray-6721",
+  "fixture": "pydata-xarray-6721",
+  "usable": true,
+  "tests": [
+   "xarray/tests/test_dataset.py::TestDataset::test_chunks_does_not_load_data"
+  ],
+  "base": [
+   [
+    1,
+    25
+   ]
+  ],
+  "gold": [
+   [
+    [
+     0,
+     9
+    ]
+   ],
+   [
+    [
+     0,
+     14
+    ]
+   ]
+  ],
+  "base_tail": "asarray(self.array, dtype=dtype)\n/tmp/tguo2-swe-validate-ws/val-d9d33892/pydata-xarray-6721/xarray/core/indexing.py:517: in __array__\n    return np.asarray(array[self.key], dtype=None)\n/tmp/tguo2-swe-validate-ws/val-d9d33892/pydata-xarray-6721/xarray/tests/__init__.py:142: in __getitem__\n    raise UnexpectedDataAccess(\"Tried accessing data\")\nE   xarray.tests.UnexpectedDataAccess: Tried accessing data\n=========================== short test summary info ============================\nFAILED xarray/tests/test_dataset.py::TestDataset::test_chunks_does_not_load_data\n1 failed in 1.37s\n\n--- stderr ---\n",
+  "gold_tail": "exit_code=0\n--- stdout ---\n.                                                                        [100%]\n1 passed in 0.92s\n\n--- stderr ---\n"
+ },
+ {
+  "instance_id": "pylint-dev__pylint-4604",
+  "fixture": "pylint-dev-pylint-4604",
+  "usable": true,
+  "tests": [
+   "tests/checkers/unittest_variables.py::TestVariablesChecker::test_bitbucket_issue_78"
+  ],
+  "base": [
+   [
+    4,
+    6
+   ]
+  ],
+  "gold": [
+   [
+    [
+     0,
+     5
+    ]
+   ],
+   [
+    [
+     0,
+     3
+    ]
+   ]
+  ],
+  "base_tail": "2-swe-validate-ws/val-168ecb04/pylint-dev-pylint-4604/pylint/constants.py)\n=========================== short test summary info ============================\nERROR tests/checkers/unittest_variables.py\n1 error in 0.06s\n\n--- stderr ---\nERROR: not found: /tmp/tguo2-swe-validate-ws/val-168ecb04/pylint-dev-pylint-4604/tests/checkers/unittest_variables.py::TestVariablesChecker::test_bitbucket_issue_78\n(no name '/tmp/tguo2-swe-validate-ws/val-168ecb04/pylint-dev-pylint-4604/tests/checkers/unittest_variables.py::TestVariablesChecker::test_bitbucket_issue_78' in any of [<Module unittest_variables.py>])\n\n",
+  "gold_tail": "exit_code=0\n--- stdout ---\n.                                                                        [100%]\n1 passed in 0.03s\n\n--- stderr ---\n"
+ },
+ {
+  "instance_id": "pylint-dev__pylint-4970",
+  "fixture": "pylint-dev-pylint-4970",
+  "usable": true,
+  "tests": [
+   "tests/checkers/unittest_similar.py::test_set_duplicate_lines_to_zero"
+  ],
+  "base": [
+   [
+    1,
+    6
+   ]
+  ],
+  "gold": [
+   [
+    [
+     0,
+     8
+    ]
+   ],
+   [
+    [
+     0,
+     10
+    ]
+   ]
+  ],
+  "base_tail": "ylint-dev-pylint-4970/.venv/lib/python3.9/site-packages/astroid/scoped_nodes.py:26\n  /users/tguo2/ha_fixtures/pylint-dev-pylint-4970/.venv/lib/python3.9/site-packages/astroid/scoped_nodes.py:26: DeprecationWarning: The 'astroid.scoped_nodes' module is deprecated and will be replaced by 'astroid.nodes' in astroid 3.0.0\n    warnings.warn(\n\n-- Docs: https://docs.pytest.org/en/stable/warnings.html\n=========================== short test summary info ============================\nFAILED tests/checkers/unittest_similar.py::test_set_duplicate_lines_to_zero\n1 failed, 2 warnings in 0.06s\n\n--- stderr ---\n",
+  "gold_tail": "astroid.node_classes' module is deprecated and will be replaced by 'astroid.nodes' in astroid 3.0.0\n    warnings.warn(\n\n../../../../users/tguo2/ha_fixtures/pylint-dev-pylint-4970/.venv/lib/python3.9/site-packages/astroid/scoped_nodes.py:26\n  /users/tguo2/ha_fixtures/pylint-dev-pylint-4970/.venv/lib/python3.9/site-packages/astroid/scoped_nodes.py:26: DeprecationWarning: The 'astroid.scoped_nodes' module is deprecated and will be replaced by 'astroid.nodes' in astroid 3.0.0\n    warnings.warn(\n\n-- Docs: https://docs.pytest.org/en/stable/warnings.html\n1 passed, 2 warnings in 0.02s\n\n--- stderr ---\n"
+ },
+ {
+  "instance_id": "pylint-dev__pylint-6903",
+  "fixture": "pylint-dev-pylint-6903",
+  "usable": true,
+  "tests": [
+   "tests/test_pylint_runners.py::test_pylint_run_jobs_equal_zero_dont_crash_with_cpu_fraction"
+  ],
+  "base": [
+   [
+    1,
+    10
+   ]
+  ],
+  "gold": [
+   [
+    [
+     0,
+     7
+    ]
+   ],
+   [
+    [
+     0,
+     8
+    ]
+   ]
+  ],
+  "base_tail": "linux-x86_64-gnu/lib/python3.9/multiprocessing/context.py:119: in Pool\n    return Pool(processes, initializer, initargs, maxtasksperchild,\n/groups/xzhang33/tguo2taicheng/envs/uv-python/cpython-3.9-linux-x86_64-gnu/lib/python3.9/multiprocessing/pool.py:205: in __init__\n    raise ValueError(\"Number of processes must be at least 1\")\nE   ValueError: Number of processes must be at least 1\n=========================== short test summary info ============================\nFAILED tests/test_pylint_runners.py::test_pylint_run_jobs_equal_zero_dont_crash_with_cpu_fraction\n1 failed in 0.16s\n\n--- stderr ---\n",
+  "gold_tail": "exit_code=0\n--- stdout ---\n.                                                                        [100%]\n1 passed in 2.87s\n\n--- stderr ---\n"
+ },
+ {
+  "instance_id": "pylint-dev__pylint-7080",
+  "fixture": "pylint-dev-pylint-7080",
+  "usable": true,
+  "tests": [
+   "tests/test_self.py::TestRunTC::test_ignore_path_recursive_current_dir"
+  ],
+  "base": [
+   [
+    1,
+    11
+   ]
+  ],
+  "gold": [
+   [
+    [
+     0,
+     6
+    ]
+   ],
+   [
+    [
+     0,
+     6
+    ]
+   ]
+  ],
+  "base_tail": "nError: expected output status 0, got 20. Below pylint output: \nE     ************* Module failing\nE     ignored_subdirectory/failing.py:1:0: C0114: Missing module docstring (missing-module-docstring)\nE     ignored_subdirectory/failing.py:1:0: W0611: Unused import re (unused-import)\nE     \nE     -----------------------------------\nE     Your code has been rated at 0.00/10\nE     \nE     \nE   assert 20 == 0\n=========================== short test summary info ============================\nFAILED tests/test_self.py::TestRunTC::test_ignore_path_recursive_current_dir\n1 failed in 0.46s\n\n--- stderr ---\n",
+  "gold_tail": "exit_code=0\n--- stdout ---\n.                                                                        [100%]\n1 passed in 0.11s\n\n--- stderr ---\n"
+ },
+ {
+  "instance_id": "pylint-dev__pylint-7277",
+  "fixture": "pylint-dev-pylint-7277",
+  "usable": true,
+  "tests": [
+   "tests/test_self.py::TestRunTC::test_modify_sys_path"
+  ],
+  "base": [
+   [
+    1,
+    7
+   ]
+  ],
+  "gold": [
+   [
+    [
+     0,
+     3
+    ]
+   ],
+   [
+    [
+     0,
+     3
+    ]
+   ]
+  ],
+  "base_tail": "estRunTC.test_modify_sys_path ________________________\ntests/test_self.py:778: in test_modify_sys_path\n    assert sys.path == paths\nE   AssertionError: assert ['/usr/local/...ite-packages'] == ['/do_not_rem...ite-packages']\nE     At index 0 diff: '/usr/local/lib/python39.zip' != '/do_not_remove'\nE     Right contains one more item: '/usr/local/lib/python3.9/site-packages'\nE     Use -v to get more diff\n=========================== short test summary info ============================\nFAILED tests/test_self.py::TestRunTC::test_modify_sys_path - AssertionError: ...\n1 failed in 0.14s\n\n--- stderr ---\n",
+  "gold_tail": "exit_code=0\n--- stdout ---\n.                                                                        [100%]\n1 passed in 0.08s\n\n--- stderr ---\n"
+ },
+ {
+  "instance_id": "pytest-dev__pytest-5262",
+  "fixture": "pytest-dev-pytest-5262",
+  "usable": false,
+  "tests": [
+   "testing/test_capture.py::TestFDCapture::test_capfd_sys_stdout_mode"
+  ],
+  "base": [
+   [
+    4,
+    2
+   ]
+  ],
+  "gold": [
+   [
+    [
+     4,
+     2
+    ]
+   ],
+   [
+    [
+     4,
+     2
+    ]
+   ]
+  ],
+  "base_tail": "exit_code=4\n--- stdout ---\n\n--- stderr ---\nERROR: usage: pytest.py [options] [file_or_dir] [file_or_dir] [...]\npytest.py: error: unrecognized arguments: --no-header\n  inifile: /tmp/tguo2-swe-validate-ws/val-053eba26/pytest-dev-pytest-5262/tox.ini\n  rootdir: /tmp/tguo2-swe-validate-ws/val-053eba26/pytest-dev-pytest-5262\n\n",
+  "gold_tail": "exit_code=4\n--- stdout ---\n\n--- stderr ---\nERROR: usage: pytest.py [options] [file_or_dir] [file_or_dir] [...]\npytest.py: error: unrecognized arguments: --no-header\n  inifile: /tmp/tguo2-swe-validate-ws/val-2a25061c/pytest-dev-pytest-5262/tox.ini\n  rootdir: /tmp/tguo2-swe-validate-ws/val-2a25061c/pytest-dev-pytest-5262\n\n",
+  "reason": "gold patch does not make the test pass"
+ },
+ {
+  "instance_id": "pytest-dev__pytest-6202",
+  "fixture": "pytest-dev-pytest-6202",
+  "usable": false,
+  "tests": [
+   "testing/test_collection.py::Test_genitems::test_example_items1"
+  ],
+  "base": [
+   [
+    4,
+    2
+   ]
+  ],
+  "gold": [
+   [
+    [
+     4,
+     2
+    ]
+   ],
+   [
+    [
+     4,
+     2
+    ]
+   ]
+  ],
+  "base_tail": "exit_code=4\n--- stdout ---\n\n--- stderr ---\nERROR: usage: pytest.py [options] [file_or_dir] [file_or_dir] [...]\npytest.py: error: unrecognized arguments: --no-header\n  inifile: /tmp/tguo2-swe-validate-ws/val-e4bf34be/pytest-dev-pytest-6202/tox.ini\n  rootdir: /tmp/tguo2-swe-validate-ws/val-e4bf34be/pytest-dev-pytest-6202\n\n",
+  "gold_tail": "exit_code=4\n--- stdout ---\n\n--- stderr ---\nERROR: usage: pytest.py [options] [file_or_dir] [file_or_dir] [...]\npytest.py: error: unrecognized arguments: --no-header\n  inifile: /tmp/tguo2-swe-validate-ws/val-d85e50f0/pytest-dev-pytest-6202/tox.ini\n  rootdir: /tmp/tguo2-swe-validate-ws/val-d85e50f0/pytest-dev-pytest-6202\n\n",
+  "reason": "gold patch does not make the test pass"
+ },
+ {
+  "instance_id": "pytest-dev__pytest-7432",
+  "fixture": "pytest-dev-pytest-7432",
+  "usable": true,
+  "tests": [
+   "testing/test_skipping.py::TestXFail::test_xfail_run_with_skip_mark[test_input1-expected1]"
+  ],
+  "base": [
+   [
+    1,
+    2
+   ]
+  ],
+  "gold": [
+   [
+    [
+     0,
+     2
+    ]
+   ],
+   [
+    [
+     0,
+     2
+    ]
+   ]
+  ],
+  "base_tail": "lected 1 item\n\ntest_sample.py s                                                         [100%]\n\n=========================== short test summary info ============================\nSKIPPED [1] ../../../../tguo2-swe-validate-ws/val-986a3db5/pytest-dev-pytest-7432/src/_pytest/skipping.py:239: unconditional skip\n============================== 1 skipped in 0.00s ==============================\n=========================== short test summary info ============================\nFAILED testing/test_skipping.py::TestXFail::test_xfail_run_with_skip_mark[test_input1-expected1]\n1 failed in 0.10s\n\n--- stderr ---\n",
+  "gold_tail": "exit_code=0\n--- stdout ---\n.                                                                        [100%]\n1 passed in 0.08s\n\n--- stderr ---\n"
+ },
+ {
+  "instance_id": "pytest-dev__pytest-7521",
+  "fixture": "pytest-dev-pytest-7521",
+  "usable": true,
+  "tests": [
+   "testing/test_capture.py::TestCaptureFixture::test_cafd_preserves_newlines[\\r\\n]"
+  ],
+  "base": [
+   [
+    1,
+    2
+   ]
+  ],
+  "gold": [
+   [
+    [
+     0,
+     2
+    ]
+   ],
+   [
+    [
+     0,
+     2
+    ]
+   ]
+  ],
+  "base_tail": "==========\n____________ TestCaptureFixture.test_cafd_preserves_newlines[\\r\\n] _____________\ntesting/test_capture.py:521: in test_cafd_preserves_newlines\n    assert out.endswith(nl)\nE   AssertionError: assert False\nE    +  where False = <built-in method endswith of str object at 0x14765d1417f0>('\\r\\n')\nE    +    where <built-in method endswith of str object at 0x14765d1417f0> = 'test\\n'.endswith\n=========================== short test summary info ============================\nFAILED testing/test_capture.py::TestCaptureFixture::test_cafd_preserves_newlines[\\r\\n]\n1 failed in 0.17s\n\n--- stderr ---\n",
+  "gold_tail": "exit_code=0\n--- stdout ---\n.                                                                        [100%]\n1 passed in 0.14s\n\n--- stderr ---\n"
+ },
+ {
+  "instance_id": "pytest-dev__pytest-7982",
+  "fixture": "pytest-dev-pytest-7982",
+  "usable": true,
+  "tests": [
+   "testing/test_collection.py::test_collect_symlink_dir"
+  ],
+  "base": [
+   [
+    1,
+    2
+   ]
+  ],
+  "gold": [
+   [
+    [
+     0,
+     2
+    ]
+   ],
+   [
+    [
+     0,
+     2
+    ]
+   ]
+  ],
+  "base_tail": "t session starts ==============================\nplatform linux -- Python 3.9.25, pytest-6.2.0.dev154+ga7e38c5c6.d20261008, py-1.11.0, pluggy-0.13.1\nrootdir: /tmp/tguo2-tmp/pytest-of-tguo2/pytest-33/test_collect_symlink_dir0\ncollected 1 item\n\ndir/test_it.py .                                                         [100%]\n\n============================== 1 passed in 0.01s ===============================\n=========================== short test summary info ============================\nFAILED testing/test_collection.py::test_collect_symlink_dir - AssertionError:...\n1 failed in 0.19s\n\n--- stderr ---\n",
+  "gold_tail": "exit_code=0\n--- stdout ---\n.                                                                        [100%]\n1 passed in 0.16s\n\n--- stderr ---\n"
+ },
+ {
+  "instance_id": "scikit-learn__scikit-learn-10908",
+  "fixture": "scikit-learn-scikit-learn-10908",
+  "usable": true,
+  "tests": [
+   "sklearn/feature_extraction/tests/test_text.py::test_feature_names"
+  ],
+  "base": [
+   [
+    1,
+    160
+   ]
+  ],
+  "gold": [
+   [
+    [
+     0,
+     165
+    ]
+   ],
+   [
+    [
+     0,
+     159
+    ]
+   ]
+  ],
+  "base_tail": "====\n______________________________ test_feature_names ______________________________\nsklearn/feature_extraction/tests/test_text.py:547: in test_feature_names\n    assert_false(cv.fixed_vocabulary_)\nE   AttributeError: 'CountVectorizer' object has no attribute 'fixed_vocabulary_'\n---------------------------- Captured stdout setup -----------------------------\nI: Seeding RNGs with 875218918\n=========================== short test summary info ============================\nFAILED sklearn/feature_extraction/tests/test_text.py::test_feature_names - At...\n1 failed, 3 warnings in 2.17s\n\n--- stderr ---\n",
+  "gold_tail": "exit_code=0\n--- stdout ---\n.                                                                        [100%]\n1 passed, 3 warnings in 1.04s\n\n--- stderr ---\n"
+ },
+ {
+  "instance_id": "scikit-learn__scikit-learn-12585",
+  "fixture": "scikit-learn-scikit-learn-12585",
+  "usable": false,
+  "tests": [
+   "sklearn/tests/test_base.py::test_clone_estimator_types"
+  ],
+  "base": [
+   [
+    4,
+    175
+   ]
+  ],
+  "gold": [
+   [
+    [
+     4,
+     175
+    ]
+   ],
+   [
+    [
+     4,
+     179
+    ]
+   ]
+  ],
+  "base_tail": "t set_loky_pickler\nsklearn/externals/joblib/externals/loky/backend/reduction.py:125: in <module>\n    from sklearn.externals.joblib.externals import cloudpickle  # noqa: F401\nsklearn/externals/joblib/externals/cloudpickle/__init__.py:3: in <module>\n    from .cloudpickle import *\nsklearn/externals/joblib/externals/cloudpickle/cloudpickle.py:167: in <module>\n    _cell_set_template_code = _make_cell_set_template_code()\nsklearn/externals/joblib/externals/cloudpickle/cloudpickle.py:148: in _make_cell_set_template_code\n    return types.CodeType(\nE   TypeError: an integer is required (got type bytes)\n",
+  "gold_tail": "t set_loky_pickler\nsklearn/externals/joblib/externals/loky/backend/reduction.py:125: in <module>\n    from sklearn.externals.joblib.externals import cloudpickle  # noqa: F401\nsklearn/externals/joblib/externals/cloudpickle/__init__.py:3: in <module>\n    from .cloudpickle import *\nsklearn/externals/joblib/externals/cloudpickle/cloudpickle.py:167: in <module>\n    _cell_set_template_code = _make_cell_set_template_code()\nsklearn/externals/joblib/externals/cloudpickle/cloudpickle.py:148: in _make_cell_set_template_code\n    return types.CodeType(\nE   TypeError: an integer is required (got type bytes)\n",
+  "reason": "gold patch does not make the test pass"
+ },
+ {
+  "instance_id": "scikit-learn__scikit-learn-13439",
+  "fixture": "scikit-learn-scikit-learn-13439",
+  "usable": false,
+  "tests": [
+   "sklearn/tests/test_pipeline.py::test_make_pipeline_memory"
+  ],
+  "base": [
+   [
+    4,
+    206
+   ]
+  ],
+  "gold": [
+   [
+    [
+     4,
+     208
+    ]
+   ],
+   [
+    [
+     4,
+     213
+    ]
+   ]
+  ],
+  "base_tail": "ib/externals/cloudpickle/__init__.py:3: in <module>\n    from .cloudpickle import *\nsklearn/externals/joblib/externals/cloudpickle/cloudpickle.py:167: in <module>\n    _cell_set_template_code = _make_cell_set_template_code()\nsklearn/externals/joblib/externals/cloudpickle/cloudpickle.py:148: in _make_cell_set_template_code\n    return types.CodeType(\nE   TypeError: an integer is required (got type bytes)\n2 errors in 1.00s\n\n--- stderr ---\nERROR: found no collectors for /tmp/tguo2-swe-validate-ws/val-76ff712e/scikit-learn-scikit-learn-13439/sklearn/tests/test_pipeline.py::test_make_pipeline_memory\n\n",
+  "gold_tail": "ib/externals/cloudpickle/__init__.py:3: in <module>\n    from .cloudpickle import *\nsklearn/externals/joblib/externals/cloudpickle/cloudpickle.py:167: in <module>\n    _cell_set_template_code = _make_cell_set_template_code()\nsklearn/externals/joblib/externals/cloudpickle/cloudpickle.py:148: in _make_cell_set_template_code\n    return types.CodeType(\nE   TypeError: an integer is required (got type bytes)\n2 errors in 0.41s\n\n--- stderr ---\nERROR: found no collectors for /tmp/tguo2-swe-validate-ws/val-a34b23be/scikit-learn-scikit-learn-13439/sklearn/tests/test_pipeline.py::test_make_pipeline_memory\n\n",
+  "reason": "gold patch does not make the test pass"
+ },
+ {
+  "instance_id": "scikit-learn__scikit-learn-14141",
+  "fixture": "scikit-learn-scikit-learn-14141",
+  "usable": false,
+  "tests": [
+   "sklearn/utils/tests/test_show_versions.py::test_get_deps_info"
+  ],
+  "base": [
+   [
+    1,
+    249
+   ]
+  ],
+  "gold": [
+   [
+    [
+     0,
+     250
+    ]
+   ],
+   [
+    [
+     0,
+     248
+    ]
+   ]
+  ],
+  "base_tail": "                                                              [100%]\n=================================== FAILURES ===================================\n______________________________ test_get_deps_info ______________________________\nsklearn/utils/tests/test_show_versions.py:26: in test_get_deps_info\n    assert 'joblib' in deps_info\nE   AssertionError: assert 'joblib' in {'Cython': '0.29.37', 'matplotlib': None, 'numpy': '1.19.2', 'pandas': None, ...}\n---------------------------- Captured stdout setup -----------------------------\nI: Seeding RNGs with 1718970025\n1 failed in 0.97s\n\n--- stderr ---\n",
+  "gold_tail": "exit_code=0\n--- stdout ---\n.                                                                        [100%]\n1 passed in 0.38s\n\n--- stderr ---\n",
+  "reason": "too slow (250s)"
+ },
+ {
+  "instance_id": "sphinx-doc__sphinx-8621",
+  "fixture": "sphinx-doc-sphinx-8621",
+  "usable": false,
+  "tests": [
+   "tests/test_markup.py::test_inline[verify-:kbd:`Alt+^`-<p><kbd"
+  ],
+  "base": [
+   [
+    1,
+    5
+   ]
+  ],
+  "gold": [
+   [
+    [
+     1,
+     5
+    ]
+   ],
+   [
+    [
+     1,
+     3
+    ]
+   ]
+  ],
+  "base_tail": "import util\n  File \"/tmp/tguo2-swe-validate-ws/val-e374178b/sphinx-doc-sphinx-8621/sphinx/testing/util.py\", line 23, in <module>\n    from sphinx import application, locale\n  File \"/tmp/tguo2-swe-validate-ws/val-e374178b/sphinx-doc-sphinx-8621/sphinx/application.py\", line 43, in <module>\n    from sphinx.registry import SphinxComponentRegistry\n  File \"/tmp/tguo2-swe-validate-ws/val-e374178b/sphinx-doc-sphinx-8621/sphinx/registry.py\", line 22, in <module>\n    from pkg_resources import iter_entry_points\nImportError: Error importing plugin \"sphinx.testing.fixtures\": No module named 'pkg_resources'\n",
+  "gold_tail": "import util\n  File \"/tmp/tguo2-swe-validate-ws/val-a3abe166/sphinx-doc-sphinx-8621/sphinx/testing/util.py\", line 23, in <module>\n    from sphinx import application, locale\n  File \"/tmp/tguo2-swe-validate-ws/val-a3abe166/sphinx-doc-sphinx-8621/sphinx/application.py\", line 43, in <module>\n    from sphinx.registry import SphinxComponentRegistry\n  File \"/tmp/tguo2-swe-validate-ws/val-a3abe166/sphinx-doc-sphinx-8621/sphinx/registry.py\", line 22, in <module>\n    from pkg_resources import iter_entry_points\nImportError: Error importing plugin \"sphinx.testing.fixtures\": No module named 'pkg_resources'\n",
+  "reason": "gold patch does not make the test pass"
+ },
+ {
+  "instance_id": "sphinx-doc__sphinx-8721",
+  "fixture": "sphinx-doc-sphinx-8721",
+  "usable": false,
+  "tests": [
+   "tests/test_ext_viewcode.py::test_viewcode_epub_default"
+  ],
+  "base": [
+   [
+    1,
+    5
+   ]
+  ],
+  "gold": [
+   [
+    [
+     1,
+     4
+    ]
+   ],
+   [
+    [
+     1,
+     2
+    ]
+   ]
+  ],
+  "base_tail": "import util\n  File \"/tmp/tguo2-swe-validate-ws/val-5556215f/sphinx-doc-sphinx-8721/sphinx/testing/util.py\", line 23, in <module>\n    from sphinx import application, locale\n  File \"/tmp/tguo2-swe-validate-ws/val-5556215f/sphinx-doc-sphinx-8721/sphinx/application.py\", line 43, in <module>\n    from sphinx.registry import SphinxComponentRegistry\n  File \"/tmp/tguo2-swe-validate-ws/val-5556215f/sphinx-doc-sphinx-8721/sphinx/registry.py\", line 22, in <module>\n    from pkg_resources import iter_entry_points\nImportError: Error importing plugin \"sphinx.testing.fixtures\": No module named 'pkg_resources'\n",
+  "gold_tail": "import util\n  File \"/tmp/tguo2-swe-validate-ws/val-8604f2c2/sphinx-doc-sphinx-8721/sphinx/testing/util.py\", line 23, in <module>\n    from sphinx import application, locale\n  File \"/tmp/tguo2-swe-validate-ws/val-8604f2c2/sphinx-doc-sphinx-8721/sphinx/application.py\", line 43, in <module>\n    from sphinx.registry import SphinxComponentRegistry\n  File \"/tmp/tguo2-swe-validate-ws/val-8604f2c2/sphinx-doc-sphinx-8721/sphinx/registry.py\", line 22, in <module>\n    from pkg_resources import iter_entry_points\nImportError: Error importing plugin \"sphinx.testing.fixtures\": No module named 'pkg_resources'\n",
+  "reason": "gold patch does not make the test pass"
+ },
+ {
+  "instance_id": "sphinx-doc__sphinx-9230",
+  "fixture": "sphinx-doc-sphinx-9230",
+  "usable": false,
+  "tests": [
+   "tests/test_domain_py.py::test_info_field_list"
+  ],
+  "base": [
+   [
+    1,
+    5
+   ]
+  ],
+  "gold": [
+   [
+    [
+     1,
+     4
+    ]
+   ],
+   [
+    [
+     1,
+     2
+    ]
+   ]
+  ],
+  "base_tail": "import util\n  File \"/tmp/tguo2-swe-validate-ws/val-30a5ce3f/sphinx-doc-sphinx-9230/sphinx/testing/util.py\", line 23, in <module>\n    from sphinx import application, locale\n  File \"/tmp/tguo2-swe-validate-ws/val-30a5ce3f/sphinx-doc-sphinx-9230/sphinx/application.py\", line 43, in <module>\n    from sphinx.registry import SphinxComponentRegistry\n  File \"/tmp/tguo2-swe-validate-ws/val-30a5ce3f/sphinx-doc-sphinx-9230/sphinx/registry.py\", line 24, in <module>\n    from pkg_resources import iter_entry_points\nImportError: Error importing plugin \"sphinx.testing.fixtures\": No module named 'pkg_resources'\n",
+  "gold_tail": "import util\n  File \"/tmp/tguo2-swe-validate-ws/val-3437c0df/sphinx-doc-sphinx-9230/sphinx/testing/util.py\", line 23, in <module>\n    from sphinx import application, locale\n  File \"/tmp/tguo2-swe-validate-ws/val-3437c0df/sphinx-doc-sphinx-9230/sphinx/application.py\", line 43, in <module>\n    from sphinx.registry import SphinxComponentRegistry\n  File \"/tmp/tguo2-swe-validate-ws/val-3437c0df/sphinx-doc-sphinx-9230/sphinx/registry.py\", line 24, in <module>\n    from pkg_resources import iter_entry_points\nImportError: Error importing plugin \"sphinx.testing.fixtures\": No module named 'pkg_resources'\n",
+  "reason": "gold patch does not make the test pass"
+ },
+ {
+  "instance_id": "sphinx-doc__sphinx-9591",
+  "fixture": "sphinx-doc-sphinx-9591",
+  "usable": false,
+  "tests": [
+   "tests/test_domain_py.py::test_pyproperty"
+  ],
+  "base": [
+   [
+    1,
+    5
+   ]
+  ],
+  "gold": [
+   [
+    [
+     1,
+     5
+    ]
+   ],
+   [
+    [
+     1,
+     3
+    ]
+   ]
+  ],
+  "base_tail": "import util\n  File \"/tmp/tguo2-swe-validate-ws/val-1e03f9d5/sphinx-doc-sphinx-9591/sphinx/testing/util.py\", line 23, in <module>\n    from sphinx import application, locale\n  File \"/tmp/tguo2-swe-validate-ws/val-1e03f9d5/sphinx-doc-sphinx-9591/sphinx/application.py\", line 43, in <module>\n    from sphinx.registry import SphinxComponentRegistry\n  File \"/tmp/tguo2-swe-validate-ws/val-1e03f9d5/sphinx-doc-sphinx-9591/sphinx/registry.py\", line 24, in <module>\n    from pkg_resources import iter_entry_points\nImportError: Error importing plugin \"sphinx.testing.fixtures\": No module named 'pkg_resources'\n",
+  "gold_tail": "import util\n  File \"/tmp/tguo2-swe-validate-ws/val-136fcb1e/sphinx-doc-sphinx-9591/sphinx/testing/util.py\", line 23, in <module>\n    from sphinx import application, locale\n  File \"/tmp/tguo2-swe-validate-ws/val-136fcb1e/sphinx-doc-sphinx-9591/sphinx/application.py\", line 43, in <module>\n    from sphinx.registry import SphinxComponentRegistry\n  File \"/tmp/tguo2-swe-validate-ws/val-136fcb1e/sphinx-doc-sphinx-9591/sphinx/registry.py\", line 24, in <module>\n    from pkg_resources import iter_entry_points\nImportError: Error importing plugin \"sphinx.testing.fixtures\": No module named 'pkg_resources'\n",
+  "reason": "gold patch does not make the test pass"
+ },
+ {
+  "instance_id": "sympy__sympy-13757",
+  "fixture": "sympy-sympy-13757",
+  "usable": false,
+  "tests": [
+   "test_issue_13079"
+  ],
+  "base": [
+   [
+    4,
+    4
+   ]
+  ],
+  "gold": [
+   [
+    [
+     4,
+     2
+    ]
+   ],
+   [
+    [
+     4,
+     9
+    ]
+   ]
+  ],
+  "base_tail": "exit_code=4\n--- stdout ---\n\nno tests ran in 0.00s\n\n--- stderr ---\nERROR: file or directory not found: test_issue_13079\n\n",
+  "gold_tail": "exit_code=4\n--- stdout ---\n\nno tests ran in 0.00s\n\n--- stderr ---\nERROR: file or directory not found: test_issue_13079\n\n",
+  "reason": "gold patch does not make the test pass"
+ },
+ {
+  "instance_id": "sympy__sympy-22914",
+  "fixture": "sympy-sympy-22914",
+  "usable": false,
+  "tests": [
+   "test_PythonCodePrinter"
+  ],
+  "base": [
+   [
+    4,
+    12
+   ]
+  ],
+  "gold": [
+   [
+    [
+     4,
+     3
+    ]
+   ],
+   [
+    [
+     4,
+     5
+    ]
+   ]
+  ],
+  "base_tail": "exit_code=4\n--- stdout ---\n\nno tests ran in 0.00s\n\n--- stderr ---\nERROR: file or directory not found: test_PythonCodePrinter\n\n",
+  "gold_tail": "exit_code=4\n--- stdout ---\n\nno tests ran in 0.00s\n\n--- stderr ---\nERROR: file or directory not found: test_PythonCodePrinter\n\n",
+  "reason": "gold patch does not make the test pass"
+ },
+ {
+  "instance_id": "sympy__sympy-23534",
+  "fixture": "sympy-sympy-23534",
+  "usable": false,
+  "tests": [
+   "test_symbols"
+  ],
+  "base": [
+   [
+    4,
+    6
+   ]
+  ],
+  "gold": [
+   [
+    [
+     4,
+     3
+    ]
+   ],
+   [
+    [
+     4,
+     5
+    ]
+   ]
+  ],
+  "base_tail": "exit_code=4\n--- stdout ---\n\nno tests ran in 0.00s\n\n--- stderr ---\nERROR: file or directory not found: test_symbols\n\n",
+  "gold_tail": "exit_code=4\n--- stdout ---\n\nno tests ran in 0.00s\n\n--- stderr ---\nERROR: file or directory not found: test_symbols\n\n",
+  "reason": "gold patch does not make the test pass"
+ },
+ {
+  "instance_id": "sympy__sympy-23950",
+  "fixture": "sympy-sympy-23950",
+  "usable": false,
+  "tests": [
+   "test_as_set"
+  ],
+  "base": [
+   [
+    4,
+    5
+   ]
+  ],
+  "gold": [
+   [
+    [
+     4,
+     7
+    ]
+   ],
+   [
+    [
+     4,
+     3
+    ]
+   ]
+  ],
+  "base_tail": "exit_code=4\n--- stdout ---\n\nno tests ran in 0.00s\n\n--- stderr ---\nERROR: file or directory not found: test_as_set\n\n",
+  "gold_tail": "exit_code=4\n--- stdout ---\n\nno tests ran in 0.00s\n\n--- stderr ---\nERROR: file or directory not found: test_as_set\n\n",
+  "reason": "gold patch does not make the test pass"
+ }
+]

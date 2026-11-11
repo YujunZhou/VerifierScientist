@@ -1,0 +1,11 @@
+{
+ "schema_version": 1,
+ "date": "2026-11-11",
+ "scope": "One frozen-library 28-update run (arm=frozen, seed 1) on a collaborator's machine inside the published container image, plus the smoke test that precedes it. No guidance optimization, no extra seeds or arms.",
+ "authorized_by": "project owner, by direct instruction on 2026-11-11 to hand the run to a collaborator with GPUs",
+ "max_api_usd": 25,
+ "api_ledger": "frozen28_2026-11-11/out/api_budget.json (new ledger, starts at zero)",
+ "gpus": 4,
+ "allowed_hardware": ["A100", "H100"],
+ "note": "Handoff copy. The CRC-side authorization record of the November adaptive run is not part of this package."
+}

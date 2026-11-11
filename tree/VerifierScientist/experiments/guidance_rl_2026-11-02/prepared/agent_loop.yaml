@@ -1,0 +1,2 @@
+- name: guidance_tool_agent
+  _target_: guidance_rl.agent_loop.GuidanceToolAgentLoop

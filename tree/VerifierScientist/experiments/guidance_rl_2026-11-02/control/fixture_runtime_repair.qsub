@@ -1,0 +1,13 @@
+#!/bin/bash
+#$ -N vs_fixture_repair
+#$ -cwd
+#$ -j y
+#$ -pe smp 2
+#$ -l h_rt=03:00:00
+#$ -l h_vmem=8G
+#$ -o /groups/xzhang33/tguo2taicheng/VerifierScientist/experiments/guidance_rl_2026-11-02/audit/fixture_runtime/cpu_repair.log
+set -euo pipefail
+cd /groups/xzhang33/tguo2taicheng
+export OMP_NUM_THREADS=1 OPENBLAS_NUM_THREADS=1 MKL_NUM_THREADS=1 MAX_JOBS=2 MAKEFLAGS=-j2
+export PYTHONDONTWRITEBYTECODE=1
+/users/yzhou25/miniconda3/bin/python3 VerifierScientist/experiments/guidance_rl_2026-11-02/control/fixture_runtime_repair.py

@@ -1,0 +1,1 @@
+{"instance_id": "django__django-14534", "fixture": "django-django-14534", "ok": false, "python": "python3.8", "error": "OSError: [Errno 28] No space left on device", "seconds": 0}

@@ -1,0 +1,4 @@
+JOB_ID=1513124 NSLOTS=40 SGE_HGR_gpu_card=gpu0 gpu1 gpu2 gpu3 CUDA_VISIBLE_DEVICES= TMPDIR=/tmp/tguo2-tmp
+               total        used        free      shared  buff/cache   available
+Mem:             250           4         241           0           6         245
+pid 12403's current affinity list: 0-63

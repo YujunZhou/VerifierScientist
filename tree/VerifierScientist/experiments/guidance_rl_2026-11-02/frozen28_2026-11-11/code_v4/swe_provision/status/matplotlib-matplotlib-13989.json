@@ -1,0 +1,1 @@
+{"instance_id": "matplotlib__matplotlib-13989", "fixture": "matplotlib-matplotlib-13989", "ok": false, "python": "python3.8", "error": "OSError: [Errno 28] No space left on device", "seconds": 0}

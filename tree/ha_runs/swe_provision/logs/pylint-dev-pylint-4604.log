@@ -1,0 +1,290 @@
+
+$ git clone --quiet /tmp/tguo2-swe-mirrors/pylint-dev__pylint.git /users/tguo2/ha_fixtures/pylint-dev-pylint-4604
+[rc=0 16s]
+
+$ git checkout --quiet 1e55ae64624d28c5fe8b63ad7979880ee2e6ef3f
+[rc=0 15s]
+
+$ git apply --whitespace=nowarn _test_patch.diff
+[rc=0 0s]
+
+$ /groups/xzhang33/tguo2taicheng/envs/swetools/bin/uv venv --seed --python /groups/xzhang33/tguo2taicheng/envs/uv-python/cpython-3.9.25-linux-x86_64-gnu/bin/python3.9 /users/tguo2/ha_fixtures/pylint-dev-pylint-4604/.venv
+Using CPython 3.9.25 interpreter at: /groups/xzhang33/tguo2taicheng/envs/uv-python/cpython-3.9.25-linux-x86_64-gnu/bin/python3.9
+Creating virtual environment with seed packages at: /users/tguo2/ha_fixtures/pylint-dev-pylint-4604/.venv
+warning: Failed to hardlink files; falling back to full copy. This may lead to degraded performance.
+         If the cache and target directories are on different filesystems, hardlinking may not be supported.
+         If this is intentional, set `export UV_LINK_MODE=copy` or use `--link-mode=copy` to suppress this warning.
+ + packaging==26.3
+ + pip==26.0.1
+ + setuptools==82.0.1
+ + wheel==0.48.0
+Activate with: source /users/tguo2/ha_fixtures/pylint-dev-pylint-4604/.venv/bin/activate
+[rc=0 4s]
+
+$ /users/tguo2/ha_fixtures/pylint-dev-pylint-4604/.venv/bin/python -m pip install --disable-pip-version-check -q --upgrade pip<24.1 wheel
+[rc=0 11s]
+
+$ /users/tguo2/ha_fixtures/pylint-dev-pylint-4604/.venv/bin/python -m pip install --disable-pip-version-check -r /users/tguo2/ha_fixtures/pylint-dev-pylint-4604/requirements_test.txt
+Obtaining file:///users/tguo2/ha_fixtures/pylint-dev-pylint-4604 (from -r /users/tguo2/ha_fixtures/pylint-dev-pylint-4604/requirements_test_min.txt (line 1))
+  Preparing metadata (setup.py): started
+  Preparing metadata (setup.py): finished with status 'done'
+Collecting black==21.6b0 (from -r /users/tguo2/ha_fixtures/pylint-dev-pylint-4604/requirements_test_pre_commit.txt (line 3))
+  Downloading black-21.6b0-py3-none-any.whl.metadata (34 kB)
+Collecting flake8==3.9.2 (from -r /users/tguo2/ha_fixtures/pylint-dev-pylint-4604/requirements_test_pre_commit.txt (line 4))
+  Downloading flake8-3.9.2-py2.py3-none-any.whl.metadata (3.7 kB)
+Collecting isort==5.9.1 (from -r /users/tguo2/ha_fixtures/pylint-dev-pylint-4604/requirements_test_pre_commit.txt (line 5))
+  Downloading isort-5.9.1-py3-none-any.whl.metadata (12 kB)
+Collecting mypy==0.902 (from -r /users/tguo2/ha_fixtures/pylint-dev-pylint-4604/requirements_test_pre_commit.txt (line 6))
+  Downloading mypy-0.902-cp39-cp39-manylinux2010_x86_64.whl.metadata (1.6 kB)
+Collecting astroid==2.6.0 (from -r /users/tguo2/ha_fixtures/pylint-dev-pylint-4604/requirements_test_min.txt (line 2))
+  Downloading astroid-2.6.0-py3-none-any.whl.metadata (4.6 kB)
+Collecting pytest~=6.2 (from -r /users/tguo2/ha_fixtures/pylint-dev-pylint-4604/requirements_test_min.txt (line 3))
+  Downloading pytest-6.2.5-py3-none-any.whl.metadata (7.5 kB)
+Collecting pytest-benchmark~=3.4 (from -r /users/tguo2/ha_fixtures/pylint-dev-pylint-4604/requirements_test_min.txt (line 4))
+  Downloading pytest_benchmark-3.4.1-py2.py3-none-any.whl.metadata (22 kB)
+Collecting coveralls~=3.1 (from -r /users/tguo2/ha_fixtures/pylint-dev-pylint-4604/requirements_test.txt (line 3))
+  Downloading coveralls-3.3.1-py2.py3-none-any.whl.metadata (5.0 kB)
+Collecting coverage~=5.5 (from -r /users/tguo2/ha_fixtures/pylint-dev-pylint-4604/requirements_test.txt (line 4))
+  Downloading coverage-5.5-cp39-cp39-manylinux2010_x86_64.whl.metadata (8.0 kB)
+Collecting pre-commit~=2.13 (from -r /users/tguo2/ha_fixtures/pylint-dev-pylint-4604/requirements_test.txt (line 5))
+  Downloading pre_commit-2.21.0-py2.py3-none-any.whl.metadata (1.6 kB)
+Collecting tbump~=6.3.2 (from -r /users/tguo2/ha_fixtures/pylint-dev-pylint-4604/requirements_test.txt (line 6))
+  Downloading tbump-6.3.2-py3-none-any.whl.metadata (8.2 kB)
+Collecting pyenchant~=3.2 (from -r /users/tguo2/ha_fixtures/pylint-dev-pylint-4604/requirements_test.txt (line 7))
+  Downloading pyenchant-3.3.0-py3-none-any.whl.metadata (3.4 kB)
+Collecting pytest-cov~=2.12 (from -r /users/tguo2/ha_fixtures/pylint-dev-pylint-4604/requirements_test.txt (line 8))
+  Downloading pytest_cov-2.12.1-py2.py3-none-any.whl.metadata (22 kB)
+Collecting pytest-profiling~=1.7 (from -r /users/tguo2/ha_fixtures/pylint-dev-pylint-4604/requirements_test.txt (line 9))
+  Downloading pytest_profiling-1.8.1-py3-none-any.whl.metadata (15 kB)
+Collecting pytest-xdist~=2.3 (from -r /users/tguo2/ha_fixtures/pylint-dev-pylint-4604/requirements_test.txt (line 10))
+  Downloading pytest_xdist-2.5.0-py3-none-any.whl.metadata (21 kB)
+Collecting types-pkg_resources==0.1.3 (from -r /users/tguo2/ha_fixtures/pylint-dev-pylint-4604/requirements_test.txt (line 12))
+  Downloading types_pkg_resources-0.1.3-py2.py3-none-any.whl.metadata (902 bytes)
+Collecting types-toml==0.1.3 (from -r /users/tguo2/ha_fixtures/pylint-dev-pylint-4604/requirements_test.txt (line 13))
+  Downloading types_toml-0.1.3-py2.py3-none-any.whl.metadata (848 bytes)
+Collecting click>=7.1.2 (from black==21.6b0->-r /users/tguo2/ha_fixtures/pylint-dev-pylint-4604/requirements_test_pre_commit.txt (line 3))
+  Using cached click-8.1.8-py3-none-any.whl.metadata (2.3 kB)
+Collecting appdirs (from black==21.6b0->-r /users/tguo2/ha_fixtures/pylint-dev-pylint-4604/requirements_test_pre_commit.txt (line 3))
+  Downloading appdirs-1.4.4-py2.py3-none-any.whl.metadata (9.0 kB)
+Collecting toml>=0.10.1 (from black==21.6b0->-r /users/tguo2/ha_fixtures/pylint-dev-pylint-4604/requirements_test_pre_commit.txt (line 3))
+  Downloading toml-0.10.2-py2.py3-none-any.whl.metadata (7.1 kB)
+Collecting regex>=2020.1.8 (from black==21.6b0->-r /users/tguo2/ha_fixtures/pylint-dev-pylint-4604/requirements_test_pre_commit.txt (line 3))
+  Downloading regex-2026.1.15-cp39-cp39-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (40 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 40.5/40.5 kB 22.0 MB/s eta 0:00:00
+Collecting pathspec<1,>=0.8.1 (from black==21.6b0->-r /users/tguo2/ha_fixtures/pylint-dev-pylint-4604/requirements_test_pre_commit.txt (line 3))
+  Downloading pathspec-0.12.1-py3-none-any.whl.metadata (21 kB)
+Collecting mypy-extensions>=0.4.3 (from black==21.6b0->-r /users/tguo2/ha_fixtures/pylint-dev-pylint-4604/requirements_test_pre_commit.txt (line 3))
+  Using cached mypy_extensions-1.1.0-py3-none-any.whl.metadata (1.1 kB)
+Collecting pyflakes<2.4.0,>=2.3.0 (from flake8==3.9.2->-r /users/tguo2/ha_fixtures/pylint-dev-pylint-4604/requirements_test_pre_commit.txt (line 4))
+  Downloading pyflakes-2.3.1-py2.py3-none-any.whl.metadata (3.9 kB)
+Collecting pycodestyle<2.8.0,>=2.7.0 (from flake8==3.9.2->-r /users/tguo2/ha_fixtures/pylint-dev-pylint-4604/requirements_test_pre_commit.txt (line 4))
+  Downloading pycodestyle-2.7.0-py2.py3-none-any.whl.metadata (30 kB)
+Collecting mccabe<0.7.0,>=0.6.0 (from flake8==3.9.2->-r /users/tguo2/ha_fixtures/pylint-dev-pylint-4604/requirements_test_pre_commit.txt (line 4))
+  Downloading mccabe-0.6.1-py2.py3-none-any.whl.metadata (4.3 kB)
+Collecting typing-extensions>=3.7.4 (from mypy==0.902->-r /users/tguo2/ha_fixtures/pylint-dev-pylint-4604/requirements_test_pre_commit.txt (line 6))
+  Using cached typing_extensions-4.16.0-py3-none-any.whl.metadata (3.3 kB)
+Collecting mypy-extensions>=0.4.3 (from black==21.6b0->-r /users/tguo2/ha_fixtures/pylint-dev-pylint-4604/requirements_test_pre_commit.txt (line 3))
+  Downloading mypy_extensions-0.4.4.tar.gz (4.2 kB)
+  Preparing metadata (setup.py): started
+  Preparing metadata (setup.py): finished with status 'done'
+Collecting lazy-object-proxy>=1.4.0 (from astroid==2.6.0->-r /users/tguo2/ha_fixtures/pylint-dev-pylint-4604/requirements_test_min.txt (line 2))
+  Downloading lazy_object_proxy-1.12.0-cp39-cp39-manylinux_2_5_x86_64.manylinux1_x86_64.manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (5.1 kB)
+Collecting wrapt<1.13,>=1.11 (from astroid==2.6.0->-r /users/tguo2/ha_fixtures/pylint-dev-pylint-4604/requirements_test_min.txt (line 2))
+  Downloading wrapt-1.12.1.tar.gz (27 kB)
+  Preparing metadata (setup.py): started
+  Preparing metadata (setup.py): finished with status 'done'
+Collecting attrs>=19.2.0 (from pytest~=6.2->-r /users/tguo2/ha_fixtures/pylint-dev-pylint-4604/requirements_test_min.txt (line 3))
+  Using cached attrs-26.1.0-py3-none-any.whl.metadata (8.8 kB)
+Collecting iniconfig (from pytest~=6.2->-r /users/tguo2/ha_fixtures/pylint-dev-pylint-4604/requirements_test_min.txt (line 3))
+  Using cached iniconfig-2.1.0-py3-none-any.whl.metadata (2.7 kB)
+Requirement already satisfied: packaging in ./.venv/lib/python3.9/site-packages (from pytest~=6.2->-r /users/tguo2/ha_fixtures/pylint-dev-pylint-4604/requirements_test_min.txt (line 3)) (26.3)
+Collecting pluggy<2.0,>=0.12 (from pytest~=6.2->-r /users/tguo2/ha_fixtures/pylint-dev-pylint-4604/requirements_test_min.txt (line 3))
+  Using cached pluggy-1.6.0-py3-none-any.whl.metadata (4.8 kB)
+Collecting py>=1.8.2 (from pytest~=6.2->-r /users/tguo2/ha_fixtures/pylint-dev-pylint-4604/requirements_test_min.txt (line 3))
+  Using cached py-1.11.0-py2.py3-none-any.whl.metadata (2.8 kB)
+Collecting py-cpuinfo (from pytest-benchmark~=3.4->-r /users/tguo2/ha_fixtures/pylint-dev-pylint-4604/requirements_test_min.txt (line 4))
+  Downloading py_cpuinfo-9.0.0-py3-none-any.whl.metadata (794 bytes)
+Collecting docopt>=0.6.1 (from coveralls~=3.1->-r /users/tguo2/ha_fixtures/pylint-dev-pylint-4604/requirements_test.txt (line 3))
+  Downloading docopt-0.6.2.tar.gz (25 kB)
+  Preparing metadata (setup.py): started
+  Preparing metadata (setup.py): finished with status 'done'
+Collecting requests>=1.0.0 (from coveralls~=3.1->-r /users/tguo2/ha_fixtures/pylint-dev-pylint-4604/requirements_test.txt (line 3))
+  Using cached requests-2.32.5-py3-none-any.whl.metadata (4.9 kB)
+Collecting cfgv>=2.0.0 (from pre-commit~=2.13->-r /users/tguo2/ha_fixtures/pylint-dev-pylint-4604/requirements_test.txt (line 5))
+  Using cached cfgv-3.4.0-py2.py3-none-any.whl.metadata (8.5 kB)
+Collecting identify>=1.0.0 (from pre-commit~=2.13->-r /users/tguo2/ha_fixtures/pylint-dev-pylint-4604/requirements_test.txt (line 5))
+  Using cached identify-2.6.15-py2.py3-none-any.whl.metadata (4.4 kB)
+Collecting nodeenv>=0.11.1 (from pre-commit~=2.13->-r /users/tguo2/ha_fixtures/pylint-dev-pylint-4604/requirements_test.txt (line 5))
+  Using cached nodeenv-1.11.0-py2.py3-none-any.whl.metadata (40 kB)
+Collecting pyyaml>=5.1 (from pre-commit~=2.13->-r /users/tguo2/ha_fixtures/pylint-dev-pylint-4604/requirements_test.txt (line 5))
+  Using cached pyyaml-6.0.3-cp39-cp39-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (2.4 kB)
+Collecting virtualenv>=20.10.0 (from pre-commit~=2.13->-r /users/tguo2/ha_fixtures/pylint-dev-pylint-4604/requirements_test.txt (line 5))
+  Using cached virtualenv-21.14.6-py3-none-any.whl.metadata (4.1 kB)
+Collecting attrs>=19.2.0 (from pytest~=6.2->-r /users/tguo2/ha_fixtures/pylint-dev-pylint-4604/requirements_test_min.txt (line 3))
+  Downloading attrs-19.3.0-py2.py3-none-any.whl.metadata (9.0 kB)
+Collecting cli-ui<0.11.0,>=0.10.3 (from tbump~=6.3.2->-r /users/tguo2/ha_fixtures/pylint-dev-pylint-4604/requirements_test.txt (line 6))
+  Downloading cli_ui-0.10.3-py3-none-any.whl.metadata (2.2 kB)
+Collecting schema<0.8.0,>=0.7.1 (from tbump~=6.3.2->-r /users/tguo2/ha_fixtures/pylint-dev-pylint-4604/requirements_test.txt (line 6))
+  Downloading schema-0.7.8-py2.py3-none-any.whl.metadata (34 kB)
+Collecting tomlkit>=0.5.8 (from tbump~=6.3.2->-r /users/tguo2/ha_fixtures/pylint-dev-pylint-4604/requirements_test.txt (line 6))
+  Downloading tomlkit-0.15.1-py3-none-any.whl.metadata (3.3 kB)
+Collecting six (from pytest-profiling~=1.7->-r /users/tguo2/ha_fixtures/pylint-dev-pylint-4604/requirements_test.txt (line 9))
+  Using cached six-1.17.0-py2.py3-none-any.whl.metadata (1.7 kB)
+Collecting gprof2dot (from pytest-profiling~=1.7->-r /users/tguo2/ha_fixtures/pylint-dev-pylint-4604/requirements_test.txt (line 9))
+  Downloading gprof2dot-2025.4.14-py3-none-any.whl.metadata (19 kB)
+Collecting execnet>=1.1 (from pytest-xdist~=2.3->-r /users/tguo2/ha_fixtures/pylint-dev-pylint-4604/requirements_test.txt (line 10))
+  Using cached execnet-2.1.2-py3-none-any.whl.metadata (2.9 kB)
+Collecting pytest-forked (from pytest-xdist~=2.3->-r /users/tguo2/ha_fixtures/pylint-dev-pylint-4604/requirements_test.txt (line 10))
+  Downloading pytest_forked-1.6.0-py3-none-any.whl.metadata (3.5 kB)
+Collecting colorama<0.5.0,>=0.4.1 (from cli-ui<0.11.0,>=0.10.3->tbump~=6.3.2->-r /users/tguo2/ha_fixtures/pylint-dev-pylint-4604/requirements_test.txt (line 6))
+  Using cached colorama-0.4.6-py2.py3-none-any.whl.metadata (17 kB)
+Collecting tabulate<0.9.0,>=0.8.3 (from cli-ui<0.11.0,>=0.10.3->tbump~=6.3.2->-r /users/tguo2/ha_fixtures/pylint-dev-pylint-4604/requirements_test.txt (line 6))
+  Downloading tabulate-0.8.10-py3-none-any.whl.metadata (25 kB)
+Collecting unidecode<2.0.0,>=1.0.23 (from cli-ui<0.11.0,>=0.10.3->tbump~=6.3.2->-r /users/tguo2/ha_fixtures/pylint-dev-pylint-4604/requirements_test.txt (line 6))
+  Downloading Unidecode-1.4.0-py3-none-any.whl.metadata (13 kB)
+Collecting charset_normalizer<4,>=2 (from requests>=1.0.0->coveralls~=3.1->-r /users/tguo2/ha_fixtures/pylint-dev-pylint-4604/requirements_test.txt (line 3))
+  Using cached charset_normalizer-3.5.2-cp39-cp39-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (46 kB)
+Collecting idna<4,>=2.5 (from requests>=1.0.0->coveralls~=3.1->-r /users/tguo2/ha_fixtures/pylint-dev-pylint-4604/requirements_test.txt (line 3))
+  Using cached idna-3.20-py3-none-any.whl.metadata (7.2 kB)
+Collecting urllib3<3,>=1.21.1 (from requests>=1.0.0->coveralls~=3.1->-r /users/tguo2/ha_fixtures/pylint-dev-pylint-4604/requirements_test.txt (line 3))
+  Using cached urllib3-2.6.3-py3-none-any.whl.metadata (6.9 kB)
+Collecting certifi>=2017.4.17 (from requests>=1.0.0->coveralls~=3.1->-r /users/tguo2/ha_fixtures/pylint-dev-pylint-4604/requirements_test.txt (line 3))
+  Using cached certifi-2026.7.22-py3-none-any.whl.metadata (2.5 kB)
+Collecting distlib<1,>=0.4.3 (from virtualenv>=20.10.0->pre-commit~=2.13->-r /users/tguo2/ha_fixtures/pylint-dev-pylint-4604/requirements_test.txt (line 5))
+  Using cached distlib-0.4.3-py2.py3-none-any.whl.metadata (5.3 kB)
+Collecting filelock<=3.19.1,>=3.19.1 (from virtualenv>=20.10.0->pre-commit~=2.13->-r /users/tguo2/ha_fixtures/pylint-dev-pylint-4604/requirements_test.txt (line 5))
+  Using cached filelock-3.19.1-py3-none-any.whl.metadata (2.1 kB)
+Collecting platformdirs<5,>=4.4 (from virtualenv>=20.10.0->pre-commit~=2.13->-r /users/tguo2/ha_fixtures/pylint-dev-pylint-4604/requirements_test.txt (line 5))
+  Using cached platformdirs-4.4.0-py3-none-any.whl.metadata (12 kB)
+Collecting python-discovery>=1.6.1 (from virtualenv>=20.10.0->pre-commit~=2.13->-r /users/tguo2/ha_fixtures/pylint-dev-pylint-4604/requirements_test.txt (line 5))
+  Using cached python_discovery-1.6.1-py3-none-any.whl.metadata (5.1 kB)
+WARNING: The candidate selected for download or install is a yanked version: 'types-pkg-resources' candidate (version 0.1.3 at https://files.pythonhosted.org/packages/e9/97/a24ffd614ac2962dabbd599afbed00adf6464604a53b96b5f48301518a5f/types_pkg_resources-0.1.3-py2.py3-none-any.whl (from https://pypi.org/simple/types-pkg-resources/))
+Reason for being yanked: Use types-setuptools instead
+Downloading black-21.6b0-py3-none-any.whl (140 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 140.3/140.3 kB 11.2 MB/s eta 0:00:00
+Downloading flake8-3.9.2-py2.py3-none-any.whl (73 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 73.1/73.1 kB 46.5 MB/s eta 0:00:00
+Downloading isort-5.9.1-py3-none-any.whl (105 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 105.6/105.6 kB 44.7 MB/s eta 0:00:00
+Downloading mypy-0.902-cp39-cp39-manylinux2010_x86_64.whl (23.2 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 23.2/23.2 MB 210.3 MB/s eta 0:00:00
+Downloading astroid-2.6.0-py3-none-any.whl (227 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 227.7/227.7 kB 114.9 MB/s eta 0:00:00
+Downloading types_pkg_resources-0.1.3-py2.py3-none-any.whl (4.8 kB)
+Downloading types_toml-0.1.3-py2.py3-none-any.whl (2.1 kB)
+Downloading pytest-6.2.5-py3-none-any.whl (280 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 280.7/280.7 kB 133.0 MB/s eta 0:00:00
+Downloading pytest_benchmark-3.4.1-py2.py3-none-any.whl (50 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 50.1/50.1 kB 31.2 MB/s eta 0:00:00
+Downloading coveralls-3.3.1-py2.py3-none-any.whl (14 kB)
+Downloading coverage-5.5-cp39-cp39-manylinux2010_x86_64.whl (243 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 243.5/243.5 kB 119.9 MB/s eta 0:00:00
+Downloading pre_commit-2.21.0-py2.py3-none-any.whl (201 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 201.9/201.9 kB 106.1 MB/s eta 0:00:00
+Downloading tbump-6.3.2-py3-none-any.whl (30 kB)
+Downloading pyenchant-3.3.0-py3-none-any.whl (58 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 58.4/58.4 kB 39.0 MB/s eta 0:00:00
+Downloading pytest_cov-2.12.1-py2.py3-none-any.whl (20 kB)
+Downloading pytest_profiling-1.8.1-py3-none-any.whl (9.9 kB)
+Downloading pytest_xdist-2.5.0-py3-none-any.whl (41 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 41.7/41.7 kB 25.8 MB/s eta 0:00:00
+Downloading attrs-19.3.0-py2.py3-none-any.whl (39 kB)
+Using cached cfgv-3.4.0-py2.py3-none-any.whl (7.2 kB)
+Downloading cli_ui-0.10.3-py3-none-any.whl (11 kB)
+Using cached click-8.1.8-py3-none-any.whl (98 kB)
+Using cached execnet-2.1.2-py3-none-any.whl (40 kB)
+Using cached identify-2.6.15-py2.py3-none-any.whl (99 kB)
+Downloading lazy_object_proxy-1.12.0-cp39-cp39-manylinux_2_5_x86_64.manylinux1_x86_64.manylinux_2_17_x86_64.manylinux2014_x86_64.whl (66 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 66.3/66.3 kB 42.8 MB/s eta 0:00:00
+Downloading mccabe-0.6.1-py2.py3-none-any.whl (8.6 kB)
+Using cached nodeenv-1.11.0-py2.py3-none-any.whl (34 kB)
+Downloading pathspec-0.12.1-py3-none-any.whl (31 kB)
+Using cached pluggy-1.6.0-py3-none-any.whl (20 kB)
+Using cached py-1.11.0-py2.py3-none-any.whl (98 kB)
+Downloading pycodestyle-2.7.0-py2.py3-none-any.whl (41 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 41.7/41.7 kB 25.9 MB/s eta 0:00:00
+Downloading pyflakes-2.3.1-py2.py3-none-any.whl (68 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 68.8/68.8 kB 44.8 MB/s eta 0:00:00
+Using cached pyyaml-6.0.3-cp39-cp39-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (750 kB)
+Downloading regex-2026.1.15-cp39-cp39-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (791 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 791.3/791.3 kB 213.4 MB/s eta 0:00:00
+Using cached requests-2.32.5-py3-none-any.whl (64 kB)
+Downloading schema-0.7.8-py2.py3-none-any.whl (19 kB)
+Downloading toml-0.10.2-py2.py3-none-any.whl (16 kB)
+Downloading tomlkit-0.15.1-py3-none-any.whl (49 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 49.4/49.4 kB 29.8 MB/s eta 0:00:00
+Using cached typing_extensions-4.16.0-py3-none-any.whl (45 kB)
+Using cached virtualenv-21.14.6-py3-none-any.whl (5.5 MB)
+Downloading appdirs-1.4.4-py2.py3-none-any.whl (9.6 kB)
+Downloading gprof2dot-2025.4.14-py3-none-any.whl (37 kB)
+Using cached iniconfig-2.1.0-py3-none-any.whl (6.0 kB)
+Downloading py_cpuinfo-9.0.0-py3-none-any.whl (22 kB)
+Downloading pytest_forked-1.6.0-py3-none-any.whl (4.9 kB)
+Using cached six-1.17.0-py2.py3-none-any.whl (11 kB)
+Using cached certifi-2026.7.22-py3-none-any.whl (136 kB)
+Using cached charset_normalizer-3.5.2-cp39-cp39-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (271 kB)
+Using cached colorama-0.4.6-py2.py3-none-any.whl (25 kB)
+Using cached distlib-0.4.3-py2.py3-none-any.whl (470 kB)
+Using cached filelock-3.19.1-py3-none-any.whl (15 kB)
+Using cached idna-3.20-py3-none-any.whl (69 kB)
+Using cached platformdirs-4.4.0-py3-none-any.whl (18 kB)
+Using cached python_discovery-1.6.1-py3-none-any.whl (38 kB)
+Downloading tabulate-0.8.10-py3-none-any.whl (29 kB)
+Downloading Unidecode-1.4.0-py3-none-any.whl (235 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 235.8/235.8 kB 119.6 MB/s eta 0:00:00
+Using cached urllib3-2.6.3-py3-none-any.whl (131 kB)
+Building wheels for collected packages: docopt, mypy-extensions, wrapt
+  Building wheel for docopt (setup.py): started
+  Building wheel for docopt (setup.py): finished with status 'done'
+  Created wheel for docopt: filename=docopt-0.6.2-py2.py3-none-any.whl size=13782 sha256=d9baa8830b0f94df53493d129b90220ec9cdb151f12949c9b5f6c810882216e6
+  Stored in directory: /tmp/tguo2-pip-cache/wheels/70/4a/46/1309fc853b8d395e60bafaf1b6df7845bdd82c95fd59dd8d2b
+  Building wheel for mypy-extensions (setup.py): started
+  Building wheel for mypy-extensions (setup.py): finished with status 'done'
+  Created wheel for mypy-extensions: filename=mypy_extensions-0.4.4-py2.py3-none-any.whl size=4557 sha256=ed3313c5f588716d1984b73613a5ea3da9272368b50f9b46f2242f10df22eb3f
+  Stored in directory: /tmp/tguo2-pip-cache/wheels/5e/53/31/a2f6574f22c8f2d131a5ab0b5f59fa04bc9666517f214243c9
+  Building wheel for wrapt (setup.py): started
+  Building wheel for wrapt (setup.py): finished with status 'done'
+  Created wheel for wrapt: filename=wrapt-1.12.1-cp39-cp39-linux_x86_64.whl size=72583 sha256=5a982d6e55b231c0b2b07f1f5dfedebaf589ae3f031ff7937f7e6fdadd53b6e4
+  Stored in directory: /tmp/tguo2-pip-cache/wheels/98/23/68/efe259aaca055e93b08e74fbe512819c69a2155c11ba3c0f10
+Successfully built docopt mypy-extensions wrapt
+Installing collected packages: wrapt, types-toml, types-pkg_resources, schema, py-cpuinfo, mccabe, docopt, distlib, appdirs, urllib3, unidecode, typing-extensions, tomlkit, toml, tabulate, six, regex, pyyaml, pyflakes, pyenchant, pycodestyle, py, pluggy, platformdirs, pathspec, nodeenv, mypy-extensions, lazy-object-proxy, isort, iniconfig, idna, identify, gprof2dot, filelock, execnet, coverage, colorama, click, charset_normalizer, cfgv, certifi, attrs, requests, python-discovery, pytest, mypy, flake8, cli-ui, black, astroid, virtualenv, tbump, pytest-profiling, pytest-forked, pytest-cov, pytest-benchmark, pylint, coveralls, pytest-xdist, pre-commit
+  Running setup.py develop for pylint
+Successfully installed appdirs-1.4.4 astroid-2.6.0 attrs-19.3.0 black-21.6b0 certifi-2026.7.22 cfgv-3.4.0 charset_normalizer-3.5.2 cli-ui-0.10.3 click-8.1.8 colorama-0.4.6 coverage-5.5 coveralls-3.3.1 distlib-0.4.3 docopt-0.6.2 execnet-2.1.2 filelock-3.19.1 flake8-3.9.2 gprof2dot-2025.4.14 identify-2.6.15 idna-3.20 iniconfig-2.1.0 isort-5.9.1 lazy-object-proxy-1.12.0 mccabe-0.6.1 mypy-0.902 mypy-extensions-0.4.4 nodeenv-1.11.0 pathspec-0.12.1 platformdirs-4.4.0 pluggy-1.6.0 pre-commit-2.21.0 py-1.11.0 py-cpuinfo-9.0.0 pycodestyle-2.7.0 pyenchant-3.3.0 pyflakes-2.3.1 pylint-2.9.0.dev1 pytest-6.2.5 pytest-benchmark-3.4.1 pytest-cov-2.12.1 pytest-forked-1.6.0 pytest-profiling-1.8.1 pytest-xdist-2.5.0 python-discovery-1.6.1 pyyaml-6.0.3 regex-2026.1.15 requests-2.32.5 schema-0.7.8 six-1.17.0 tabulate-0.8.10 tbump-6.3.2 toml-0.10.2 tomlkit-0.15.1 types-pkg_resources-0.1.3 types-toml-0.1.3 typing-extensions-4.16.0 unidecode-1.4.0 urllib3-2.6.3 virtualenv-21.14.6 wrapt-1.12.1
+[rc=0 48s]
+
+$ /users/tguo2/ha_fixtures/pylint-dev-pylint-4604/.venv/bin/python -m pip install -e .
+Obtaining file:///users/tguo2/ha_fixtures/pylint-dev-pylint-4604
+  Preparing metadata (setup.py): started
+  Preparing metadata (setup.py): finished with status 'done'
+Requirement already satisfied: astroid<2.7,>=2.6.0 in ./.venv/lib/python3.9/site-packages (from pylint==2.9.0.dev1) (2.6.0)
+Requirement already satisfied: isort<6,>=4.2.5 in ./.venv/lib/python3.9/site-packages (from pylint==2.9.0.dev1) (5.9.1)
+Requirement already satisfied: mccabe<0.7,>=0.6 in ./.venv/lib/python3.9/site-packages (from pylint==2.9.0.dev1) (0.6.1)
+Requirement already satisfied: toml>=0.7.1 in ./.venv/lib/python3.9/site-packages (from pylint==2.9.0.dev1) (0.10.2)
+Requirement already satisfied: lazy-object-proxy>=1.4.0 in ./.venv/lib/python3.9/site-packages (from astroid<2.7,>=2.6.0->pylint==2.9.0.dev1) (1.12.0)
+Requirement already satisfied: wrapt<1.13,>=1.11 in ./.venv/lib/python3.9/site-packages (from astroid<2.7,>=2.6.0->pylint==2.9.0.dev1) (1.12.1)
+Installing collected packages: pylint
+  Attempting uninstall: pylint
+    Found existing installation: pylint 2.9.0.dev1
+    Uninstalling pylint-2.9.0.dev1:
+      Successfully uninstalled pylint-2.9.0.dev1
+  Running setup.py develop for pylint
+Successfully installed pylint-2.9.0.dev1
+
+[notice] A new release of pip is available: 24.0 -> 26.0.1
+[notice] To update, run: /users/tguo2/ha_fixtures/pylint-dev-pylint-4604/.venv/bin/python -m pip install --upgrade pip
+[rc=0 7s]
+
+$ /users/tguo2/ha_fixtures/pylint-dev-pylint-4604/.venv/bin/python -c import pytest
+[rc=0 0s]
+
+$ git init --quiet
+[rc=0 0s]
+
+$ git add -A
+[rc=0 10s]
+
+$ git ls-files -o -i --exclude-standard -z -- . ':!.venv' ':!**/__pycache__/**' ':!build/**' ':!*.pyc' ':!*.o' | xargs -0 -r git add -f --
+[rc=0 0s]
+
+$ git -c user.email=a@b.c -c user.name=ingest commit --quiet -m init
+[rc=0 2s]

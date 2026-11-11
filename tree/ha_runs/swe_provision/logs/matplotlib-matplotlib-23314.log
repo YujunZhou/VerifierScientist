@@ -1,0 +1,1345 @@
+
+$ git clone --quiet /tmp/tguo2-swe-mirrors/matplotlib__matplotlib.git /users/tguo2/ha_fixtures/matplotlib-matplotlib-23314
+[rc=0 13s]
+
+$ git -c gc.auto=0 checkout --quiet 97fc1154992f64cfb2f86321155a7404efeb2d8a
+[rc=0 10s]
+
+$ git apply --whitespace=nowarn _test_patch.diff
+[rc=0 0s]
+
+$ /groups/xzhang33/tguo2taicheng/envs/swetools/bin/uv venv --seed --python /groups/xzhang33/tguo2taicheng/envs/uv-python/cpython-3.11.17-linux-x86_64-gnu/bin/python3.11 /users/tguo2/ha_fixtures/matplotlib-matplotlib-23314/.venv
+Using CPython 3.11.17 interpreter at: /groups/xzhang33/tguo2taicheng/envs/uv-python/cpython-3.11.17-linux-x86_64-gnu/bin/python3.11
+Creating virtual environment with seed packages at: /users/tguo2/ha_fixtures/matplotlib-matplotlib-23314/.venv
+warning: Failed to hardlink files; falling back to full copy. This may lead to degraded performance.
+         If the cache and target directories are on different filesystems, hardlinking may not be supported.
+         If this is intentional, set `export UV_LINK_MODE=copy` or use `--link-mode=copy` to suppress this warning.
+ + packaging==26.3
+ + pip==26.2.1
+ + setuptools==84.0.0
+ + wheel==0.48.0
+Activate with: source /users/tguo2/ha_fixtures/matplotlib-matplotlib-23314/.venv/bin/activate
+[rc=0 2s]
+
+$ /users/tguo2/ha_fixtures/matplotlib-matplotlib-23314/.venv/bin/python -m pip install --disable-pip-version-check -q --upgrade pip<24.1 wheel
+[rc=0 10s]
+
+$ /users/tguo2/ha_fixtures/matplotlib-matplotlib-23314/.venv/bin/python -m pip install --disable-pip-version-check cairocffi contourpy>=1.0.1 cycler>=0.10.0 fonttools>=4.22.0 kiwisolver>=1.0.1 numpy>=1.19 pillow>=6.2 pyparsing pyqt python-dateutil>=2.1 setuptools setuptools_scm wxpython colorspacious ipython ipywidgets numpydoc>=0.8 packaging pydata-sphinx-theme sphinx>=1.8.1,!=2.0.0 sphinx-copybutton sphinx-gallery>=0.10 sphinx-design mpl-sphinx-theme sphinxcontrib-svg2pdfconverter pikepdf coverage flake8>=3.8 flake8-docstrings>=1.4.0 gtk3 ipykernel nbconvert[execute]!=6.0.0,!=6.0.1 nbformat!=5.0.0,!=5.0.1 pandas!=0.25.0 psutil pre-commit pydocstyle>=5.1.0 pytest!=4.6.0,!=5.4.0 pytest-cov pytest-rerunfailures pytest-timeout pytest-xdist tornado pytz
+Collecting cairocffi
+  Using cached cairocffi-1.7.1-py3-none-any.whl.metadata (3.3 kB)
+Collecting contourpy>=1.0.1
+  Using cached contourpy-1.3.3-cp311-cp311-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl.metadata (5.5 kB)
+Collecting cycler>=0.10.0
+  Using cached cycler-0.12.1-py3-none-any.whl.metadata (3.8 kB)
+Collecting fonttools>=4.22.0
+  Using cached fonttools-4.66.1-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.whl.metadata (130 kB)
+Collecting kiwisolver>=1.0.1
+  Using cached kiwisolver-1.5.1-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.whl.metadata (5.2 kB)
+Collecting numpy>=1.19
+  Using cached numpy-2.4.6-cp311-cp311-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl.metadata (6.6 kB)
+Collecting pillow>=6.2
+  Using cached pillow-12.3.0-cp311-cp311-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl.metadata (9.1 kB)
+Collecting pyparsing
+  Using cached pyparsing-3.3.3-py3-none-any.whl.metadata (5.9 kB)
+ERROR: Ignored the following versions that require a different python version: 1.21.2 Requires-Python >=3.7,<3.11; 1.21.3 Requires-Python >=3.7,<3.11; 1.21.4 Requires-Python >=3.7,<3.11; 1.21.5 Requires-Python >=3.7,<3.11; 1.21.6 Requires-Python >=3.7,<3.11; 1.4.0 Requires-Python >=3.12; 2.5.0 Requires-Python >=3.12; 2.5.0rc1 Requires-Python >=3.12; 2.5.1 Requires-Python >=3.12; 2.5.2 Requires-Python >=3.12; 2.5.3 Requires-Python >=3.12
+ERROR: Could not find a version that satisfies the requirement pyqt (from versions: none)
+ERROR: No matching distribution found for pyqt
+[rc=1 2s]
+
+$ /users/tguo2/ha_fixtures/matplotlib-matplotlib-23314/.venv/bin/python -m pip install --disable-pip-version-check cairocffi
+Collecting cairocffi
+  Using cached cairocffi-1.7.1-py3-none-any.whl.metadata (3.3 kB)
+Collecting cffi>=1.1.0 (from cairocffi)
+  Using cached cffi-2.1.1-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.whl.metadata (2.5 kB)
+Collecting pycparser (from cffi>=1.1.0->cairocffi)
+  Using cached pycparser-3.1-py3-none-any.whl.metadata (8.2 kB)
+Using cached cairocffi-1.7.1-py3-none-any.whl (75 kB)
+Using cached cffi-2.1.1-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (217 kB)
+Using cached pycparser-3.1-py3-none-any.whl (48 kB)
+Installing collected packages: pycparser, cffi, cairocffi
+Successfully installed cairocffi-1.7.1 cffi-2.1.1 pycparser-3.1
+[rc=0 2s]
+
+$ /users/tguo2/ha_fixtures/matplotlib-matplotlib-23314/.venv/bin/python -m pip install --disable-pip-version-check contourpy>=1.0.1
+Collecting contourpy>=1.0.1
+  Using cached contourpy-1.3.3-cp311-cp311-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl.metadata (5.5 kB)
+Collecting numpy>=1.25 (from contourpy>=1.0.1)
+  Using cached numpy-2.4.6-cp311-cp311-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl.metadata (6.6 kB)
+Using cached contourpy-1.3.3-cp311-cp311-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl (355 kB)
+Using cached numpy-2.4.6-cp311-cp311-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl (16.9 MB)
+Installing collected packages: numpy, contourpy
+Successfully installed contourpy-1.3.3 numpy-2.4.6
+[rc=0 11s]
+
+$ /users/tguo2/ha_fixtures/matplotlib-matplotlib-23314/.venv/bin/python -m pip install --disable-pip-version-check cycler>=0.10.0
+Collecting cycler>=0.10.0
+  Using cached cycler-0.12.1-py3-none-any.whl.metadata (3.8 kB)
+Using cached cycler-0.12.1-py3-none-any.whl (8.3 kB)
+Installing collected packages: cycler
+Successfully installed cycler-0.12.1
+[rc=0 2s]
+
+$ /users/tguo2/ha_fixtures/matplotlib-matplotlib-23314/.venv/bin/python -m pip install --disable-pip-version-check fonttools>=4.22.0
+Collecting fonttools>=4.22.0
+  Using cached fonttools-4.66.1-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.whl.metadata (130 kB)
+Using cached fonttools-4.66.1-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (5.4 MB)
+Installing collected packages: fonttools
+Successfully installed fonttools-4.66.1
+[rc=0 6s]
+
+$ /users/tguo2/ha_fixtures/matplotlib-matplotlib-23314/.venv/bin/python -m pip install --disable-pip-version-check kiwisolver>=1.0.1
+Collecting kiwisolver>=1.0.1
+  Using cached kiwisolver-1.5.1-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.whl.metadata (5.2 kB)
+Using cached kiwisolver-1.5.1-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (1.4 MB)
+Installing collected packages: kiwisolver
+Successfully installed kiwisolver-1.5.1
+[rc=0 1s]
+
+$ /users/tguo2/ha_fixtures/matplotlib-matplotlib-23314/.venv/bin/python -m pip install --disable-pip-version-check numpy>=1.19
+Requirement already satisfied: numpy>=1.19 in /users/tguo2/ha_fixtures/matplotlib-matplotlib-23314/.venv/lib/python3.11/site-packages (2.4.6)
+[rc=0 1s]
+
+$ /users/tguo2/ha_fixtures/matplotlib-matplotlib-23314/.venv/bin/python -m pip install --disable-pip-version-check pillow>=6.2
+Collecting pillow>=6.2
+  Using cached pillow-12.3.0-cp311-cp311-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl.metadata (9.1 kB)
+Using cached pillow-12.3.0-cp311-cp311-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl (6.9 MB)
+Installing collected packages: pillow
+Successfully installed pillow-12.3.0
+[rc=0 3s]
+
+$ /users/tguo2/ha_fixtures/matplotlib-matplotlib-23314/.venv/bin/python -m pip install --disable-pip-version-check pyparsing
+Collecting pyparsing
+  Using cached pyparsing-3.3.3-py3-none-any.whl.metadata (5.9 kB)
+Using cached pyparsing-3.3.3-py3-none-any.whl (126 kB)
+Installing collected packages: pyparsing
+Successfully installed pyparsing-3.3.3
+[rc=0 1s]
+
+$ /users/tguo2/ha_fixtures/matplotlib-matplotlib-23314/.venv/bin/python -m pip install --disable-pip-version-check pyqt
+ERROR: Could not find a version that satisfies the requirement pyqt (from versions: none)
+ERROR: No matching distribution found for pyqt
+[rc=1 1s]
+
+$ /users/tguo2/ha_fixtures/matplotlib-matplotlib-23314/.venv/bin/python -m pip install --disable-pip-version-check python-dateutil>=2.1
+Collecting python-dateutil>=2.1
+  Using cached python_dateutil-2.9.0.post0-py2.py3-none-any.whl.metadata (8.4 kB)
+Collecting six>=1.5 (from python-dateutil>=2.1)
+  Using cached six-1.17.0-py2.py3-none-any.whl.metadata (1.7 kB)
+Using cached python_dateutil-2.9.0.post0-py2.py3-none-any.whl (229 kB)
+Using cached six-1.17.0-py2.py3-none-any.whl (11 kB)
+Installing collected packages: six, python-dateutil
+Successfully installed python-dateutil-2.9.0.post0 six-1.17.0
+[rc=0 1s]
+
+$ /users/tguo2/ha_fixtures/matplotlib-matplotlib-23314/.venv/bin/python -m pip install --disable-pip-version-check setuptools
+Requirement already satisfied: setuptools in /users/tguo2/ha_fixtures/matplotlib-matplotlib-23314/.venv/lib/python3.11/site-packages (84.0.0)
+[rc=0 1s]
+
+$ /users/tguo2/ha_fixtures/matplotlib-matplotlib-23314/.venv/bin/python -m pip install --disable-pip-version-check setuptools_scm
+Collecting setuptools_scm
+  Using cached setuptools_scm-10.3.4-py3-none-any.whl.metadata (6.7 kB)
+Collecting vcs-versioning<3,>=2.5.0.dev0 (from setuptools_scm)
+  Using cached vcs_versioning-2.6.0-py3-none-any.whl.metadata (1.7 kB)
+Requirement already satisfied: packaging>=20 in /users/tguo2/ha_fixtures/matplotlib-matplotlib-23314/.venv/lib/python3.11/site-packages (from setuptools_scm) (26.3)
+Requirement already satisfied: setuptools in /users/tguo2/ha_fixtures/matplotlib-matplotlib-23314/.venv/lib/python3.11/site-packages (from setuptools_scm) (84.0.0)
+Using cached setuptools_scm-10.3.4-py3-none-any.whl (33 kB)
+Using cached vcs_versioning-2.6.0-py3-none-any.whl (123 kB)
+Installing collected packages: vcs-versioning, setuptools_scm
+Successfully installed setuptools_scm-10.3.4 vcs-versioning-2.6.0
+[rc=0 2s]
+
+$ /users/tguo2/ha_fixtures/matplotlib-matplotlib-23314/.venv/bin/python -m pip install --disable-pip-version-check wxpython
+Collecting wxpython
+  Using cached wxpython-4.3.1.tar.gz (64.1 MB)
+  Installing build dependencies: started
+  Installing build dependencies: finished with status 'done'
+  Getting requirements to build wheel: started
+  Getting requirements to build wheel: finished with status 'done'
+  Preparing metadata (pyproject.toml): started
+  Preparing metadata (pyproject.toml): finished with status 'done'
+Requirement already satisfied: numpy in /users/tguo2/ha_fixtures/matplotlib-matplotlib-23314/.venv/lib/python3.11/site-packages (from wxpython) (2.4.6)
+Building wheels for collected packages: wxpython
+  Building wheel for wxpython (pyproject.toml): started
+  Building wheel for wxpython (pyproject.toml): finished with status 'error'
+  error: subprocess-exited-with-error
+  
+  × Building wheel for wxpython (pyproject.toml) did not run successfully.
+  │ exit code: 1
+  ╰─> [149 lines of output]
+      /tmp/tguo2-tmp/pip-build-env-ncse7lg0/overlay/lib/python3.11/site-packages/setuptools/config/_apply_pyprojecttoml.py:61: SetuptoolsDeprecationWarning: License classifiers are deprecated.
+      !!
+      
+              ********************************************************************************
+              Please consider removing the following classifiers in favor of a SPDX license expression:
+      
+              License :: OSI Approved
+      
+              See https://packaging.python.org/en/latest/guides/writing-pyproject-toml/#license for details.
+              ********************************************************************************
+      
+      !!
+        dist._finalize_license_expression()
+      /tmp/tguo2-tmp/pip-build-env-ncse7lg0/overlay/lib/python3.11/site-packages/setuptools/dist.py:765: SetuptoolsDeprecationWarning: License classifiers are deprecated.
+      !!
+      
+              ********************************************************************************
+              Please consider removing the following classifiers in favor of a SPDX license expression:
+      
+              License :: OSI Approved
+      
+              See https://packaging.python.org/en/latest/guides/writing-pyproject-toml/#license for details.
+              ********************************************************************************
+      
+      !!
+        self._finalize_license_expression()
+      running bdist_wheel
+      running build
+      Will build using: "/users/tguo2/ha_fixtures/matplotlib-matplotlib-23314/.venv/bin/python"
+      3.11.17 (main, Oct  3 2026, 01:05:36) [Clang 22.1.3 ]
+      Python's architecture is 64bit
+      cfg.VERSION: 4.3.1
+      
+      Running command: build
+      Running command: build_wx
+      wxWidgets build options: ['--wxpython', '--gtk3', '--set_rpath_origin']
+      Configure options: ['--with-gtk=3', '--enable-sound', '--enable-graphics_ctx', '--enable-display', '--enable-debug_flag', '--enable-optimise', '--disable-debugreport', '--enable-uiactionsim', '--enable-autoidman', '--with-sdl', '--disable-rpath', "LDFLAGS='-Wl,-rpath,\\$$ORIGIN'"]
+      /tmp/tguo2-tmp/pip-install-jpohnv3m/wxpython_638c779f8fc74083a13d89a1454e25ad/ext/wxWidgets/configure --with-gtk=3 --enable-sound --enable-graphics_ctx --enable-display --enable-debug_flag --enable-optimise --disable-debugreport --enable-uiactionsim --enable-autoidman --with-sdl --disable-rpath LDFLAGS='-Wl,-rpath,\$$ORIGIN'
+      checking build system type... x86_64-pc-linux-gnu
+      checking host system type... x86_64-pc-linux-gnu
+      checking for toolkit... gtk
+      checking for gcc... gcc
+      checking whether the C compiler works... yes
+      checking for C compiler default output file name... a.out
+      checking for suffix of executables...
+      checking whether we are cross compiling... no
+      checking for suffix of object files... o
+      checking whether we are using the GNU C compiler... yes
+      checking whether gcc accepts -g... yes
+      checking for gcc option to accept ISO C89... none needed
+      checking whether we are using the Intel C compiler... no
+      checking how to run the C preprocessor... gcc -E
+      checking for grep that handles long lines and -e... /bin/grep
+      checking for egrep... /bin/grep -E
+      checking whether gcc needs -traditional... no
+      checking for g++... g++
+      checking whether we are using the GNU C++ compiler... yes
+      checking whether g++ accepts -g... yes
+      checking whether we are using the Intel C++ compiler... no
+      checking whether we are using the Sun C++ compiler... no
+      checking whether g++ supports C++11 features by default... yes
+      checking for ar... ar
+      checking for ANSI C header files... yes
+      checking for sys/types.h... yes
+      checking for sys/stat.h... yes
+      checking for stdlib.h... yes
+      checking for string.h... yes
+      checking for memory.h... yes
+      checking for strings.h... yes
+      checking for inttypes.h... yes
+      checking for stdint.h... yes
+      checking for unistd.h... yes
+      checking for langinfo.h... yes
+      checking for wchar.h... yes
+      checking for sys/select.h... yes
+      checking for cxxabi.h... yes
+      checking for an ANSI C-conforming const... yes
+      checking for inline... inline
+      checking size of short... 2
+      checking size of void *... 8
+      checking size of int... 4
+      checking size of long... 8
+      checking size of size_t... 8
+      checking size of long long... 8
+      checking size of wchar_t... 4
+      checking for va_copy... yes
+      checking for _FILE_OFFSET_BITS value needed for large files... 64
+      checking if large file support is available... yes
+      checking for _LARGEFILE_SOURCE value needed for large files... no
+      checking whether byte ordering is bigendian... no
+      checking for __sync_xxx_and_fetch builtins... yes
+      checking for libraries directories... /usr/lib64
+      checking for cos... no
+      checking for floor... no
+      checking if floating point functions link without -lm... no
+      checking for sin... yes
+      checking for ceil... yes
+      checking if floating point functions link with -lm... yes
+      checking for pkg-config... /bin/pkg-config
+      checking pkg-config is at least version 0.9.0... yes
+      checking for libpcre2-32... yes
+      checking for zlib.h >= 1.1.4... yes
+      checking for zlib.h... (cached) yes
+      checking for deflate in -lz... yes
+      checking for png.h > 0.90... yes
+      checking for png.h... (cached) yes
+      checking for png_sig_cmp in -lpng... yes
+      checking for jpeglib.h... yes
+      checking for jpeg_read_header in -ljpeg... yes
+      checking for jbg_dec_init in -ljbig... no
+      checking for libwebp libwebpdemux... no
+      configure: WARNING: system webp library not found, will use built-in instead
+      checking whether webp_dec.c file exists... yes
+      checking for libtiff-4... yes
+      checking for expat.h... yes
+      checking if expat.h is valid C++ header... yes
+      checking for XML_ParserCreate in -lexpat... yes
+      checking for libcurl... yes
+      checking for gtk+-3.0... no
+      configure: error: Package requirements (gtk+-3.0) were not met:
+      
+      Package 'gtk+-3.0', required by 'virtual:world', not found
+      
+      Consider adjusting the PKG_CONFIG_PATH environment variable if you
+      installed software in a non-standard prefix.
+      
+      Alternatively, you may set the environment variables GTK_CFLAGS
+      and GTK_LIBS to avoid the need to call pkg-config.
+      See the pkg-config man page for more details.
+      Error running configure
+      ERROR: failed building wxWidgets
+      Traceback (most recent call last):
+        File "/tmp/tguo2-tmp/pip-install-jpohnv3m/wxpython_638c779f8fc74083a13d89a1454e25ad/build.py", line 1606, in cmd_build_wx
+          wxbuild.main(wxDir(), build_options)
+        File "/tmp/tguo2-tmp/pip-install-jpohnv3m/wxpython_638c779f8fc74083a13d89a1454e25ad/buildtools/build_wxwidgets.py", line 385, in main
+          exitIfError(wxBuilder.configure(dir=wxRootDir, options=configure_opts, env=env),
+        File "/tmp/tguo2-tmp/pip-install-jpohnv3m/wxpython_638c779f8fc74083a13d89a1454e25ad/buildtools/build_wxwidgets.py", line 70, in exitIfError
+          raise builder.BuildError(msg)
+      buildtools.builder.BuildError: Error running configure
+      Finished command: build_wx (0m2.814s)
+      Finished command: build (0m2.814s)
+      WARNING: Building this way assumes that all generated files have been
+      generated already.  If that is not the case then use build.py directly
+      to generate the source and perform the build stage.  You can use
+      --skip-build with the bdist_* or install commands to avoid this
+      message and the wxWidgets and Phoenix build steps in the future.
+      
+      "/users/tguo2/ha_fixtures/matplotlib-matplotlib-23314/.venv/bin/python" -u build.py build
+      Command '"/users/tguo2/ha_fixtures/matplotlib-matplotlib-23314/.venv/bin/python" -u build.py build' failed with exit code 1.
+      [end of output]
+  
+  note: This error originates from a subprocess, and is likely not a problem with pip.
+  ERROR: Failed building wheel for wxpython
+Failed to build wxpython
+ERROR: Could not build wheels for wxpython, which is required to install pyproject.toml-based projects
+[rc=1 12s]
+
+$ /users/tguo2/ha_fixtures/matplotlib-matplotlib-23314/.venv/bin/python -m pip install --disable-pip-version-check colorspacious
+Collecting colorspacious
+  Using cached colorspacious-1.1.2-py2.py3-none-any.whl.metadata (3.6 kB)
+Requirement already satisfied: numpy in /users/tguo2/ha_fixtures/matplotlib-matplotlib-23314/.venv/lib/python3.11/site-packages (from colorspacious) (2.4.6)
+Using cached colorspacious-1.1.2-py2.py3-none-any.whl (37 kB)
+Installing collected packages: colorspacious
+Successfully installed colorspacious-1.1.2
+[rc=0 1s]
+
+$ /users/tguo2/ha_fixtures/matplotlib-matplotlib-23314/.venv/bin/python -m pip install --disable-pip-version-check ipython
+Collecting ipython
+  Using cached ipython-9.17.1-py3-none-any.whl.metadata (4.6 kB)
+Collecting ipython-pygments-lexers>=1.0.0 (from ipython)
+  Using cached ipython_pygments_lexers-1.1.1-py3-none-any.whl.metadata (1.1 kB)
+Collecting jedi>=0.18.2 (from ipython)
+  Using cached jedi-0.20.0-py2.py3-none-any.whl.metadata (23 kB)
+Collecting matplotlib-inline>=0.1.6 (from ipython)
+  Using cached matplotlib_inline-0.2.2-py3-none-any.whl.metadata (2.4 kB)
+Collecting pexpect>4.6 (from ipython)
+  Using cached pexpect-4.9.0-py2.py3-none-any.whl.metadata (2.5 kB)
+Collecting prompt_toolkit<3.1.0,>=3.0.41 (from ipython)
+  Using cached prompt_toolkit-3.0.53-py3-none-any.whl.metadata (6.4 kB)
+Collecting psutil>=7 (from ipython)
+  Using cached psutil-7.2.2-cp36-abi3-manylinux2010_x86_64.manylinux_2_12_x86_64.manylinux_2_28_x86_64.whl.metadata (22 kB)
+Collecting pygments>=2.14.0 (from ipython)
+  Using cached pygments-2.21.0-py3-none-any.whl.metadata (2.5 kB)
+Collecting stack_data>=0.6.0 (from ipython)
+  Using cached stack_data-0.6.3-py3-none-any.whl.metadata (18 kB)
+Collecting traitlets>=5.13.0 (from ipython)
+  Using cached traitlets-5.16.1-py3-none-any.whl.metadata (10 kB)
+Collecting typing_extensions>=4.6 (from ipython)
+  Using cached typing_extensions-4.16.0-py3-none-any.whl.metadata (3.3 kB)
+Collecting parso<0.9.0,>=0.8.6 (from jedi>=0.18.2->ipython)
+  Using cached parso-0.8.7-py2.py3-none-any.whl.metadata (8.2 kB)
+Collecting ptyprocess>=0.5 (from pexpect>4.6->ipython)
+  Using cached ptyprocess-0.7.0-py2.py3-none-any.whl.metadata (1.3 kB)
+Collecting wcwidth>=0.1.4 (from prompt_toolkit<3.1.0,>=3.0.41->ipython)
+  Using cached wcwidth-0.9.2-cp310-abi3-manylinux2014_x86_64.manylinux_2_17_x86_64.whl.metadata (23 kB)
+Collecting executing>=1.2.0 (from stack_data>=0.6.0->ipython)
+  Using cached executing-2.2.1-py2.py3-none-any.whl.metadata (8.9 kB)
+Collecting asttokens>=2.1.0 (from stack_data>=0.6.0->ipython)
+  Using cached asttokens-3.0.2-py3-none-any.whl.metadata (5.7 kB)
+Collecting pure-eval (from stack_data>=0.6.0->ipython)
+  Using cached pure_eval-0.2.4-py3-none-any.whl.metadata (6.4 kB)
+Using cached ipython-9.17.1-py3-none-any.whl (639 kB)
+Using cached ipython_pygments_lexers-1.1.1-py3-none-any.whl (8.1 kB)
+Using cached jedi-0.20.0-py2.py3-none-any.whl (4.9 MB)
+Using cached matplotlib_inline-0.2.2-py3-none-any.whl (9.5 kB)
+Using cached pexpect-4.9.0-py2.py3-none-any.whl (63 kB)
+Using cached prompt_toolkit-3.0.53-py3-none-any.whl (392 kB)
+Using cached psutil-7.2.2-cp36-abi3-manylinux2010_x86_64.manylinux_2_12_x86_64.manylinux_2_28_x86_64.whl (155 kB)
+Using cached pygments-2.21.0-py3-none-any.whl (1.3 MB)
+Using cached stack_data-0.6.3-py3-none-any.whl (24 kB)
+Using cached traitlets-5.16.1-py3-none-any.whl (86 kB)
+Using cached typing_extensions-4.16.0-py3-none-any.whl (45 kB)
+Using cached asttokens-3.0.2-py3-none-any.whl (28 kB)
+Using cached executing-2.2.1-py2.py3-none-any.whl (28 kB)
+Using cached parso-0.8.7-py2.py3-none-any.whl (107 kB)
+Using cached ptyprocess-0.7.0-py2.py3-none-any.whl (13 kB)
+Using cached wcwidth-0.9.2-cp310-abi3-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (769 kB)
+Using cached pure_eval-0.2.4-py3-none-any.whl (11 kB)
+Installing collected packages: pure-eval, ptyprocess, wcwidth, typing_extensions, traitlets, pygments, psutil, pexpect, parso, executing, asttokens, stack_data, prompt_toolkit, matplotlib-inline, jedi, ipython-pygments-lexers, ipython
+Successfully installed asttokens-3.0.2 executing-2.2.1 ipython-9.17.1 ipython-pygments-lexers-1.1.1 jedi-0.20.0 matplotlib-inline-0.2.2 parso-0.8.7 pexpect-4.9.0 prompt_toolkit-3.0.53 psutil-7.2.2 ptyprocess-0.7.0 pure-eval-0.2.4 pygments-2.21.0 stack_data-0.6.3 traitlets-5.16.1 typing_extensions-4.16.0 wcwidth-0.9.2
+[rc=0 31s]
+
+$ /users/tguo2/ha_fixtures/matplotlib-matplotlib-23314/.venv/bin/python -m pip install --disable-pip-version-check ipywidgets
+Collecting ipywidgets
+  Using cached ipywidgets-8.1.9-py3-none-any.whl.metadata (2.4 kB)
+Collecting comm>=0.1.3 (from ipywidgets)
+  Using cached comm-0.2.3-py3-none-any.whl.metadata (3.7 kB)
+Requirement already satisfied: ipython>=6.1.0 in /users/tguo2/ha_fixtures/matplotlib-matplotlib-23314/.venv/lib/python3.11/site-packages (from ipywidgets) (9.17.1)
+Requirement already satisfied: traitlets>=4.3.1 in /users/tguo2/ha_fixtures/matplotlib-matplotlib-23314/.venv/lib/python3.11/site-packages (from ipywidgets) (5.16.1)
+Collecting widgetsnbextension~=4.0.16 (from ipywidgets)
+  Using cached widgetsnbextension-4.0.16-py3-none-any.whl.metadata (1.6 kB)
+Collecting jupyterlab_widgets~=3.0.17 (from ipywidgets)
+  Using cached jupyterlab_widgets-3.0.17-py3-none-any.whl.metadata (20 kB)
+Requirement already satisfied: ipython-pygments-lexers>=1.0.0 in /users/tguo2/ha_fixtures/matplotlib-matplotlib-23314/.venv/lib/python3.11/site-packages (from ipython>=6.1.0->ipywidgets) (1.1.1)
+Requirement already satisfied: jedi>=0.18.2 in /users/tguo2/ha_fixtures/matplotlib-matplotlib-23314/.venv/lib/python3.11/site-packages (from ipython>=6.1.0->ipywidgets) (0.20.0)
+Requirement already satisfied: matplotlib-inline>=0.1.6 in /users/tguo2/ha_fixtures/matplotlib-matplotlib-23314/.venv/lib/python3.11/site-packages (from ipython>=6.1.0->ipywidgets) (0.2.2)
+Requirement already satisfied: pexpect>4.6 in /users/tguo2/ha_fixtures/matplotlib-matplotlib-23314/.venv/lib/python3.11/site-packages (from ipython>=6.1.0->ipywidgets) (4.9.0)
+Requirement already satisfied: prompt_toolkit<3.1.0,>=3.0.41 in /users/tguo2/ha_fixtures/matplotlib-matplotlib-23314/.venv/lib/python3.11/site-packages (from ipython>=6.1.0->ipywidgets) (3.0.53)
+Requirement already satisfied: psutil>=7 in /users/tguo2/ha_fixtures/matplotlib-matplotlib-23314/.venv/lib/python3.11/site-packages (from ipython>=6.1.0->ipywidgets) (7.2.2)
+Requirement already satisfied: pygments>=2.14.0 in /users/tguo2/ha_fixtures/matplotlib-matplotlib-23314/.venv/lib/python3.11/site-packages (from ipython>=6.1.0->ipywidgets) (2.21.0)
+Requirement already satisfied: stack_data>=0.6.0 in /users/tguo2/ha_fixtures/matplotlib-matplotlib-23314/.venv/lib/python3.11/site-packages (from ipython>=6.1.0->ipywidgets) (0.6.3)
+Requirement already satisfied: typing_extensions>=4.6 in /users/tguo2/ha_fixtures/matplotlib-matplotlib-23314/.venv/lib/python3.11/site-packages (from ipython>=6.1.0->ipywidgets) (4.16.0)
+Requirement already satisfied: parso<0.9.0,>=0.8.6 in /users/tguo2/ha_fixtures/matplotlib-matplotlib-23314/.venv/lib/python3.11/site-packages (from jedi>=0.18.2->ipython>=6.1.0->ipywidgets) (0.8.7)
+Requirement already satisfied: ptyprocess>=0.5 in /users/tguo2/ha_fixtures/matplotlib-matplotlib-23314/.venv/lib/python3.11/site-packages (from pexpect>4.6->ipython>=6.1.0->ipywidgets) (0.7.0)
+Requirement already satisfied: wcwidth>=0.1.4 in /users/tguo2/ha_fixtures/matplotlib-matplotlib-23314/.venv/lib/python3.11/site-packages (from prompt_toolkit<3.1.0,>=3.0.41->ipython>=6.1.0->ipywidgets) (0.9.2)
+Requirement already satisfied: executing>=1.2.0 in /users/tguo2/ha_fixtures/matplotlib-matplotlib-23314/.venv/lib/python3.11/site-packages (from stack_data>=0.6.0->ipython>=6.1.0->ipywidgets) (2.2.1)
+Requirement already satisfied: asttokens>=2.1.0 in /users/tguo2/ha_fixtures/matplotlib-matplotlib-23314/.venv/lib/python3.11/site-packages (from stack_data>=0.6.0->ipython>=6.1.0->ipywidgets) (3.0.2)
+Requirement already satisfied: pure-eval in /users/tguo2/ha_fixtures/matplotlib-matplotlib-23314/.venv/lib/python3.11/site-packages (from stack_data>=0.6.0->ipython>=6.1.0->ipywidgets) (0.2.4)
+Using cached ipywidgets-8.1.9-py3-none-any.whl (140 kB)
+Using cached comm-0.2.3-py3-none-any.whl (7.3 kB)
+Using cached jupyterlab_widgets-3.0.17-py3-none-any.whl (217 kB)
+Using cached widgetsnbextension-4.0.16-py3-none-any.whl (2.2 MB)
+Installing collected packages: widgetsnbextension, jupyterlab_widgets, comm, ipywidgets
+Successfully installed comm-0.2.3 ipywidgets-8.1.9 jupyterlab_widgets-3.0.17 widgetsnbextension-4.0.16
+[rc=0 3s]
+
+$ /users/tguo2/ha_fixtures/matplotlib-matplotlib-23314/.venv/bin/python -m pip install --disable-pip-version-check numpydoc>=0.8
+Collecting numpydoc>=0.8
+  Using cached numpydoc-1.11.0-py3-none-any.whl.metadata (3.8 kB)
+Collecting sphinx>=6 (from numpydoc>=0.8)
+  Using cached sphinx-9.0.4-py3-none-any.whl.metadata (5.8 kB)
+Collecting sphinxcontrib-applehelp>=1.0.7 (from sphinx>=6->numpydoc>=0.8)
+  Using cached sphinxcontrib_applehelp-2.0.0-py3-none-any.whl.metadata (2.3 kB)
+Collecting sphinxcontrib-devhelp>=1.0.6 (from sphinx>=6->numpydoc>=0.8)
+  Using cached sphinxcontrib_devhelp-2.0.0-py3-none-any.whl.metadata (2.3 kB)
+Collecting sphinxcontrib-htmlhelp>=2.0.6 (from sphinx>=6->numpydoc>=0.8)
+  Using cached sphinxcontrib_htmlhelp-2.1.0-py3-none-any.whl.metadata (2.3 kB)
+Collecting sphinxcontrib-jsmath>=1.0.1 (from sphinx>=6->numpydoc>=0.8)
+  Using cached sphinxcontrib_jsmath-1.0.1-py2.py3-none-any.whl.metadata (1.4 kB)
+Collecting sphinxcontrib-qthelp>=1.0.6 (from sphinx>=6->numpydoc>=0.8)
+  Using cached sphinxcontrib_qthelp-2.0.0-py3-none-any.whl.metadata (2.3 kB)
+Collecting sphinxcontrib-serializinghtml>=1.1.9 (from sphinx>=6->numpydoc>=0.8)
+  Using cached sphinxcontrib_serializinghtml-2.0.0-py3-none-any.whl.metadata (2.4 kB)
+Collecting Jinja2>=3.1 (from sphinx>=6->numpydoc>=0.8)
+  Using cached jinja2-3.1.6-py3-none-any.whl.metadata (2.9 kB)
+Requirement already satisfied: Pygments>=2.17 in /users/tguo2/ha_fixtures/matplotlib-matplotlib-23314/.venv/lib/python3.11/site-packages (from sphinx>=6->numpydoc>=0.8) (2.21.0)
+Collecting docutils<0.23,>=0.20 (from sphinx>=6->numpydoc>=0.8)
+  Using cached docutils-0.22.4-py3-none-any.whl.metadata (15 kB)
+Collecting snowballstemmer>=2.2 (from sphinx>=6->numpydoc>=0.8)
+  Using cached snowballstemmer-3.1.1-py3-none-any.whl.metadata (7.9 kB)
+Collecting babel>=2.13 (from sphinx>=6->numpydoc>=0.8)
+  Using cached babel-2.18.0-py3-none-any.whl.metadata (2.2 kB)
+Collecting alabaster>=0.7.14 (from sphinx>=6->numpydoc>=0.8)
+  Using cached alabaster-1.0.0-py3-none-any.whl.metadata (2.8 kB)
+Collecting imagesize>=1.3 (from sphinx>=6->numpydoc>=0.8)
+  Using cached imagesize-2.0.1-py3-none-any.whl.metadata (7.0 kB)
+Collecting requests>=2.30.0 (from sphinx>=6->numpydoc>=0.8)
+  Using cached requests-2.34.2-py3-none-any.whl.metadata (4.8 kB)
+Collecting roman-numerals>=1.0.0 (from sphinx>=6->numpydoc>=0.8)
+  Using cached roman_numerals-4.1.0-py3-none-any.whl.metadata (3.3 kB)
+Requirement already satisfied: packaging>=23.0 in /users/tguo2/ha_fixtures/matplotlib-matplotlib-23314/.venv/lib/python3.11/site-packages (from sphinx>=6->numpydoc>=0.8) (26.3)
+Collecting MarkupSafe>=2.0 (from Jinja2>=3.1->sphinx>=6->numpydoc>=0.8)
+  Using cached markupsafe-3.0.4-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (2.7 kB)
+Collecting charset_normalizer<4,>=2 (from requests>=2.30.0->sphinx>=6->numpydoc>=0.8)
+  Using cached charset_normalizer-3.5.2-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (46 kB)
+Collecting idna<4,>=2.5 (from requests>=2.30.0->sphinx>=6->numpydoc>=0.8)
+  Using cached idna-3.20-py3-none-any.whl.metadata (7.2 kB)
+Collecting urllib3<3,>=1.26 (from requests>=2.30.0->sphinx>=6->numpydoc>=0.8)
+  Using cached urllib3-2.8.0-py3-none-any.whl.metadata (7.4 kB)
+Collecting certifi>=2023.5.7 (from requests>=2.30.0->sphinx>=6->numpydoc>=0.8)
+  Using cached certifi-2026.7.22-py3-none-any.whl.metadata (2.5 kB)
+Using cached numpydoc-1.11.0-py3-none-any.whl (71 kB)
+Using cached sphinx-9.0.4-py3-none-any.whl (3.9 MB)
+Using cached alabaster-1.0.0-py3-none-any.whl (13 kB)
+Using cached babel-2.18.0-py3-none-any.whl (10.2 MB)
+Using cached docutils-0.22.4-py3-none-any.whl (633 kB)
+Using cached imagesize-2.0.1-py3-none-any.whl (14 kB)
+Using cached jinja2-3.1.6-py3-none-any.whl (134 kB)
+Using cached requests-2.34.2-py3-none-any.whl (73 kB)
+Using cached roman_numerals-4.1.0-py3-none-any.whl (7.7 kB)
+Using cached snowballstemmer-3.1.1-py3-none-any.whl (104 kB)
+Using cached sphinxcontrib_applehelp-2.0.0-py3-none-any.whl (119 kB)
+Using cached sphinxcontrib_devhelp-2.0.0-py3-none-any.whl (82 kB)
+Using cached sphinxcontrib_htmlhelp-2.1.0-py3-none-any.whl (98 kB)
+Using cached sphinxcontrib_jsmath-1.0.1-py2.py3-none-any.whl (5.1 kB)
+Using cached sphinxcontrib_qthelp-2.0.0-py3-none-any.whl (88 kB)
+Using cached sphinxcontrib_serializinghtml-2.0.0-py3-none-any.whl (92 kB)
+Using cached certifi-2026.7.22-py3-none-any.whl (136 kB)
+Using cached charset_normalizer-3.5.2-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (269 kB)
+Using cached idna-3.20-py3-none-any.whl (69 kB)
+Using cached markupsafe-3.0.4-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (22 kB)
+Using cached urllib3-2.8.0-py3-none-any.whl (135 kB)
+Installing collected packages: urllib3, sphinxcontrib-serializinghtml, sphinxcontrib-qthelp, sphinxcontrib-jsmath, sphinxcontrib-htmlhelp, sphinxcontrib-devhelp, sphinxcontrib-applehelp, snowballstemmer, roman-numerals, MarkupSafe, imagesize, idna, docutils, charset_normalizer, certifi, babel, alabaster, requests, Jinja2, sphinx, numpydoc
+Successfully installed Jinja2-3.1.6 MarkupSafe-3.0.4 alabaster-1.0.0 babel-2.18.0 certifi-2026.7.22 charset_normalizer-3.5.2 docutils-0.22.4 idna-3.20 imagesize-2.0.1 numpydoc-1.11.0 requests-2.34.2 roman-numerals-4.1.0 snowballstemmer-3.1.1 sphinx-9.0.4 sphinxcontrib-applehelp-2.0.0 sphinxcontrib-devhelp-2.0.0 sphinxcontrib-htmlhelp-2.1.0 sphinxcontrib-jsmath-1.0.1 sphinxcontrib-qthelp-2.0.0 sphinxcontrib-serializinghtml-2.0.0 urllib3-2.8.0
+[rc=0 19s]
+
+$ /users/tguo2/ha_fixtures/matplotlib-matplotlib-23314/.venv/bin/python -m pip install --disable-pip-version-check packaging
+Requirement already satisfied: packaging in /users/tguo2/ha_fixtures/matplotlib-matplotlib-23314/.venv/lib/python3.11/site-packages (26.3)
+[rc=0 1s]
+
+$ /users/tguo2/ha_fixtures/matplotlib-matplotlib-23314/.venv/bin/python -m pip install --disable-pip-version-check pydata-sphinx-theme
+Collecting pydata-sphinx-theme
+  Using cached pydata_sphinx_theme-0.23.0-py3-none-any.whl.metadata (6.0 kB)
+Requirement already satisfied: sphinx<10,>=8.2 in /users/tguo2/ha_fixtures/matplotlib-matplotlib-23314/.venv/lib/python3.11/site-packages (from pydata-sphinx-theme) (9.0.4)
+Collecting beautifulsoup4 (from pydata-sphinx-theme)
+  Using cached beautifulsoup4-4.15.0-py3-none-any.whl.metadata (3.8 kB)
+Requirement already satisfied: docutils!=0.17.0 in /users/tguo2/ha_fixtures/matplotlib-matplotlib-23314/.venv/lib/python3.11/site-packages (from pydata-sphinx-theme) (0.22.4)
+Requirement already satisfied: Babel in /users/tguo2/ha_fixtures/matplotlib-matplotlib-23314/.venv/lib/python3.11/site-packages (from pydata-sphinx-theme) (2.18.0)
+Requirement already satisfied: pygments>=2.7 in /users/tguo2/ha_fixtures/matplotlib-matplotlib-23314/.venv/lib/python3.11/site-packages (from pydata-sphinx-theme) (2.21.0)
+Collecting accessible-pygments (from pydata-sphinx-theme)
+  Using cached accessible_pygments-0.0.5-py3-none-any.whl.metadata (10 kB)
+Requirement already satisfied: jinja2 in /users/tguo2/ha_fixtures/matplotlib-matplotlib-23314/.venv/lib/python3.11/site-packages (from pydata-sphinx-theme) (3.1.6)
+Requirement already satisfied: requests in /users/tguo2/ha_fixtures/matplotlib-matplotlib-23314/.venv/lib/python3.11/site-packages (from pydata-sphinx-theme) (2.34.2)
+Requirement already satisfied: sphinxcontrib-applehelp>=1.0.7 in /users/tguo2/ha_fixtures/matplotlib-matplotlib-23314/.venv/lib/python3.11/site-packages (from sphinx<10,>=8.2->pydata-sphinx-theme) (2.0.0)
+Requirement already satisfied: sphinxcontrib-devhelp>=1.0.6 in /users/tguo2/ha_fixtures/matplotlib-matplotlib-23314/.venv/lib/python3.11/site-packages (from sphinx<10,>=8.2->pydata-sphinx-theme) (2.0.0)
+Requirement already satisfied: sphinxcontrib-htmlhelp>=2.0.6 in /users/tguo2/ha_fixtures/matplotlib-matplotlib-23314/.venv/lib/python3.11/site-packages (from sphinx<10,>=8.2->pydata-sphinx-theme) (2.1.0)
+Requirement already satisfied: sphinxcontrib-jsmath>=1.0.1 in /users/tguo2/ha_fixtures/matplotlib-matplotlib-23314/.venv/lib/python3.11/site-packages (from sphinx<10,>=8.2->pydata-sphinx-theme) (1.0.1)
+Requirement already satisfied: sphinxcontrib-qthelp>=1.0.6 in /users/tguo2/ha_fixtures/matplotlib-matplotlib-23314/.venv/lib/python3.11/site-packages (from sphinx<10,>=8.2->pydata-sphinx-theme) (2.0.0)
+Requirement already satisfied: sphinxcontrib-serializinghtml>=1.1.9 in /users/tguo2/ha_fixtures/matplotlib-matplotlib-23314/.venv/lib/python3.11/site-packages (from sphinx<10,>=8.2->pydata-sphinx-theme) (2.0.0)
+Requirement already satisfied: snowballstemmer>=2.2 in /users/tguo2/ha_fixtures/matplotlib-matplotlib-23314/.venv/lib/python3.11/site-packages (from sphinx<10,>=8.2->pydata-sphinx-theme) (3.1.1)
+Requirement already satisfied: alabaster>=0.7.14 in /users/tguo2/ha_fixtures/matplotlib-matplotlib-23314/.venv/lib/python3.11/site-packages (from sphinx<10,>=8.2->pydata-sphinx-theme) (1.0.0)
+Requirement already satisfied: imagesize>=1.3 in /users/tguo2/ha_fixtures/matplotlib-matplotlib-23314/.venv/lib/python3.11/site-packages (from sphinx<10,>=8.2->pydata-sphinx-theme) (2.0.1)
+Requirement already satisfied: roman-numerals>=1.0.0 in /users/tguo2/ha_fixtures/matplotlib-matplotlib-23314/.venv/lib/python3.11/site-packages (from sphinx<10,>=8.2->pydata-sphinx-theme) (4.1.0)
+Requirement already satisfied: packaging>=23.0 in /users/tguo2/ha_fixtures/matplotlib-matplotlib-23314/.venv/lib/python3.11/site-packages (from sphinx<10,>=8.2->pydata-sphinx-theme) (26.3)
+Requirement already satisfied: MarkupSafe>=2.0 in /users/tguo2/ha_fixtures/matplotlib-matplotlib-23314/.venv/lib/python3.11/site-packages (from jinja2->pydata-sphinx-theme) (3.0.4)
+Requirement already satisfied: charset_normalizer<4,>=2 in /users/tguo2/ha_fixtures/matplotlib-matplotlib-23314/.venv/lib/python3.11/site-packages (from requests->pydata-sphinx-theme) (3.5.2)
+Requirement already satisfied: idna<4,>=2.5 in /users/tguo2/ha_fixtures/matplotlib-matplotlib-23314/.venv/lib/python3.11/site-packages (from requests->pydata-sphinx-theme) (3.20)
+Requirement already satisfied: urllib3<3,>=1.26 in /users/tguo2/ha_fixtures/matplotlib-matplotlib-23314/.venv/lib/python3.11/site-packages (from requests->pydata-sphinx-theme) (2.8.0)
+Requirement already satisfied: certifi>=2023.5.7 in /users/tguo2/ha_fixtures/matplotlib-matplotlib-23314/.venv/lib/python3.11/site-packages (from requests->pydata-sphinx-theme) (2026.7.22)
+Collecting soupsieve>=1.6.1 (from beautifulsoup4->pydata-sphinx-theme)
+  Using cached soupsieve-2.10-py3-none-any.whl.metadata (4.4 kB)
+Requirement already satisfied: typing-extensions>=4.0.0 in /users/tguo2/ha_fixtures/matplotlib-matplotlib-23314/.venv/lib/python3.11/site-packages (from beautifulsoup4->pydata-sphinx-theme) (4.16.0)
+Using cached pydata_sphinx_theme-0.23.0-py3-none-any.whl (6.2 MB)
+Using cached accessible_pygments-0.0.5-py3-none-any.whl (1.4 MB)
+Using cached beautifulsoup4-4.15.0-py3-none-any.whl (109 kB)
+Using cached soupsieve-2.10-py3-none-any.whl (38 kB)
+Installing collected packages: soupsieve, accessible-pygments, beautifulsoup4, pydata-sphinx-theme
+Successfully installed accessible-pygments-0.0.5 beautifulsoup4-4.15.0 pydata-sphinx-theme-0.23.0 soupsieve-2.10
+[rc=0 4s]
+
+$ /users/tguo2/ha_fixtures/matplotlib-matplotlib-23314/.venv/bin/python -m pip install --disable-pip-version-check sphinx>=1.8.1,!=2.0.0
+Requirement already satisfied: sphinx!=2.0.0,>=1.8.1 in /users/tguo2/ha_fixtures/matplotlib-matplotlib-23314/.venv/lib/python3.11/site-packages (9.0.4)
+Requirement already satisfied: sphinxcontrib-applehelp>=1.0.7 in /users/tguo2/ha_fixtures/matplotlib-matplotlib-23314/.venv/lib/python3.11/site-packages (from sphinx!=2.0.0,>=1.8.1) (2.0.0)
+Requirement already satisfied: sphinxcontrib-devhelp>=1.0.6 in /users/tguo2/ha_fixtures/matplotlib-matplotlib-23314/.venv/lib/python3.11/site-packages (from sphinx!=2.0.0,>=1.8.1) (2.0.0)
+Requirement already satisfied: sphinxcontrib-htmlhelp>=2.0.6 in /users/tguo2/ha_fixtures/matplotlib-matplotlib-23314/.venv/lib/python3.11/site-packages (from sphinx!=2.0.0,>=1.8.1) (2.1.0)
+Requirement already satisfied: sphinxcontrib-jsmath>=1.0.1 in /users/tguo2/ha_fixtures/matplotlib-matplotlib-23314/.venv/lib/python3.11/site-packages (from sphinx!=2.0.0,>=1.8.1) (1.0.1)
+Requirement already satisfied: sphinxcontrib-qthelp>=1.0.6 in /users/tguo2/ha_fixtures/matplotlib-matplotlib-23314/.venv/lib/python3.11/site-packages (from sphinx!=2.0.0,>=1.8.1) (2.0.0)
+Requirement already satisfied: sphinxcontrib-serializinghtml>=1.1.9 in /users/tguo2/ha_fixtures/matplotlib-matplotlib-23314/.venv/lib/python3.11/site-packages (from sphinx!=2.0.0,>=1.8.1) (2.0.0)
+Requirement already satisfied: Jinja2>=3.1 in /users/tguo2/ha_fixtures/matplotlib-matplotlib-23314/.venv/lib/python3.11/site-packages (from sphinx!=2.0.0,>=1.8.1) (3.1.6)
+Requirement already satisfied: Pygments>=2.17 in /users/tguo2/ha_fixtures/matplotlib-matplotlib-23314/.venv/lib/python3.11/site-packages (from sphinx!=2.0.0,>=1.8.1) (2.21.0)
+Requirement already satisfied: docutils<0.23,>=0.20 in /users/tguo2/ha_fixtures/matplotlib-matplotlib-23314/.venv/lib/python3.11/site-packages (from sphinx!=2.0.0,>=1.8.1) (0.22.4)
+Requirement already satisfied: snowballstemmer>=2.2 in /users/tguo2/ha_fixtures/matplotlib-matplotlib-23314/.venv/lib/python3.11/site-packages (from sphinx!=2.0.0,>=1.8.1) (3.1.1)
+Requirement already satisfied: babel>=2.13 in /users/tguo2/ha_fixtures/matplotlib-matplotlib-23314/.venv/lib/python3.11/site-packages (from sphinx!=2.0.0,>=1.8.1) (2.18.0)
+Requirement already satisfied: alabaster>=0.7.14 in /users/tguo2/ha_fixtures/matplotlib-matplotlib-23314/.venv/lib/python3.11/site-packages (from sphinx!=2.0.0,>=1.8.1) (1.0.0)
+Requirement already satisfied: imagesize>=1.3 in /users/tguo2/ha_fixtures/matplotlib-matplotlib-23314/.venv/lib/python3.11/site-packages (from sphinx!=2.0.0,>=1.8.1) (2.0.1)
+Requirement already satisfied: requests>=2.30.0 in /users/tguo2/ha_fixtures/matplotlib-matplotlib-23314/.venv/lib/python3.11/site-packages (from sphinx!=2.0.0,>=1.8.1) (2.34.2)
+Requirement already satisfied: roman-numerals>=1.0.0 in /users/tguo2/ha_fixtures/matplotlib-matplotlib-23314/.venv/lib/python3.11/site-packages (from sphinx!=2.0.0,>=1.8.1) (4.1.0)
+Requirement already satisfied: packaging>=23.0 in /users/tguo2/ha_fixtures/matplotlib-matplotlib-23314/.venv/lib/python3.11/site-packages (from sphinx!=2.0.0,>=1.8.1) (26.3)
+Requirement already satisfied: MarkupSafe>=2.0 in /users/tguo2/ha_fixtures/matplotlib-matplotlib-23314/.venv/lib/python3.11/site-packages (from Jinja2>=3.1->sphinx!=2.0.0,>=1.8.1) (3.0.4)
+Requirement already satisfied: charset_normalizer<4,>=2 in /users/tguo2/ha_fixtures/matplotlib-matplotlib-23314/.venv/lib/python3.11/site-packages (from requests>=2.30.0->sphinx!=2.0.0,>=1.8.1) (3.5.2)
+Requirement already satisfied: idna<4,>=2.5 in /users/tguo2/ha_fixtures/matplotlib-matplotlib-23314/.venv/lib/python3.11/site-packages (from requests>=2.30.0->sphinx!=2.0.0,>=1.8.1) (3.20)
+Requirement already satisfied: urllib3<3,>=1.26 in /users/tguo2/ha_fixtures/matplotlib-matplotlib-23314/.venv/lib/python3.11/site-packages (from requests>=2.30.0->sphinx!=2.0.0,>=1.8.1) (2.8.0)
+Requirement already satisfied: certifi>=2023.5.7 in /users/tguo2/ha_fixtures/matplotlib-matplotlib-23314/.venv/lib/python3.11/site-packages (from requests>=2.30.0->sphinx!=2.0.0,>=1.8.1) (2026.7.22)
+[rc=0 3s]
+
+$ /users/tguo2/ha_fixtures/matplotlib-matplotlib-23314/.venv/bin/python -m pip install --disable-pip-version-check sphinx-copybutton
+Collecting sphinx-copybutton
+  Using cached sphinx_copybutton-0.5.2-py3-none-any.whl.metadata (3.2 kB)
+Requirement already satisfied: sphinx>=1.8 in /users/tguo2/ha_fixtures/matplotlib-matplotlib-23314/.venv/lib/python3.11/site-packages (from sphinx-copybutton) (9.0.4)
+Requirement already satisfied: sphinxcontrib-applehelp>=1.0.7 in /users/tguo2/ha_fixtures/matplotlib-matplotlib-23314/.venv/lib/python3.11/site-packages (from sphinx>=1.8->sphinx-copybutton) (2.0.0)
+Requirement already satisfied: sphinxcontrib-devhelp>=1.0.6 in /users/tguo2/ha_fixtures/matplotlib-matplotlib-23314/.venv/lib/python3.11/site-packages (from sphinx>=1.8->sphinx-copybutton) (2.0.0)
+Requirement already satisfied: sphinxcontrib-htmlhelp>=2.0.6 in /users/tguo2/ha_fixtures/matplotlib-matplotlib-23314/.venv/lib/python3.11/site-packages (from sphinx>=1.8->sphinx-copybutton) (2.1.0)
+Requirement already satisfied: sphinxcontrib-jsmath>=1.0.1 in /users/tguo2/ha_fixtures/matplotlib-matplotlib-23314/.venv/lib/python3.11/site-packages (from sphinx>=1.8->sphinx-copybutton) (1.0.1)
+Requirement already satisfied: sphinxcontrib-qthelp>=1.0.6 in /users/tguo2/ha_fixtures/matplotlib-matplotlib-23314/.venv/lib/python3.11/site-packages (from sphinx>=1.8->sphinx-copybutton) (2.0.0)
+Requirement already satisfied: sphinxcontrib-serializinghtml>=1.1.9 in /users/tguo2/ha_fixtures/matplotlib-matplotlib-23314/.venv/lib/python3.11/site-packages (from sphinx>=1.8->sphinx-copybutton) (2.0.0)
+Requirement already satisfied: Jinja2>=3.1 in /users/tguo2/ha_fixtures/matplotlib-matplotlib-23314/.venv/lib/python3.11/site-packages (from sphinx>=1.8->sphinx-copybutton) (3.1.6)
+Requirement already satisfied: Pygments>=2.17 in /users/tguo2/ha_fixtures/matplotlib-matplotlib-23314/.venv/lib/python3.11/site-packages (from sphinx>=1.8->sphinx-copybutton) (2.21.0)
+Requirement already satisfied: docutils<0.23,>=0.20 in /users/tguo2/ha_fixtures/matplotlib-matplotlib-23314/.venv/lib/python3.11/site-packages (from sphinx>=1.8->sphinx-copybutton) (0.22.4)
+Requirement already satisfied: snowballstemmer>=2.2 in /users/tguo2/ha_fixtures/matplotlib-matplotlib-23314/.venv/lib/python3.11/site-packages (from sphinx>=1.8->sphinx-copybutton) (3.1.1)
+Requirement already satisfied: babel>=2.13 in /users/tguo2/ha_fixtures/matplotlib-matplotlib-23314/.venv/lib/python3.11/site-packages (from sphinx>=1.8->sphinx-copybutton) (2.18.0)
+Requirement already satisfied: alabaster>=0.7.14 in /users/tguo2/ha_fixtures/matplotlib-matplotlib-23314/.venv/lib/python3.11/site-packages (from sphinx>=1.8->sphinx-copybutton) (1.0.0)
+Requirement already satisfied: imagesize>=1.3 in /users/tguo2/ha_fixtures/matplotlib-matplotlib-23314/.venv/lib/python3.11/site-packages (from sphinx>=1.8->sphinx-copybutton) (2.0.1)
+Requirement already satisfied: requests>=2.30.0 in /users/tguo2/ha_fixtures/matplotlib-matplotlib-23314/.venv/lib/python3.11/site-packages (from sphinx>=1.8->sphinx-copybutton) (2.34.2)
+Requirement already satisfied: roman-numerals>=1.0.0 in /users/tguo2/ha_fixtures/matplotlib-matplotlib-23314/.venv/lib/python3.11/site-packages (from sphinx>=1.8->sphinx-copybutton) (4.1.0)
+Requirement already satisfied: packaging>=23.0 in /users/tguo2/ha_fixtures/matplotlib-matplotlib-23314/.venv/lib/python3.11/site-packages (from sphinx>=1.8->sphinx-copybutton) (26.3)
+Requirement already satisfied: MarkupSafe>=2.0 in /users/tguo2/ha_fixtures/matplotlib-matplotlib-23314/.venv/lib/python3.11/site-packages (from Jinja2>=3.1->sphinx>=1.8->sphinx-copybutton) (3.0.4)
+Requirement already satisfied: charset_normalizer<4,>=2 in /users/tguo2/ha_fixtures/matplotlib-matplotlib-23314/.venv/lib/python3.11/site-packages (from requests>=2.30.0->sphinx>=1.8->sphinx-copybutton) (3.5.2)
+Requirement already satisfied: idna<4,>=2.5 in /users/tguo2/ha_fixtures/matplotlib-matplotlib-23314/.venv/lib/python3.11/site-packages (from requests>=2.30.0->sphinx>=1.8->sphinx-copybutton) (3.20)
+Requirement already satisfied: urllib3<3,>=1.26 in /users/tguo2/ha_fixtures/matplotlib-matplotlib-23314/.venv/lib/python3.11/site-packages (from requests>=2.30.0->sphinx>=1.8->sphinx-copybutton) (2.8.0)
+Requirement already satisfied: certifi>=2023.5.7 in /users/tguo2/ha_fixtures/matplotlib-matplotlib-23314/.venv/lib/python3.11/site-packages (from requests>=2.30.0->sphinx>=1.8->sphinx-copybutton) (2026.7.22)
+Using cached sphinx_copybutton-0.5.2-py3-none-any.whl (13 kB)
+Installing collected packages: sphinx-copybutton
+Successfully installed sphinx-copybutton-0.5.2
+[rc=0 2s]
+
+$ /users/tguo2/ha_fixtures/matplotlib-matplotlib-23314/.venv/bin/python -m pip install --disable-pip-version-check sphinx-gallery>=0.10
+Collecting sphinx-gallery>=0.10
+  Using cached sphinx_gallery-0.22.1-py3-none-any.whl.metadata (9.5 kB)
+Requirement already satisfied: pillow in /users/tguo2/ha_fixtures/matplotlib-matplotlib-23314/.venv/lib/python3.11/site-packages (from sphinx-gallery>=0.10) (12.3.0)
+Requirement already satisfied: sphinx>=6 in /users/tguo2/ha_fixtures/matplotlib-matplotlib-23314/.venv/lib/python3.11/site-packages (from sphinx-gallery>=0.10) (9.0.4)
+Requirement already satisfied: sphinxcontrib-applehelp>=1.0.7 in /users/tguo2/ha_fixtures/matplotlib-matplotlib-23314/.venv/lib/python3.11/site-packages (from sphinx>=6->sphinx-gallery>=0.10) (2.0.0)
+Requirement already satisfied: sphinxcontrib-devhelp>=1.0.6 in /users/tguo2/ha_fixtures/matplotlib-matplotlib-23314/.venv/lib/python3.11/site-packages (from sphinx>=6->sphinx-gallery>=0.10) (2.0.0)
+Requirement already satisfied: sphinxcontrib-htmlhelp>=2.0.6 in /users/tguo2/ha_fixtures/matplotlib-matplotlib-23314/.venv/lib/python3.11/site-packages (from sphinx>=6->sphinx-gallery>=0.10) (2.1.0)
+Requirement already satisfied: sphinxcontrib-jsmath>=1.0.1 in /users/tguo2/ha_fixtures/matplotlib-matplotlib-23314/.venv/lib/python3.11/site-packages (from sphinx>=6->sphinx-gallery>=0.10) (1.0.1)
+Requirement already satisfied: sphinxcontrib-qthelp>=1.0.6 in /users/tguo2/ha_fixtures/matplotlib-matplotlib-23314/.venv/lib/python3.11/site-packages (from sphinx>=6->sphinx-gallery>=0.10) (2.0.0)
+Requirement already satisfied: sphinxcontrib-serializinghtml>=1.1.9 in /users/tguo2/ha_fixtures/matplotlib-matplotlib-23314/.venv/lib/python3.11/site-packages (from sphinx>=6->sphinx-gallery>=0.10) (2.0.0)
+Requirement already satisfied: Jinja2>=3.1 in /users/tguo2/ha_fixtures/matplotlib-matplotlib-23314/.venv/lib/python3.11/site-packages (from sphinx>=6->sphinx-gallery>=0.10) (3.1.6)
+Requirement already satisfied: Pygments>=2.17 in /users/tguo2/ha_fixtures/matplotlib-matplotlib-23314/.venv/lib/python3.11/site-packages (from sphinx>=6->sphinx-gallery>=0.10) (2.21.0)
+Requirement already satisfied: docutils<0.23,>=0.20 in /users/tguo2/ha_fixtures/matplotlib-matplotlib-23314/.venv/lib/python3.11/site-packages (from sphinx>=6->sphinx-gallery>=0.10) (0.22.4)
+Requirement already satisfied: snowballstemmer>=2.2 in /users/tguo2/ha_fixtures/matplotlib-matplotlib-23314/.venv/lib/python3.11/site-packages (from sphinx>=6->sphinx-gallery>=0.10) (3.1.1)
+Requirement already satisfied: babel>=2.13 in /users/tguo2/ha_fixtures/matplotlib-matplotlib-23314/.venv/lib/python3.11/site-packages (from sphinx>=6->sphinx-gallery>=0.10) (2.18.0)
+Requirement already satisfied: alabaster>=0.7.14 in /users/tguo2/ha_fixtures/matplotlib-matplotlib-23314/.venv/lib/python3.11/site-packages (from sphinx>=6->sphinx-gallery>=0.10) (1.0.0)
+Requirement already satisfied: imagesize>=1.3 in /users/tguo2/ha_fixtures/matplotlib-matplotlib-23314/.venv/lib/python3.11/site-packages (from sphinx>=6->sphinx-gallery>=0.10) (2.0.1)
+Requirement already satisfied: requests>=2.30.0 in /users/tguo2/ha_fixtures/matplotlib-matplotlib-23314/.venv/lib/python3.11/site-packages (from sphinx>=6->sphinx-gallery>=0.10) (2.34.2)
+Requirement already satisfied: roman-numerals>=1.0.0 in /users/tguo2/ha_fixtures/matplotlib-matplotlib-23314/.venv/lib/python3.11/site-packages (from sphinx>=6->sphinx-gallery>=0.10) (4.1.0)
+Requirement already satisfied: packaging>=23.0 in /users/tguo2/ha_fixtures/matplotlib-matplotlib-23314/.venv/lib/python3.11/site-packages (from sphinx>=6->sphinx-gallery>=0.10) (26.3)
+Requirement already satisfied: MarkupSafe>=2.0 in /users/tguo2/ha_fixtures/matplotlib-matplotlib-23314/.venv/lib/python3.11/site-packages (from Jinja2>=3.1->sphinx>=6->sphinx-gallery>=0.10) (3.0.4)
+Requirement already satisfied: charset_normalizer<4,>=2 in /users/tguo2/ha_fixtures/matplotlib-matplotlib-23314/.venv/lib/python3.11/site-packages (from requests>=2.30.0->sphinx>=6->sphinx-gallery>=0.10) (3.5.2)
+Requirement already satisfied: idna<4,>=2.5 in /users/tguo2/ha_fixtures/matplotlib-matplotlib-23314/.venv/lib/python3.11/site-packages (from requests>=2.30.0->sphinx>=6->sphinx-gallery>=0.10) (3.20)
+Requirement already satisfied: urllib3<3,>=1.26 in /users/tguo2/ha_fixtures/matplotlib-matplotlib-23314/.venv/lib/python3.11/site-packages (from requests>=2.30.0->sphinx>=6->sphinx-gallery>=0.10) (2.8.0)
+Requirement already satisfied: certifi>=2023.5.7 in /users/tguo2/ha_fixtures/matplotlib-matplotlib-23314/.venv/lib/python3.11/site-packages (from requests>=2.30.0->sphinx>=6->sphinx-gallery>=0.10) (2026.7.22)
+Using cached sphinx_gallery-0.22.1-py3-none-any.whl (487 kB)
+Installing collected packages: sphinx-gallery
+Successfully installed sphinx-gallery-0.22.1
+[rc=0 3s]
+
+$ /users/tguo2/ha_fixtures/matplotlib-matplotlib-23314/.venv/bin/python -m pip install --disable-pip-version-check sphinx-design
+Collecting sphinx-design
+  Using cached sphinx_design-0.7.0-py3-none-any.whl.metadata (5.5 kB)
+Requirement already satisfied: sphinx<10,>=7 in /users/tguo2/ha_fixtures/matplotlib-matplotlib-23314/.venv/lib/python3.11/site-packages (from sphinx-design) (9.0.4)
+Requirement already satisfied: sphinxcontrib-applehelp>=1.0.7 in /users/tguo2/ha_fixtures/matplotlib-matplotlib-23314/.venv/lib/python3.11/site-packages (from sphinx<10,>=7->sphinx-design) (2.0.0)
+Requirement already satisfied: sphinxcontrib-devhelp>=1.0.6 in /users/tguo2/ha_fixtures/matplotlib-matplotlib-23314/.venv/lib/python3.11/site-packages (from sphinx<10,>=7->sphinx-design) (2.0.0)
+Requirement already satisfied: sphinxcontrib-htmlhelp>=2.0.6 in /users/tguo2/ha_fixtures/matplotlib-matplotlib-23314/.venv/lib/python3.11/site-packages (from sphinx<10,>=7->sphinx-design) (2.1.0)
+Requirement already satisfied: sphinxcontrib-jsmath>=1.0.1 in /users/tguo2/ha_fixtures/matplotlib-matplotlib-23314/.venv/lib/python3.11/site-packages (from sphinx<10,>=7->sphinx-design) (1.0.1)
+Requirement already satisfied: sphinxcontrib-qthelp>=1.0.6 in /users/tguo2/ha_fixtures/matplotlib-matplotlib-23314/.venv/lib/python3.11/site-packages (from sphinx<10,>=7->sphinx-design) (2.0.0)
+Requirement already satisfied: sphinxcontrib-serializinghtml>=1.1.9 in /users/tguo2/ha_fixtures/matplotlib-matplotlib-23314/.venv/lib/python3.11/site-packages (from sphinx<10,>=7->sphinx-design) (2.0.0)
+Requirement already satisfied: Jinja2>=3.1 in /users/tguo2/ha_fixtures/matplotlib-matplotlib-23314/.venv/lib/python3.11/site-packages (from sphinx<10,>=7->sphinx-design) (3.1.6)
+Requirement already satisfied: Pygments>=2.17 in /users/tguo2/ha_fixtures/matplotlib-matplotlib-23314/.venv/lib/python3.11/site-packages (from sphinx<10,>=7->sphinx-design) (2.21.0)
+Requirement already satisfied: docutils<0.23,>=0.20 in /users/tguo2/ha_fixtures/matplotlib-matplotlib-23314/.venv/lib/python3.11/site-packages (from sphinx<10,>=7->sphinx-design) (0.22.4)
+Requirement already satisfied: snowballstemmer>=2.2 in /users/tguo2/ha_fixtures/matplotlib-matplotlib-23314/.venv/lib/python3.11/site-packages (from sphinx<10,>=7->sphinx-design) (3.1.1)
+Requirement already satisfied: babel>=2.13 in /users/tguo2/ha_fixtures/matplotlib-matplotlib-23314/.venv/lib/python3.11/site-packages (from sphinx<10,>=7->sphinx-design) (2.18.0)
+Requirement already satisfied: alabaster>=0.7.14 in /users/tguo2/ha_fixtures/matplotlib-matplotlib-23314/.venv/lib/python3.11/site-packages (from sphinx<10,>=7->sphinx-design) (1.0.0)
+Requirement already satisfied: imagesize>=1.3 in /users/tguo2/ha_fixtures/matplotlib-matplotlib-23314/.venv/lib/python3.11/site-packages (from sphinx<10,>=7->sphinx-design) (2.0.1)
+Requirement already satisfied: requests>=2.30.0 in /users/tguo2/ha_fixtures/matplotlib-matplotlib-23314/.venv/lib/python3.11/site-packages (from sphinx<10,>=7->sphinx-design) (2.34.2)
+Requirement already satisfied: roman-numerals>=1.0.0 in /users/tguo2/ha_fixtures/matplotlib-matplotlib-23314/.venv/lib/python3.11/site-packages (from sphinx<10,>=7->sphinx-design) (4.1.0)
+Requirement already satisfied: packaging>=23.0 in /users/tguo2/ha_fixtures/matplotlib-matplotlib-23314/.venv/lib/python3.11/site-packages (from sphinx<10,>=7->sphinx-design) (26.3)
+Requirement already satisfied: MarkupSafe>=2.0 in /users/tguo2/ha_fixtures/matplotlib-matplotlib-23314/.venv/lib/python3.11/site-packages (from Jinja2>=3.1->sphinx<10,>=7->sphinx-design) (3.0.4)
+Requirement already satisfied: charset_normalizer<4,>=2 in /users/tguo2/ha_fixtures/matplotlib-matplotlib-23314/.venv/lib/python3.11/site-packages (from requests>=2.30.0->sphinx<10,>=7->sphinx-design) (3.5.2)
+Requirement already satisfied: idna<4,>=2.5 in /users/tguo2/ha_fixtures/matplotlib-matplotlib-23314/.venv/lib/python3.11/site-packages (from requests>=2.30.0->sphinx<10,>=7->sphinx-design) (3.20)
+Requirement already satisfied: urllib3<3,>=1.26 in /users/tguo2/ha_fixtures/matplotlib-matplotlib-23314/.venv/lib/python3.11/site-packages (from requests>=2.30.0->sphinx<10,>=7->sphinx-design) (2.8.0)
+Requirement already satisfied: certifi>=2023.5.7 in /users/tguo2/ha_fixtures/matplotlib-matplotlib-23314/.venv/lib/python3.11/site-packages (from requests>=2.30.0->sphinx<10,>=7->sphinx-design) (2026.7.22)
+Using cached sphinx_design-0.7.0-py3-none-any.whl (2.2 MB)
+Installing collected packages: sphinx-design
+Successfully installed sphinx-design-0.7.0
+[rc=0 2s]
+
+$ /users/tguo2/ha_fixtures/matplotlib-matplotlib-23314/.venv/bin/python -m pip install --disable-pip-version-check mpl-sphinx-theme
+Collecting mpl-sphinx-theme
+  Using cached mpl_sphinx_theme-3.11.0-py3-none-any.whl.metadata (2.4 kB)
+Collecting pydata-sphinx-theme==0.18.0 (from mpl-sphinx-theme)
+  Using cached pydata_sphinx_theme-0.18.0-py3-none-any.whl.metadata (6.0 kB)
+Collecting matplotlib (from mpl-sphinx-theme)
+  Using cached matplotlib-3.11.2-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.whl.metadata (80 kB)
+Requirement already satisfied: sphinx-design in /users/tguo2/ha_fixtures/matplotlib-matplotlib-23314/.venv/lib/python3.11/site-packages (from mpl-sphinx-theme) (0.7.0)
+Requirement already satisfied: sphinx<10,>=8.0 in /users/tguo2/ha_fixtures/matplotlib-matplotlib-23314/.venv/lib/python3.11/site-packages (from pydata-sphinx-theme==0.18.0->mpl-sphinx-theme) (9.0.4)
+Requirement already satisfied: beautifulsoup4 in /users/tguo2/ha_fixtures/matplotlib-matplotlib-23314/.venv/lib/python3.11/site-packages (from pydata-sphinx-theme==0.18.0->mpl-sphinx-theme) (4.15.0)
+Requirement already satisfied: docutils!=0.17.0 in /users/tguo2/ha_fixtures/matplotlib-matplotlib-23314/.venv/lib/python3.11/site-packages (from pydata-sphinx-theme==0.18.0->mpl-sphinx-theme) (0.22.4)
+Requirement already satisfied: Babel in /users/tguo2/ha_fixtures/matplotlib-matplotlib-23314/.venv/lib/python3.11/site-packages (from pydata-sphinx-theme==0.18.0->mpl-sphinx-theme) (2.18.0)
+Requirement already satisfied: pygments>=2.7 in /users/tguo2/ha_fixtures/matplotlib-matplotlib-23314/.venv/lib/python3.11/site-packages (from pydata-sphinx-theme==0.18.0->mpl-sphinx-theme) (2.21.0)
+Requirement already satisfied: accessible-pygments in /users/tguo2/ha_fixtures/matplotlib-matplotlib-23314/.venv/lib/python3.11/site-packages (from pydata-sphinx-theme==0.18.0->mpl-sphinx-theme) (0.0.5)
+Requirement already satisfied: typing-extensions in /users/tguo2/ha_fixtures/matplotlib-matplotlib-23314/.venv/lib/python3.11/site-packages (from pydata-sphinx-theme==0.18.0->mpl-sphinx-theme) (4.16.0)
+Requirement already satisfied: contourpy>=1.0.1 in /users/tguo2/ha_fixtures/matplotlib-matplotlib-23314/.venv/lib/python3.11/site-packages (from matplotlib->mpl-sphinx-theme) (1.3.3)
+Requirement already satisfied: cycler>=0.10 in /users/tguo2/ha_fixtures/matplotlib-matplotlib-23314/.venv/lib/python3.11/site-packages (from matplotlib->mpl-sphinx-theme) (0.12.1)
+Requirement already satisfied: fonttools>=4.28.2 in /users/tguo2/ha_fixtures/matplotlib-matplotlib-23314/.venv/lib/python3.11/site-packages (from matplotlib->mpl-sphinx-theme) (4.66.1)
+Requirement already satisfied: kiwisolver>=1.3.1 in /users/tguo2/ha_fixtures/matplotlib-matplotlib-23314/.venv/lib/python3.11/site-packages (from matplotlib->mpl-sphinx-theme) (1.5.1)
+Requirement already satisfied: numpy>=1.25 in /users/tguo2/ha_fixtures/matplotlib-matplotlib-23314/.venv/lib/python3.11/site-packages (from matplotlib->mpl-sphinx-theme) (2.4.6)
+Requirement already satisfied: packaging>=20.0 in /users/tguo2/ha_fixtures/matplotlib-matplotlib-23314/.venv/lib/python3.11/site-packages (from matplotlib->mpl-sphinx-theme) (26.3)
+Requirement already satisfied: pillow>=9 in /users/tguo2/ha_fixtures/matplotlib-matplotlib-23314/.venv/lib/python3.11/site-packages (from matplotlib->mpl-sphinx-theme) (12.3.0)
+Requirement already satisfied: pyparsing>=3 in /users/tguo2/ha_fixtures/matplotlib-matplotlib-23314/.venv/lib/python3.11/site-packages (from matplotlib->mpl-sphinx-theme) (3.3.3)
+Requirement already satisfied: python-dateutil>=2.7 in /users/tguo2/ha_fixtures/matplotlib-matplotlib-23314/.venv/lib/python3.11/site-packages (from matplotlib->mpl-sphinx-theme) (2.9.0.post0)
+Requirement already satisfied: six>=1.5 in /users/tguo2/ha_fixtures/matplotlib-matplotlib-23314/.venv/lib/python3.11/site-packages (from python-dateutil>=2.7->matplotlib->mpl-sphinx-theme) (1.17.0)
+Requirement already satisfied: sphinxcontrib-applehelp>=1.0.7 in /users/tguo2/ha_fixtures/matplotlib-matplotlib-23314/.venv/lib/python3.11/site-packages (from sphinx<10,>=8.0->pydata-sphinx-theme==0.18.0->mpl-sphinx-theme) (2.0.0)
+Requirement already satisfied: sphinxcontrib-devhelp>=1.0.6 in /users/tguo2/ha_fixtures/matplotlib-matplotlib-23314/.venv/lib/python3.11/site-packages (from sphinx<10,>=8.0->pydata-sphinx-theme==0.18.0->mpl-sphinx-theme) (2.0.0)
+Requirement already satisfied: sphinxcontrib-htmlhelp>=2.0.6 in /users/tguo2/ha_fixtures/matplotlib-matplotlib-23314/.venv/lib/python3.11/site-packages (from sphinx<10,>=8.0->pydata-sphinx-theme==0.18.0->mpl-sphinx-theme) (2.1.0)
+Requirement already satisfied: sphinxcontrib-jsmath>=1.0.1 in /users/tguo2/ha_fixtures/matplotlib-matplotlib-23314/.venv/lib/python3.11/site-packages (from sphinx<10,>=8.0->pydata-sphinx-theme==0.18.0->mpl-sphinx-theme) (1.0.1)
+Requirement already satisfied: sphinxcontrib-qthelp>=1.0.6 in /users/tguo2/ha_fixtures/matplotlib-matplotlib-23314/.venv/lib/python3.11/site-packages (from sphinx<10,>=8.0->pydata-sphinx-theme==0.18.0->mpl-sphinx-theme) (2.0.0)
+Requirement already satisfied: sphinxcontrib-serializinghtml>=1.1.9 in /users/tguo2/ha_fixtures/matplotlib-matplotlib-23314/.venv/lib/python3.11/site-packages (from sphinx<10,>=8.0->pydata-sphinx-theme==0.18.0->mpl-sphinx-theme) (2.0.0)
+Requirement already satisfied: Jinja2>=3.1 in /users/tguo2/ha_fixtures/matplotlib-matplotlib-23314/.venv/lib/python3.11/site-packages (from sphinx<10,>=8.0->pydata-sphinx-theme==0.18.0->mpl-sphinx-theme) (3.1.6)
+Requirement already satisfied: snowballstemmer>=2.2 in /users/tguo2/ha_fixtures/matplotlib-matplotlib-23314/.venv/lib/python3.11/site-packages (from sphinx<10,>=8.0->pydata-sphinx-theme==0.18.0->mpl-sphinx-theme) (3.1.1)
+Requirement already satisfied: alabaster>=0.7.14 in /users/tguo2/ha_fixtures/matplotlib-matplotlib-23314/.venv/lib/python3.11/site-packages (from sphinx<10,>=8.0->pydata-sphinx-theme==0.18.0->mpl-sphinx-theme) (1.0.0)
+Requirement already satisfied: imagesize>=1.3 in /users/tguo2/ha_fixtures/matplotlib-matplotlib-23314/.venv/lib/python3.11/site-packages (from sphinx<10,>=8.0->pydata-sphinx-theme==0.18.0->mpl-sphinx-theme) (2.0.1)
+Requirement already satisfied: requests>=2.30.0 in /users/tguo2/ha_fixtures/matplotlib-matplotlib-23314/.venv/lib/python3.11/site-packages (from sphinx<10,>=8.0->pydata-sphinx-theme==0.18.0->mpl-sphinx-theme) (2.34.2)
+Requirement already satisfied: roman-numerals>=1.0.0 in /users/tguo2/ha_fixtures/matplotlib-matplotlib-23314/.venv/lib/python3.11/site-packages (from sphinx<10,>=8.0->pydata-sphinx-theme==0.18.0->mpl-sphinx-theme) (4.1.0)
+Requirement already satisfied: soupsieve>=1.6.1 in /users/tguo2/ha_fixtures/matplotlib-matplotlib-23314/.venv/lib/python3.11/site-packages (from beautifulsoup4->pydata-sphinx-theme==0.18.0->mpl-sphinx-theme) (2.10)
+Requirement already satisfied: MarkupSafe>=2.0 in /users/tguo2/ha_fixtures/matplotlib-matplotlib-23314/.venv/lib/python3.11/site-packages (from Jinja2>=3.1->sphinx<10,>=8.0->pydata-sphinx-theme==0.18.0->mpl-sphinx-theme) (3.0.4)
+Requirement already satisfied: charset_normalizer<4,>=2 in /users/tguo2/ha_fixtures/matplotlib-matplotlib-23314/.venv/lib/python3.11/site-packages (from requests>=2.30.0->sphinx<10,>=8.0->pydata-sphinx-theme==0.18.0->mpl-sphinx-theme) (3.5.2)
+Requirement already satisfied: idna<4,>=2.5 in /users/tguo2/ha_fixtures/matplotlib-matplotlib-23314/.venv/lib/python3.11/site-packages (from requests>=2.30.0->sphinx<10,>=8.0->pydata-sphinx-theme==0.18.0->mpl-sphinx-theme) (3.20)
+Requirement already satisfied: urllib3<3,>=1.26 in /users/tguo2/ha_fixtures/matplotlib-matplotlib-23314/.venv/lib/python3.11/site-packages (from requests>=2.30.0->sphinx<10,>=8.0->pydata-sphinx-theme==0.18.0->mpl-sphinx-theme) (2.8.0)
+Requirement already satisfied: certifi>=2023.5.7 in /users/tguo2/ha_fixtures/matplotlib-matplotlib-23314/.venv/lib/python3.11/site-packages (from requests>=2.30.0->sphinx<10,>=8.0->pydata-sphinx-theme==0.18.0->mpl-sphinx-theme) (2026.7.22)
+Using cached mpl_sphinx_theme-3.11.0-py3-none-any.whl (52 kB)
+Using cached pydata_sphinx_theme-0.18.0-py3-none-any.whl (6.2 MB)
+Using cached matplotlib-3.11.2-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (9.9 MB)
+Installing collected packages: matplotlib, pydata-sphinx-theme, mpl-sphinx-theme
+  Attempting uninstall: pydata-sphinx-theme
+    Found existing installation: pydata-sphinx-theme 0.23.0
+    Uninstalling pydata-sphinx-theme-0.23.0:
+      Successfully uninstalled pydata-sphinx-theme-0.23.0
+Successfully installed matplotlib-3.11.2 mpl-sphinx-theme-3.11.0 pydata-sphinx-theme-0.18.0
+[rc=0 8s]
+
+$ /users/tguo2/ha_fixtures/matplotlib-matplotlib-23314/.venv/bin/python -m pip install --disable-pip-version-check sphinxcontrib-svg2pdfconverter
+Collecting sphinxcontrib-svg2pdfconverter
+  Using cached sphinxcontrib_svg2pdfconverter-2.1.0-py3-none-any.whl.metadata (3.3 kB)
+Requirement already satisfied: Sphinx>=1.6.3 in /users/tguo2/ha_fixtures/matplotlib-matplotlib-23314/.venv/lib/python3.11/site-packages (from sphinxcontrib-svg2pdfconverter) (9.0.4)
+Requirement already satisfied: sphinxcontrib-applehelp>=1.0.7 in /users/tguo2/ha_fixtures/matplotlib-matplotlib-23314/.venv/lib/python3.11/site-packages (from Sphinx>=1.6.3->sphinxcontrib-svg2pdfconverter) (2.0.0)
+Requirement already satisfied: sphinxcontrib-devhelp>=1.0.6 in /users/tguo2/ha_fixtures/matplotlib-matplotlib-23314/.venv/lib/python3.11/site-packages (from Sphinx>=1.6.3->sphinxcontrib-svg2pdfconverter) (2.0.0)
+Requirement already satisfied: sphinxcontrib-htmlhelp>=2.0.6 in /users/tguo2/ha_fixtures/matplotlib-matplotlib-23314/.venv/lib/python3.11/site-packages (from Sphinx>=1.6.3->sphinxcontrib-svg2pdfconverter) (2.1.0)
+Requirement already satisfied: sphinxcontrib-jsmath>=1.0.1 in /users/tguo2/ha_fixtures/matplotlib-matplotlib-23314/.venv/lib/python3.11/site-packages (from Sphinx>=1.6.3->sphinxcontrib-svg2pdfconverter) (1.0.1)
+Requirement already satisfied: sphinxcontrib-qthelp>=1.0.6 in /users/tguo2/ha_fixtures/matplotlib-matplotlib-23314/.venv/lib/python3.11/site-packages (from Sphinx>=1.6.3->sphinxcontrib-svg2pdfconverter) (2.0.0)
+Requirement already satisfied: sphinxcontrib-serializinghtml>=1.1.9 in /users/tguo2/ha_fixtures/matplotlib-matplotlib-23314/.venv/lib/python3.11/site-packages (from Sphinx>=1.6.3->sphinxcontrib-svg2pdfconverter) (2.0.0)
+Requirement already satisfied: Jinja2>=3.1 in /users/tguo2/ha_fixtures/matplotlib-matplotlib-23314/.venv/lib/python3.11/site-packages (from Sphinx>=1.6.3->sphinxcontrib-svg2pdfconverter) (3.1.6)
+Requirement already satisfied: Pygments>=2.17 in /users/tguo2/ha_fixtures/matplotlib-matplotlib-23314/.venv/lib/python3.11/site-packages (from Sphinx>=1.6.3->sphinxcontrib-svg2pdfconverter) (2.21.0)
+Requirement already satisfied: docutils<0.23,>=0.20 in /users/tguo2/ha_fixtures/matplotlib-matplotlib-23314/.venv/lib/python3.11/site-packages (from Sphinx>=1.6.3->sphinxcontrib-svg2pdfconverter) (0.22.4)
+Requirement already satisfied: snowballstemmer>=2.2 in /users/tguo2/ha_fixtures/matplotlib-matplotlib-23314/.venv/lib/python3.11/site-packages (from Sphinx>=1.6.3->sphinxcontrib-svg2pdfconverter) (3.1.1)
+Requirement already satisfied: babel>=2.13 in /users/tguo2/ha_fixtures/matplotlib-matplotlib-23314/.venv/lib/python3.11/site-packages (from Sphinx>=1.6.3->sphinxcontrib-svg2pdfconverter) (2.18.0)
+Requirement already satisfied: alabaster>=0.7.14 in /users/tguo2/ha_fixtures/matplotlib-matplotlib-23314/.venv/lib/python3.11/site-packages (from Sphinx>=1.6.3->sphinxcontrib-svg2pdfconverter) (1.0.0)
+Requirement already satisfied: imagesize>=1.3 in /users/tguo2/ha_fixtures/matplotlib-matplotlib-23314/.venv/lib/python3.11/site-packages (from Sphinx>=1.6.3->sphinxcontrib-svg2pdfconverter) (2.0.1)
+Requirement already satisfied: requests>=2.30.0 in /users/tguo2/ha_fixtures/matplotlib-matplotlib-23314/.venv/lib/python3.11/site-packages (from Sphinx>=1.6.3->sphinxcontrib-svg2pdfconverter) (2.34.2)
+Requirement already satisfied: roman-numerals>=1.0.0 in /users/tguo2/ha_fixtures/matplotlib-matplotlib-23314/.venv/lib/python3.11/site-packages (from Sphinx>=1.6.3->sphinxcontrib-svg2pdfconverter) (4.1.0)
+Requirement already satisfied: packaging>=23.0 in /users/tguo2/ha_fixtures/matplotlib-matplotlib-23314/.venv/lib/python3.11/site-packages (from Sphinx>=1.6.3->sphinxcontrib-svg2pdfconverter) (26.3)
+Requirement already satisfied: MarkupSafe>=2.0 in /users/tguo2/ha_fixtures/matplotlib-matplotlib-23314/.venv/lib/python3.11/site-packages (from Jinja2>=3.1->Sphinx>=1.6.3->sphinxcontrib-svg2pdfconverter) (3.0.4)
+Requirement already satisfied: charset_normalizer<4,>=2 in /users/tguo2/ha_fixtures/matplotlib-matplotlib-23314/.venv/lib/python3.11/site-packages (from requests>=2.30.0->Sphinx>=1.6.3->sphinxcontrib-svg2pdfconverter) (3.5.2)
+Requirement already satisfied: idna<4,>=2.5 in /users/tguo2/ha_fixtures/matplotlib-matplotlib-23314/.venv/lib/python3.11/site-packages (from requests>=2.30.0->Sphinx>=1.6.3->sphinxcontrib-svg2pdfconverter) (3.20)
+Requirement already satisfied: urllib3<3,>=1.26 in /users/tguo2/ha_fixtures/matplotlib-matplotlib-23314/.venv/lib/python3.11/site-packages (from requests>=2.30.0->Sphinx>=1.6.3->sphinxcontrib-svg2pdfconverter) (2.8.0)
+Requirement already satisfied: certifi>=2023.5.7 in /users/tguo2/ha_fixtures/matplotlib-matplotlib-23314/.venv/lib/python3.11/site-packages (from requests>=2.30.0->Sphinx>=1.6.3->sphinxcontrib-svg2pdfconverter) (2026.7.22)
+Using cached sphinxcontrib_svg2pdfconverter-2.1.0-py3-none-any.whl (9.3 kB)
+Installing collected packages: sphinxcontrib-svg2pdfconverter
+Successfully installed sphinxcontrib-svg2pdfconverter-2.1.0
+[rc=0 1s]
+
+$ /users/tguo2/ha_fixtures/matplotlib-matplotlib-23314/.venv/bin/python -m pip install --disable-pip-version-check pikepdf
+Collecting pikepdf
+  Using cached pikepdf-10.16.0-cp311-cp311-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl.metadata (11 kB)
+Requirement already satisfied: Pillow>=10.0.1 in /users/tguo2/ha_fixtures/matplotlib-matplotlib-23314/.venv/lib/python3.11/site-packages (from pikepdf) (12.3.0)
+Collecting lxml>=4.8 (from pikepdf)
+  Using cached lxml-6.1.3-cp311-cp311-manylinux_2_26_x86_64.manylinux_2_28_x86_64.whl.metadata (3.3 kB)
+Requirement already satisfied: packaging in /users/tguo2/ha_fixtures/matplotlib-matplotlib-23314/.venv/lib/python3.11/site-packages (from pikepdf) (26.3)
+Using cached pikepdf-10.16.0-cp311-cp311-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl (2.6 MB)
+Using cached lxml-6.1.3-cp311-cp311-manylinux_2_26_x86_64.manylinux_2_28_x86_64.whl (5.2 MB)
+Installing collected packages: lxml, pikepdf
+Successfully installed lxml-6.1.3 pikepdf-10.16.0
+[rc=0 4s]
+
+$ /users/tguo2/ha_fixtures/matplotlib-matplotlib-23314/.venv/bin/python -m pip install --disable-pip-version-check coverage
+Collecting coverage
+  Using cached coverage-7.16.2-cp311-cp311-manylinux1_x86_64.manylinux_2_28_x86_64.manylinux_2_5_x86_64.whl.metadata (8.2 kB)
+Using cached coverage-7.16.2-cp311-cp311-manylinux1_x86_64.manylinux_2_28_x86_64.manylinux_2_5_x86_64.whl (256 kB)
+Installing collected packages: coverage
+Successfully installed coverage-7.16.2
+[rc=0 3s]
+
+$ /users/tguo2/ha_fixtures/matplotlib-matplotlib-23314/.venv/bin/python -m pip install --disable-pip-version-check flake8>=3.8
+Collecting flake8>=3.8
+  Using cached flake8-7.4.1-py2.py3-none-any.whl.metadata (3.8 kB)
+Collecting mccabe<0.8.0,>=0.7.0 (from flake8>=3.8)
+  Using cached mccabe-0.7.0-py2.py3-none-any.whl.metadata (5.0 kB)
+Collecting pycodestyle<2.16.0,>=2.15.0 (from flake8>=3.8)
+  Using cached pycodestyle-2.15.0-py2.py3-none-any.whl.metadata (4.5 kB)
+Collecting pyflakes<4.1.0,>=4.0.0 (from flake8>=3.8)
+  Using cached pyflakes-4.0.3-py2.py3-none-any.whl.metadata (3.7 kB)
+Using cached flake8-7.4.1-py2.py3-none-any.whl (57 kB)
+Using cached mccabe-0.7.0-py2.py3-none-any.whl (7.3 kB)
+Using cached pycodestyle-2.15.0-py2.py3-none-any.whl (31 kB)
+Using cached pyflakes-4.0.3-py2.py3-none-any.whl (66 kB)
+Installing collected packages: pyflakes, pycodestyle, mccabe, flake8
+Successfully installed flake8-7.4.1 mccabe-0.7.0 pycodestyle-2.15.0 pyflakes-4.0.3
+[rc=0 2s]
+
+$ /users/tguo2/ha_fixtures/matplotlib-matplotlib-23314/.venv/bin/python -m pip install --disable-pip-version-check flake8-docstrings>=1.4.0
+Collecting flake8-docstrings>=1.4.0
+  Using cached flake8_docstrings-1.7.0-py2.py3-none-any.whl.metadata (2.0 kB)
+Requirement already satisfied: flake8>=3 in /users/tguo2/ha_fixtures/matplotlib-matplotlib-23314/.venv/lib/python3.11/site-packages (from flake8-docstrings>=1.4.0) (7.4.1)
+Collecting pydocstyle>=2.1 (from flake8-docstrings>=1.4.0)
+  Using cached pydocstyle-6.3.0-py3-none-any.whl.metadata (3.7 kB)
+Requirement already satisfied: mccabe<0.8.0,>=0.7.0 in /users/tguo2/ha_fixtures/matplotlib-matplotlib-23314/.venv/lib/python3.11/site-packages (from flake8>=3->flake8-docstrings>=1.4.0) (0.7.0)
+Requirement already satisfied: pycodestyle<2.16.0,>=2.15.0 in /users/tguo2/ha_fixtures/matplotlib-matplotlib-23314/.venv/lib/python3.11/site-packages (from flake8>=3->flake8-docstrings>=1.4.0) (2.15.0)
+Requirement already satisfied: pyflakes<4.1.0,>=4.0.0 in /users/tguo2/ha_fixtures/matplotlib-matplotlib-23314/.venv/lib/python3.11/site-packages (from flake8>=3->flake8-docstrings>=1.4.0) (4.0.3)
+Requirement already satisfied: snowballstemmer>=2.2.0 in /users/tguo2/ha_fixtures/matplotlib-matplotlib-23314/.venv/lib/python3.11/site-packages (from pydocstyle>=2.1->flake8-docstrings>=1.4.0) (3.1.1)
+Using cached flake8_docstrings-1.7.0-py2.py3-none-any.whl (5.0 kB)
+Using cached pydocstyle-6.3.0-py3-none-any.whl (38 kB)
+Installing collected packages: pydocstyle, flake8-docstrings
+Successfully installed flake8-docstrings-1.7.0 pydocstyle-6.3.0
+[rc=0 2s]
+
+$ /users/tguo2/ha_fixtures/matplotlib-matplotlib-23314/.venv/bin/python -m pip install --disable-pip-version-check gtk3
+ERROR: Could not find a version that satisfies the requirement gtk3 (from versions: none)
+ERROR: No matching distribution found for gtk3
+[rc=1 1s]
+
+$ /users/tguo2/ha_fixtures/matplotlib-matplotlib-23314/.venv/bin/python -m pip install --disable-pip-version-check ipykernel
+Collecting ipykernel
+  Using cached ipykernel-7.4.0-py3-none-any.whl.metadata (3.4 kB)
+Requirement already satisfied: comm>=0.1.1 in /users/tguo2/ha_fixtures/matplotlib-matplotlib-23314/.venv/lib/python3.11/site-packages (from ipykernel) (0.2.3)
+Collecting debugpy>=1.6.5 (from ipykernel)
+  Using cached debugpy-1.8.22-cp311-cp311-manylinux_2_34_x86_64.whl.metadata (1.4 kB)
+Requirement already satisfied: ipython>=7.23.1 in /users/tguo2/ha_fixtures/matplotlib-matplotlib-23314/.venv/lib/python3.11/site-packages (from ipykernel) (9.17.1)
+Collecting jupyter-client>=8.9.0 (from ipykernel)
+  Using cached jupyter_client-8.10.0-py3-none-any.whl.metadata (8.5 kB)
+Collecting jupyter-core!=6.0.*,>=5.1 (from ipykernel)
+  Using cached jupyter_core-5.9.1-py3-none-any.whl.metadata (1.5 kB)
+Requirement already satisfied: matplotlib-inline>=0.1 in /users/tguo2/ha_fixtures/matplotlib-matplotlib-23314/.venv/lib/python3.11/site-packages (from ipykernel) (0.2.2)
+Collecting nest-asyncio2>=1.7.0 (from ipykernel)
+  Using cached nest_asyncio2-1.7.4-py3-none-any.whl.metadata (7.0 kB)
+Requirement already satisfied: packaging>=22 in /users/tguo2/ha_fixtures/matplotlib-matplotlib-23314/.venv/lib/python3.11/site-packages (from ipykernel) (26.3)
+Collecting pyzmq>=25 (from ipykernel)
+  Using cached pyzmq-27.2.0-cp311-cp311-manylinux_2_26_x86_64.manylinux_2_28_x86_64.whl.metadata (3.8 kB)
+Collecting tornado>=6.5.7 (from ipykernel)
+  Using cached tornado-6.5.10-cp39-abi3-manylinux1_x86_64.manylinux_2_28_x86_64.manylinux_2_5_x86_64.whl.metadata (2.8 kB)
+Requirement already satisfied: traitlets>=5.4.0 in /users/tguo2/ha_fixtures/matplotlib-matplotlib-23314/.venv/lib/python3.11/site-packages (from ipykernel) (5.16.1)
+Requirement already satisfied: ipython-pygments-lexers>=1.0.0 in /users/tguo2/ha_fixtures/matplotlib-matplotlib-23314/.venv/lib/python3.11/site-packages (from ipython>=7.23.1->ipykernel) (1.1.1)
+Requirement already satisfied: jedi>=0.18.2 in /users/tguo2/ha_fixtures/matplotlib-matplotlib-23314/.venv/lib/python3.11/site-packages (from ipython>=7.23.1->ipykernel) (0.20.0)
+Requirement already satisfied: pexpect>4.6 in /users/tguo2/ha_fixtures/matplotlib-matplotlib-23314/.venv/lib/python3.11/site-packages (from ipython>=7.23.1->ipykernel) (4.9.0)
+Requirement already satisfied: prompt_toolkit<3.1.0,>=3.0.41 in /users/tguo2/ha_fixtures/matplotlib-matplotlib-23314/.venv/lib/python3.11/site-packages (from ipython>=7.23.1->ipykernel) (3.0.53)
+Requirement already satisfied: psutil>=7 in /users/tguo2/ha_fixtures/matplotlib-matplotlib-23314/.venv/lib/python3.11/site-packages (from ipython>=7.23.1->ipykernel) (7.2.2)
+Requirement already satisfied: pygments>=2.14.0 in /users/tguo2/ha_fixtures/matplotlib-matplotlib-23314/.venv/lib/python3.11/site-packages (from ipython>=7.23.1->ipykernel) (2.21.0)
+Requirement already satisfied: stack_data>=0.6.0 in /users/tguo2/ha_fixtures/matplotlib-matplotlib-23314/.venv/lib/python3.11/site-packages (from ipython>=7.23.1->ipykernel) (0.6.3)
+Requirement already satisfied: typing_extensions>=4.6 in /users/tguo2/ha_fixtures/matplotlib-matplotlib-23314/.venv/lib/python3.11/site-packages (from ipython>=7.23.1->ipykernel) (4.16.0)
+Requirement already satisfied: python-dateutil>=2.8.2 in /users/tguo2/ha_fixtures/matplotlib-matplotlib-23314/.venv/lib/python3.11/site-packages (from jupyter-client>=8.9.0->ipykernel) (2.9.0.post0)
+Collecting platformdirs>=2.5 (from jupyter-core!=6.0.*,>=5.1->ipykernel)
+  Using cached platformdirs-4.12.4-py3-none-any.whl.metadata (5.5 kB)
+Requirement already satisfied: parso<0.9.0,>=0.8.6 in /users/tguo2/ha_fixtures/matplotlib-matplotlib-23314/.venv/lib/python3.11/site-packages (from jedi>=0.18.2->ipython>=7.23.1->ipykernel) (0.8.7)
+Requirement already satisfied: ptyprocess>=0.5 in /users/tguo2/ha_fixtures/matplotlib-matplotlib-23314/.venv/lib/python3.11/site-packages (from pexpect>4.6->ipython>=7.23.1->ipykernel) (0.7.0)
+Requirement already satisfied: wcwidth>=0.1.4 in /users/tguo2/ha_fixtures/matplotlib-matplotlib-23314/.venv/lib/python3.11/site-packages (from prompt_toolkit<3.1.0,>=3.0.41->ipython>=7.23.1->ipykernel) (0.9.2)
+Requirement already satisfied: six>=1.5 in /users/tguo2/ha_fixtures/matplotlib-matplotlib-23314/.venv/lib/python3.11/site-packages (from python-dateutil>=2.8.2->jupyter-client>=8.9.0->ipykernel) (1.17.0)
+Requirement already satisfied: executing>=1.2.0 in /users/tguo2/ha_fixtures/matplotlib-matplotlib-23314/.venv/lib/python3.11/site-packages (from stack_data>=0.6.0->ipython>=7.23.1->ipykernel) (2.2.1)
+Requirement already satisfied: asttokens>=2.1.0 in /users/tguo2/ha_fixtures/matplotlib-matplotlib-23314/.venv/lib/python3.11/site-packages (from stack_data>=0.6.0->ipython>=7.23.1->ipykernel) (3.0.2)
+Requirement already satisfied: pure-eval in /users/tguo2/ha_fixtures/matplotlib-matplotlib-23314/.venv/lib/python3.11/site-packages (from stack_data>=0.6.0->ipython>=7.23.1->ipykernel) (0.2.4)
+Using cached ipykernel-7.4.0-py3-none-any.whl (123 kB)
+Using cached debugpy-1.8.22-cp311-cp311-manylinux_2_34_x86_64.whl (3.1 MB)
+Using cached jupyter_client-8.10.0-py3-none-any.whl (110 kB)
+Using cached jupyter_core-5.9.1-py3-none-any.whl (29 kB)
+Using cached nest_asyncio2-1.7.4-py3-none-any.whl (8.5 kB)
+Using cached pyzmq-27.2.0-cp311-cp311-manylinux_2_26_x86_64.manylinux_2_28_x86_64.whl (888 kB)
+Using cached tornado-6.5.10-cp39-abi3-manylinux1_x86_64.manylinux_2_28_x86_64.manylinux_2_5_x86_64.whl (467 kB)
+Using cached platformdirs-4.12.4-py3-none-any.whl (32 kB)
+Installing collected packages: tornado, pyzmq, platformdirs, nest-asyncio2, debugpy, jupyter-core, jupyter-client, ipykernel
+Successfully installed debugpy-1.8.22 ipykernel-7.4.0 jupyter-client-8.10.0 jupyter-core-5.9.1 nest-asyncio2-1.7.4 platformdirs-4.12.4 pyzmq-27.2.0 tornado-6.5.10
+[rc=0 8s]
+
+$ /users/tguo2/ha_fixtures/matplotlib-matplotlib-23314/.venv/bin/python -m pip install --disable-pip-version-check nbconvert[execute]!=6.0.0,!=6.0.1
+Collecting nbconvert!=6.0.0,!=6.0.1 (from nbconvert[execute]!=6.0.0,!=6.0.1)
+  Using cached nbconvert-7.17.1-py3-none-any.whl.metadata (8.4 kB)
+Requirement already satisfied: beautifulsoup4 in /users/tguo2/ha_fixtures/matplotlib-matplotlib-23314/.venv/lib/python3.11/site-packages (from nbconvert!=6.0.0,!=6.0.1->nbconvert[execute]!=6.0.0,!=6.0.1) (4.15.0)
+Collecting bleach!=5.0.0 (from bleach[css]!=5.0.0->nbconvert!=6.0.0,!=6.0.1->nbconvert[execute]!=6.0.0,!=6.0.1)
+  Using cached bleach-6.4.0-py3-none-any.whl.metadata (32 kB)
+Collecting defusedxml (from nbconvert!=6.0.0,!=6.0.1->nbconvert[execute]!=6.0.0,!=6.0.1)
+  Using cached defusedxml-0.7.1-py2.py3-none-any.whl.metadata (32 kB)
+Requirement already satisfied: jinja2>=3.0 in /users/tguo2/ha_fixtures/matplotlib-matplotlib-23314/.venv/lib/python3.11/site-packages (from nbconvert!=6.0.0,!=6.0.1->nbconvert[execute]!=6.0.0,!=6.0.1) (3.1.6)
+Requirement already satisfied: jupyter-core>=4.7 in /users/tguo2/ha_fixtures/matplotlib-matplotlib-23314/.venv/lib/python3.11/site-packages (from nbconvert!=6.0.0,!=6.0.1->nbconvert[execute]!=6.0.0,!=6.0.1) (5.9.1)
+Collecting jupyterlab-pygments (from nbconvert!=6.0.0,!=6.0.1->nbconvert[execute]!=6.0.0,!=6.0.1)
+  Using cached jupyterlab_pygments-0.3.0-py3-none-any.whl.metadata (4.4 kB)
+Requirement already satisfied: markupsafe>=2.0 in /users/tguo2/ha_fixtures/matplotlib-matplotlib-23314/.venv/lib/python3.11/site-packages (from nbconvert!=6.0.0,!=6.0.1->nbconvert[execute]!=6.0.0,!=6.0.1) (3.0.4)
+Collecting mistune<4,>=2.0.3 (from nbconvert!=6.0.0,!=6.0.1->nbconvert[execute]!=6.0.0,!=6.0.1)
+  Using cached mistune-3.3.4-py3-none-any.whl.metadata (1.9 kB)
+Collecting nbclient>=0.5.0 (from nbconvert!=6.0.0,!=6.0.1->nbconvert[execute]!=6.0.0,!=6.0.1)
+  Using cached nbclient-0.11.0-py3-none-any.whl.metadata (7.3 kB)
+Collecting nbformat>=5.7 (from nbconvert!=6.0.0,!=6.0.1->nbconvert[execute]!=6.0.0,!=6.0.1)
+  Using cached nbformat-5.11.1-py3-none-any.whl.metadata (3.7 kB)
+Requirement already satisfied: packaging in /users/tguo2/ha_fixtures/matplotlib-matplotlib-23314/.venv/lib/python3.11/site-packages (from nbconvert!=6.0.0,!=6.0.1->nbconvert[execute]!=6.0.0,!=6.0.1) (26.3)
+Collecting pandocfilters>=1.4.1 (from nbconvert!=6.0.0,!=6.0.1->nbconvert[execute]!=6.0.0,!=6.0.1)
+  Using cached pandocfilters-1.5.1-py2.py3-none-any.whl.metadata (9.0 kB)
+Requirement already satisfied: pygments>=2.4.1 in /users/tguo2/ha_fixtures/matplotlib-matplotlib-23314/.venv/lib/python3.11/site-packages (from nbconvert!=6.0.0,!=6.0.1->nbconvert[execute]!=6.0.0,!=6.0.1) (2.21.0)
+Requirement already satisfied: traitlets>=5.1 in /users/tguo2/ha_fixtures/matplotlib-matplotlib-23314/.venv/lib/python3.11/site-packages (from nbconvert!=6.0.0,!=6.0.1->nbconvert[execute]!=6.0.0,!=6.0.1) (5.16.1)
+WARNING: nbconvert 7.17.1 does not provide the extra 'execute'
+Collecting webencodings (from bleach!=5.0.0->bleach[css]!=5.0.0->nbconvert!=6.0.0,!=6.0.1->nbconvert[execute]!=6.0.0,!=6.0.1)
+  Using cached webencodings-0.6.1-py3-none-any.whl.metadata (3.4 kB)
+Collecting tinycss2>=1.1.0 (from bleach[css]!=5.0.0->nbconvert!=6.0.0,!=6.0.1->nbconvert[execute]!=6.0.0,!=6.0.1)
+  Using cached tinycss2-1.5.1-py3-none-any.whl.metadata (3.0 kB)
+Requirement already satisfied: platformdirs>=2.5 in /users/tguo2/ha_fixtures/matplotlib-matplotlib-23314/.venv/lib/python3.11/site-packages (from jupyter-core>=4.7->nbconvert!=6.0.0,!=6.0.1->nbconvert[execute]!=6.0.0,!=6.0.1) (4.12.4)
+Requirement already satisfied: jupyter-client>=7.0.0 in /users/tguo2/ha_fixtures/matplotlib-matplotlib-23314/.venv/lib/python3.11/site-packages (from nbclient>=0.5.0->nbconvert!=6.0.0,!=6.0.1->nbconvert[execute]!=6.0.0,!=6.0.1) (8.10.0)
+Collecting fastjsonschema>=2.15 (from nbformat>=5.7->nbconvert!=6.0.0,!=6.0.1->nbconvert[execute]!=6.0.0,!=6.0.1)
+  Using cached fastjsonschema-2.22.2-py3-none-any.whl.metadata (2.1 kB)
+Collecting jsonschema>=2.6 (from nbformat>=5.7->nbconvert!=6.0.0,!=6.0.1->nbconvert[execute]!=6.0.0,!=6.0.1)
+  Using cached jsonschema-4.26.0-py3-none-any.whl.metadata (7.6 kB)
+Requirement already satisfied: soupsieve>=1.6.1 in /users/tguo2/ha_fixtures/matplotlib-matplotlib-23314/.venv/lib/python3.11/site-packages (from beautifulsoup4->nbconvert!=6.0.0,!=6.0.1->nbconvert[execute]!=6.0.0,!=6.0.1) (2.10)
+Requirement already satisfied: typing-extensions>=4.0.0 in /users/tguo2/ha_fixtures/matplotlib-matplotlib-23314/.venv/lib/python3.11/site-packages (from beautifulsoup4->nbconvert!=6.0.0,!=6.0.1->nbconvert[execute]!=6.0.0,!=6.0.1) (4.16.0)
+Collecting attrs>=22.2.0 (from jsonschema>=2.6->nbformat>=5.7->nbconvert!=6.0.0,!=6.0.1->nbconvert[execute]!=6.0.0,!=6.0.1)
+  Using cached attrs-26.1.0-py3-none-any.whl.metadata (8.8 kB)
+Collecting jsonschema-specifications>=2023.03.6 (from jsonschema>=2.6->nbformat>=5.7->nbconvert!=6.0.0,!=6.0.1->nbconvert[execute]!=6.0.0,!=6.0.1)
+  Using cached jsonschema_specifications-2025.9.1-py3-none-any.whl.metadata (2.9 kB)
+Collecting referencing>=0.28.4 (from jsonschema>=2.6->nbformat>=5.7->nbconvert!=6.0.0,!=6.0.1->nbconvert[execute]!=6.0.0,!=6.0.1)
+  Using cached referencing-0.37.0-py3-none-any.whl.metadata (2.8 kB)
+Collecting rpds-py>=0.25.0 (from jsonschema>=2.6->nbformat>=5.7->nbconvert!=6.0.0,!=6.0.1->nbconvert[execute]!=6.0.0,!=6.0.1)
+  Using cached rpds_py-2026.9.1-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (4.1 kB)
+Requirement already satisfied: python-dateutil>=2.8.2 in /users/tguo2/ha_fixtures/matplotlib-matplotlib-23314/.venv/lib/python3.11/site-packages (from jupyter-client>=7.0.0->nbclient>=0.5.0->nbconvert!=6.0.0,!=6.0.1->nbconvert[execute]!=6.0.0,!=6.0.1) (2.9.0.post0)
+Requirement already satisfied: pyzmq>=25.0 in /users/tguo2/ha_fixtures/matplotlib-matplotlib-23314/.venv/lib/python3.11/site-packages (from jupyter-client>=7.0.0->nbclient>=0.5.0->nbconvert!=6.0.0,!=6.0.1->nbconvert[execute]!=6.0.0,!=6.0.1) (27.2.0)
+Requirement already satisfied: tornado>=6.4.1 in /users/tguo2/ha_fixtures/matplotlib-matplotlib-23314/.venv/lib/python3.11/site-packages (from jupyter-client>=7.0.0->nbclient>=0.5.0->nbconvert!=6.0.0,!=6.0.1->nbconvert[execute]!=6.0.0,!=6.0.1) (6.5.10)
+Requirement already satisfied: six>=1.5 in /users/tguo2/ha_fixtures/matplotlib-matplotlib-23314/.venv/lib/python3.11/site-packages (from python-dateutil>=2.8.2->jupyter-client>=7.0.0->nbclient>=0.5.0->nbconvert!=6.0.0,!=6.0.1->nbconvert[execute]!=6.0.0,!=6.0.1) (1.17.0)
+Using cached nbconvert-7.17.1-py3-none-any.whl (261 kB)
+Using cached bleach-6.4.0-py3-none-any.whl (165 kB)
+Using cached mistune-3.3.4-py3-none-any.whl (66 kB)
+Using cached nbclient-0.11.0-py3-none-any.whl (25 kB)
+Using cached nbformat-5.11.1-py3-none-any.whl (79 kB)
+Using cached pandocfilters-1.5.1-py2.py3-none-any.whl (8.7 kB)
+Using cached defusedxml-0.7.1-py2.py3-none-any.whl (25 kB)
+Using cached jupyterlab_pygments-0.3.0-py3-none-any.whl (15 kB)
+Using cached fastjsonschema-2.22.2-py3-none-any.whl (27 kB)
+Using cached jsonschema-4.26.0-py3-none-any.whl (90 kB)
+Using cached tinycss2-1.5.1-py3-none-any.whl (28 kB)
+Using cached webencodings-0.6.1-py3-none-any.whl (8.7 kB)
+Using cached attrs-26.1.0-py3-none-any.whl (67 kB)
+Using cached jsonschema_specifications-2025.9.1-py3-none-any.whl (18 kB)
+Using cached referencing-0.37.0-py3-none-any.whl (26 kB)
+Using cached rpds_py-2026.9.1-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (375 kB)
+Installing collected packages: webencodings, rpds-py, pandocfilters, mistune, jupyterlab-pygments, fastjsonschema, defusedxml, attrs, tinycss2, referencing, bleach, jsonschema-specifications, jsonschema, nbformat, nbclient, nbconvert
+Successfully installed attrs-26.1.0 bleach-6.4.0 defusedxml-0.7.1 fastjsonschema-2.22.2 jsonschema-4.26.0 jsonschema-specifications-2025.9.1 jupyterlab-pygments-0.3.0 mistune-3.3.4 nbclient-0.11.0 nbconvert-7.17.1 nbformat-5.11.1 pandocfilters-1.5.1 referencing-0.37.0 rpds-py-2026.9.1 tinycss2-1.5.1 webencodings-0.6.1
+[rc=0 7s]
+
+$ /users/tguo2/ha_fixtures/matplotlib-matplotlib-23314/.venv/bin/python -m pip install --disable-pip-version-check nbformat!=5.0.0,!=5.0.1
+Requirement already satisfied: nbformat!=5.0.0,!=5.0.1 in /users/tguo2/ha_fixtures/matplotlib-matplotlib-23314/.venv/lib/python3.11/site-packages (5.11.1)
+Requirement already satisfied: fastjsonschema>=2.15 in /users/tguo2/ha_fixtures/matplotlib-matplotlib-23314/.venv/lib/python3.11/site-packages (from nbformat!=5.0.0,!=5.0.1) (2.22.2)
+Requirement already satisfied: jsonschema>=2.6 in /users/tguo2/ha_fixtures/matplotlib-matplotlib-23314/.venv/lib/python3.11/site-packages (from nbformat!=5.0.0,!=5.0.1) (4.26.0)
+Requirement already satisfied: jupyter-core!=5.0.*,>=4.12 in /users/tguo2/ha_fixtures/matplotlib-matplotlib-23314/.venv/lib/python3.11/site-packages (from nbformat!=5.0.0,!=5.0.1) (5.9.1)
+Requirement already satisfied: traitlets>=5.1 in /users/tguo2/ha_fixtures/matplotlib-matplotlib-23314/.venv/lib/python3.11/site-packages (from nbformat!=5.0.0,!=5.0.1) (5.16.1)
+Requirement already satisfied: attrs>=22.2.0 in /users/tguo2/ha_fixtures/matplotlib-matplotlib-23314/.venv/lib/python3.11/site-packages (from jsonschema>=2.6->nbformat!=5.0.0,!=5.0.1) (26.1.0)
+Requirement already satisfied: jsonschema-specifications>=2023.03.6 in /users/tguo2/ha_fixtures/matplotlib-matplotlib-23314/.venv/lib/python3.11/site-packages (from jsonschema>=2.6->nbformat!=5.0.0,!=5.0.1) (2025.9.1)
+Requirement already satisfied: referencing>=0.28.4 in /users/tguo2/ha_fixtures/matplotlib-matplotlib-23314/.venv/lib/python3.11/site-packages (from jsonschema>=2.6->nbformat!=5.0.0,!=5.0.1) (0.37.0)
+Requirement already satisfied: rpds-py>=0.25.0 in /users/tguo2/ha_fixtures/matplotlib-matplotlib-23314/.venv/lib/python3.11/site-packages (from jsonschema>=2.6->nbformat!=5.0.0,!=5.0.1) (2026.9.1)
+Requirement already satisfied: platformdirs>=2.5 in /users/tguo2/ha_fixtures/matplotlib-matplotlib-23314/.venv/lib/python3.11/site-packages (from jupyter-core!=5.0.*,>=4.12->nbformat!=5.0.0,!=5.0.1) (4.12.4)
+Requirement already satisfied: typing-extensions>=4.4.0 in /users/tguo2/ha_fixtures/matplotlib-matplotlib-23314/.venv/lib/python3.11/site-packages (from referencing>=0.28.4->jsonschema>=2.6->nbformat!=5.0.0,!=5.0.1) (4.16.0)
+[rc=0 2s]
+
+$ /users/tguo2/ha_fixtures/matplotlib-matplotlib-23314/.venv/bin/python -m pip install --disable-pip-version-check pandas!=0.25.0
+Collecting pandas!=0.25.0
+  Using cached pandas-3.0.6-cp311-cp311-manylinux_2_24_x86_64.manylinux_2_28_x86_64.whl.metadata (79 kB)
+Requirement already satisfied: numpy>=1.26.0 in /users/tguo2/ha_fixtures/matplotlib-matplotlib-23314/.venv/lib/python3.11/site-packages (from pandas!=0.25.0) (2.4.6)
+Requirement already satisfied: python-dateutil>=2.8.2 in /users/tguo2/ha_fixtures/matplotlib-matplotlib-23314/.venv/lib/python3.11/site-packages (from pandas!=0.25.0) (2.9.0.post0)
+Requirement already satisfied: six>=1.5 in /users/tguo2/ha_fixtures/matplotlib-matplotlib-23314/.venv/lib/python3.11/site-packages (from python-dateutil>=2.8.2->pandas!=0.25.0) (1.17.0)
+Using cached pandas-3.0.6-cp311-cp311-manylinux_2_24_x86_64.manylinux_2_28_x86_64.whl (11.1 MB)
+Installing collected packages: pandas
+Successfully installed pandas-3.0.6
+[rc=0 16s]
+
+$ /users/tguo2/ha_fixtures/matplotlib-matplotlib-23314/.venv/bin/python -m pip install --disable-pip-version-check psutil
+Requirement already satisfied: psutil in /users/tguo2/ha_fixtures/matplotlib-matplotlib-23314/.venv/lib/python3.11/site-packages (7.2.2)
+[rc=0 1s]
+
+$ /users/tguo2/ha_fixtures/matplotlib-matplotlib-23314/.venv/bin/python -m pip install --disable-pip-version-check pre-commit
+Collecting pre-commit
+  Using cached pre_commit-4.6.2-py2.py3-none-any.whl.metadata (1.2 kB)
+Collecting cfgv>=2.0.0 (from pre-commit)
+  Using cached cfgv-3.5.0-py2.py3-none-any.whl.metadata (8.9 kB)
+Collecting identify>=1.0.0 (from pre-commit)
+  Using cached identify-2.6.20-py2.py3-none-any.whl.metadata (4.4 kB)
+Collecting nodeenv>=0.11.1 (from pre-commit)
+  Using cached nodeenv-1.11.0-py2.py3-none-any.whl.metadata (40 kB)
+Collecting pyyaml>=5.1 (from pre-commit)
+  Using cached pyyaml-6.0.3-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (2.4 kB)
+Collecting virtualenv>=20.10.0 (from pre-commit)
+  Using cached virtualenv-21.14.6-py3-none-any.whl.metadata (4.1 kB)
+Collecting distlib<1,>=0.4.3 (from virtualenv>=20.10.0->pre-commit)
+  Using cached distlib-0.4.3-py2.py3-none-any.whl.metadata (5.3 kB)
+Collecting filelock<5,>=3.24.2 (from virtualenv>=20.10.0->pre-commit)
+  Using cached filelock-4.0.12-py3-none-any.whl.metadata (2.0 kB)
+Requirement already satisfied: packaging>=26.3 in /users/tguo2/ha_fixtures/matplotlib-matplotlib-23314/.venv/lib/python3.11/site-packages (from virtualenv>=20.10.0->pre-commit) (26.3)
+Requirement already satisfied: platformdirs<5,>=4.4 in /users/tguo2/ha_fixtures/matplotlib-matplotlib-23314/.venv/lib/python3.11/site-packages (from virtualenv>=20.10.0->pre-commit) (4.12.4)
+Collecting python-discovery>=1.6.1 (from virtualenv>=20.10.0->pre-commit)
+  Using cached python_discovery-1.6.1-py3-none-any.whl.metadata (5.1 kB)
+Using cached pre_commit-4.6.2-py2.py3-none-any.whl (226 kB)
+Using cached cfgv-3.5.0-py2.py3-none-any.whl (7.4 kB)
+Using cached identify-2.6.20-py2.py3-none-any.whl (99 kB)
+Using cached nodeenv-1.11.0-py2.py3-none-any.whl (34 kB)
+Using cached pyyaml-6.0.3-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (806 kB)
+Using cached virtualenv-21.14.6-py3-none-any.whl (5.5 MB)
+Using cached distlib-0.4.3-py2.py3-none-any.whl (470 kB)
+Using cached filelock-4.0.12-py3-none-any.whl (111 kB)
+Using cached python_discovery-1.6.1-py3-none-any.whl (38 kB)
+Installing collected packages: distlib, pyyaml, nodeenv, identify, filelock, cfgv, python-discovery, virtualenv, pre-commit
+Successfully installed cfgv-3.5.0 distlib-0.4.3 filelock-4.0.12 identify-2.6.20 nodeenv-1.11.0 pre-commit-4.6.2 python-discovery-1.6.1 pyyaml-6.0.3 virtualenv-21.14.6
+[rc=0 5s]
+
+$ /users/tguo2/ha_fixtures/matplotlib-matplotlib-23314/.venv/bin/python -m pip install --disable-pip-version-check pydocstyle>=5.1.0
+Requirement already satisfied: pydocstyle>=5.1.0 in /users/tguo2/ha_fixtures/matplotlib-matplotlib-23314/.venv/lib/python3.11/site-packages (6.3.0)
+Requirement already satisfied: snowballstemmer>=2.2.0 in /users/tguo2/ha_fixtures/matplotlib-matplotlib-23314/.venv/lib/python3.11/site-packages (from pydocstyle>=5.1.0) (3.1.1)
+[rc=0 2s]
+
+$ /users/tguo2/ha_fixtures/matplotlib-matplotlib-23314/.venv/bin/python -m pip install --disable-pip-version-check pytest!=4.6.0,!=5.4.0
+Collecting pytest!=4.6.0,!=5.4.0
+  Using cached pytest-9.1.1-py3-none-any.whl.metadata (7.6 kB)
+Collecting iniconfig>=1.0.1 (from pytest!=4.6.0,!=5.4.0)
+  Using cached iniconfig-2.3.1-py3-none-any.whl.metadata (2.8 kB)
+Requirement already satisfied: packaging>=22 in /users/tguo2/ha_fixtures/matplotlib-matplotlib-23314/.venv/lib/python3.11/site-packages (from pytest!=4.6.0,!=5.4.0) (26.3)
+Collecting pluggy<2,>=1.5 (from pytest!=4.6.0,!=5.4.0)
+  Using cached pluggy-1.6.0-py3-none-any.whl.metadata (4.8 kB)
+Requirement already satisfied: pygments>=2.7.2 in /users/tguo2/ha_fixtures/matplotlib-matplotlib-23314/.venv/lib/python3.11/site-packages (from pytest!=4.6.0,!=5.4.0) (2.21.0)
+Using cached pytest-9.1.1-py3-none-any.whl (386 kB)
+Using cached iniconfig-2.3.1-py3-none-any.whl (7.6 kB)
+Using cached pluggy-1.6.0-py3-none-any.whl (20 kB)
+Installing collected packages: pluggy, iniconfig, pytest
+Successfully installed iniconfig-2.3.1 pluggy-1.6.0 pytest-9.1.1
+[rc=0 3s]
+
+$ /users/tguo2/ha_fixtures/matplotlib-matplotlib-23314/.venv/bin/python -m pip install --disable-pip-version-check pytest-cov
+Collecting pytest-cov
+  Using cached pytest_cov-7.1.0-py3-none-any.whl.metadata (32 kB)
+Requirement already satisfied: coverage>=7.10.6 in /users/tguo2/ha_fixtures/matplotlib-matplotlib-23314/.venv/lib/python3.11/site-packages (from coverage[toml]>=7.10.6->pytest-cov) (7.16.2)
+Requirement already satisfied: pluggy>=1.2 in /users/tguo2/ha_fixtures/matplotlib-matplotlib-23314/.venv/lib/python3.11/site-packages (from pytest-cov) (1.6.0)
+Requirement already satisfied: pytest>=7 in /users/tguo2/ha_fixtures/matplotlib-matplotlib-23314/.venv/lib/python3.11/site-packages (from pytest-cov) (9.1.1)
+Requirement already satisfied: iniconfig>=1.0.1 in /users/tguo2/ha_fixtures/matplotlib-matplotlib-23314/.venv/lib/python3.11/site-packages (from pytest>=7->pytest-cov) (2.3.1)
+Requirement already satisfied: packaging>=22 in /users/tguo2/ha_fixtures/matplotlib-matplotlib-23314/.venv/lib/python3.11/site-packages (from pytest>=7->pytest-cov) (26.3)
+Requirement already satisfied: pygments>=2.7.2 in /users/tguo2/ha_fixtures/matplotlib-matplotlib-23314/.venv/lib/python3.11/site-packages (from pytest>=7->pytest-cov) (2.21.0)
+Using cached pytest_cov-7.1.0-py3-none-any.whl (22 kB)
+Installing collected packages: pytest-cov
+Successfully installed pytest-cov-7.1.0
+[rc=0 2s]
+
+$ /users/tguo2/ha_fixtures/matplotlib-matplotlib-23314/.venv/bin/python -m pip install --disable-pip-version-check pytest-rerunfailures
+Collecting pytest-rerunfailures
+  Using cached pytest_rerunfailures-16.7-py3-none-any.whl.metadata (33 kB)
+Requirement already satisfied: packaging>=17.1 in /users/tguo2/ha_fixtures/matplotlib-matplotlib-23314/.venv/lib/python3.11/site-packages (from pytest-rerunfailures) (26.3)
+Requirement already satisfied: pytest!=8.2.2,>=8.2 in /users/tguo2/ha_fixtures/matplotlib-matplotlib-23314/.venv/lib/python3.11/site-packages (from pytest-rerunfailures) (9.1.1)
+Requirement already satisfied: iniconfig>=1.0.1 in /users/tguo2/ha_fixtures/matplotlib-matplotlib-23314/.venv/lib/python3.11/site-packages (from pytest!=8.2.2,>=8.2->pytest-rerunfailures) (2.3.1)
+Requirement already satisfied: pluggy<2,>=1.5 in /users/tguo2/ha_fixtures/matplotlib-matplotlib-23314/.venv/lib/python3.11/site-packages (from pytest!=8.2.2,>=8.2->pytest-rerunfailures) (1.6.0)
+Requirement already satisfied: pygments>=2.7.2 in /users/tguo2/ha_fixtures/matplotlib-matplotlib-23314/.venv/lib/python3.11/site-packages (from pytest!=8.2.2,>=8.2->pytest-rerunfailures) (2.21.0)
+Using cached pytest_rerunfailures-16.7-py3-none-any.whl (23 kB)
+Installing collected packages: pytest-rerunfailures
+Successfully installed pytest-rerunfailures-16.7
+[rc=0 2s]
+
+$ /users/tguo2/ha_fixtures/matplotlib-matplotlib-23314/.venv/bin/python -m pip install --disable-pip-version-check pytest-timeout
+Collecting pytest-timeout
+  Using cached pytest_timeout-2.4.0-py3-none-any.whl.metadata (20 kB)
+Requirement already satisfied: pytest>=7.0.0 in /users/tguo2/ha_fixtures/matplotlib-matplotlib-23314/.venv/lib/python3.11/site-packages (from pytest-timeout) (9.1.1)
+Requirement already satisfied: iniconfig>=1.0.1 in /users/tguo2/ha_fixtures/matplotlib-matplotlib-23314/.venv/lib/python3.11/site-packages (from pytest>=7.0.0->pytest-timeout) (2.3.1)
+Requirement already satisfied: packaging>=22 in /users/tguo2/ha_fixtures/matplotlib-matplotlib-23314/.venv/lib/python3.11/site-packages (from pytest>=7.0.0->pytest-timeout) (26.3)
+Requirement already satisfied: pluggy<2,>=1.5 in /users/tguo2/ha_fixtures/matplotlib-matplotlib-23314/.venv/lib/python3.11/site-packages (from pytest>=7.0.0->pytest-timeout) (1.6.0)
+Requirement already satisfied: pygments>=2.7.2 in /users/tguo2/ha_fixtures/matplotlib-matplotlib-23314/.venv/lib/python3.11/site-packages (from pytest>=7.0.0->pytest-timeout) (2.21.0)
+Using cached pytest_timeout-2.4.0-py3-none-any.whl (14 kB)
+Installing collected packages: pytest-timeout
+Successfully installed pytest-timeout-2.4.0
+[rc=0 3s]
+
+$ /users/tguo2/ha_fixtures/matplotlib-matplotlib-23314/.venv/bin/python -m pip install --disable-pip-version-check pytest-xdist
+Collecting pytest-xdist
+  Using cached pytest_xdist-3.8.0-py3-none-any.whl.metadata (3.0 kB)
+Collecting execnet>=2.1 (from pytest-xdist)
+  Using cached execnet-2.1.2-py3-none-any.whl.metadata (2.9 kB)
+Requirement already satisfied: pytest>=7.0.0 in /users/tguo2/ha_fixtures/matplotlib-matplotlib-23314/.venv/lib/python3.11/site-packages (from pytest-xdist) (9.1.1)
+Requirement already satisfied: iniconfig>=1.0.1 in /users/tguo2/ha_fixtures/matplotlib-matplotlib-23314/.venv/lib/python3.11/site-packages (from pytest>=7.0.0->pytest-xdist) (2.3.1)
+Requirement already satisfied: packaging>=22 in /users/tguo2/ha_fixtures/matplotlib-matplotlib-23314/.venv/lib/python3.11/site-packages (from pytest>=7.0.0->pytest-xdist) (26.3)
+Requirement already satisfied: pluggy<2,>=1.5 in /users/tguo2/ha_fixtures/matplotlib-matplotlib-23314/.venv/lib/python3.11/site-packages (from pytest>=7.0.0->pytest-xdist) (1.6.0)
+Requirement already satisfied: pygments>=2.7.2 in /users/tguo2/ha_fixtures/matplotlib-matplotlib-23314/.venv/lib/python3.11/site-packages (from pytest>=7.0.0->pytest-xdist) (2.21.0)
+Using cached pytest_xdist-3.8.0-py3-none-any.whl (46 kB)
+Using cached execnet-2.1.2-py3-none-any.whl (40 kB)
+Installing collected packages: execnet, pytest-xdist
+Successfully installed execnet-2.1.2 pytest-xdist-3.8.0
+[rc=0 4s]
+
+$ /users/tguo2/ha_fixtures/matplotlib-matplotlib-23314/.venv/bin/python -m pip install --disable-pip-version-check tornado
+Requirement already satisfied: tornado in /users/tguo2/ha_fixtures/matplotlib-matplotlib-23314/.venv/lib/python3.11/site-packages (6.5.10)
+[rc=0 2s]
+
+$ /users/tguo2/ha_fixtures/matplotlib-matplotlib-23314/.venv/bin/python -m pip install --disable-pip-version-check pytz
+Collecting pytz
+  Using cached pytz-2026.5-py2.py3-none-any.whl.metadata (22 kB)
+Using cached pytz-2026.5-py2.py3-none-any.whl (506 kB)
+Installing collected packages: pytz
+Successfully installed pytz-2026.5
+[rc=0 4s]
+
+$ /users/tguo2/ha_fixtures/matplotlib-matplotlib-23314/.venv/bin/python -m pip install --disable-pip-version-check contourpy==1.1.0 cycler==0.11.0 fonttools==4.42.1 ghostscript kiwisolver==1.4.5 numpy==1.25.2 packaging==23.1 pillow==10.0.0 pikepdf pyparsing==3.0.9 python-dateutil==2.8.2 six==1.16.0 setuptools==68.1.2 setuptools-scm==7.1.0 typing-extensions==4.7.1
+Collecting contourpy==1.1.0
+  Using cached contourpy-1.1.0-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (5.7 kB)
+Collecting cycler==0.11.0
+  Using cached cycler-0.11.0-py3-none-any.whl.metadata (785 bytes)
+Collecting fonttools==4.42.1
+  Using cached fonttools-4.42.1-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (150 kB)
+Collecting ghostscript
+  Using cached ghostscript-0.8.1-py3-none-any.whl.metadata (4.4 kB)
+Collecting kiwisolver==1.4.5
+  Using cached kiwisolver-1.4.5-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (6.4 kB)
+Collecting numpy==1.25.2
+  Using cached numpy-1.25.2-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (5.6 kB)
+Collecting packaging==23.1
+  Using cached packaging-23.1-py3-none-any.whl.metadata (3.1 kB)
+Collecting pillow==10.0.0
+  Using cached Pillow-10.0.0-cp311-cp311-manylinux_2_28_x86_64.whl.metadata (9.5 kB)
+Requirement already satisfied: pikepdf in /users/tguo2/ha_fixtures/matplotlib-matplotlib-23314/.venv/lib/python3.11/site-packages (10.16.0)
+Collecting pyparsing==3.0.9
+  Using cached pyparsing-3.0.9-py3-none-any.whl.metadata (4.2 kB)
+Collecting python-dateutil==2.8.2
+  Using cached python_dateutil-2.8.2-py2.py3-none-any.whl.metadata (8.2 kB)
+Collecting six==1.16.0
+  Using cached six-1.16.0-py2.py3-none-any.whl.metadata (1.8 kB)
+Collecting setuptools==68.1.2
+  Using cached setuptools-68.1.2-py3-none-any.whl.metadata (6.2 kB)
+Collecting setuptools-scm==7.1.0
+  Using cached setuptools_scm-7.1.0-py3-none-any.whl.metadata (24 kB)
+Collecting typing-extensions==4.7.1
+  Using cached typing_extensions-4.7.1-py3-none-any.whl.metadata (3.1 kB)
+INFO: pip is looking at multiple versions of pikepdf to determine which version is compatible with other requirements. This could take a while.
+Collecting pikepdf
+  Using cached pikepdf-10.15.0-cp311-cp311-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl.metadata (11 kB)
+  Using cached pikepdf-10.14.0-cp311-cp311-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl.metadata (11 kB)
+  Using cached pikepdf-10.13.0.post1-cp311-cp311-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl.metadata (11 kB)
+  Using cached pikepdf-10.12.0-cp311-cp311-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl.metadata (11 kB)
+  Using cached pikepdf-10.11.0-cp311-cp311-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl.metadata (10 kB)
+  Using cached pikepdf-10.10.0-cp311-cp311-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl.metadata (10 kB)
+  Using cached pikepdf-10.9.1-cp311-cp311-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl.metadata (10 kB)
+INFO: pip is still looking at multiple versions of pikepdf to determine which version is compatible with other requirements. This could take a while.
+  Using cached pikepdf-10.9.0-cp311-cp311-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl.metadata (10 kB)
+  Using cached pikepdf-10.8.0-cp311-cp311-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl.metadata (10 kB)
+  Using cached pikepdf-10.7.3-cp311-cp311-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl.metadata (10 kB)
+  Using cached pikepdf-10.7.2-cp311-cp311-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl.metadata (10 kB)
+  Using cached pikepdf-10.7.1-cp311-cp311-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl.metadata (10 kB)
+INFO: This is taking longer than usual. You might need to provide the dependency resolver with stricter constraints to reduce runtime. See https://pip.pypa.io/warnings/backtracking for guidance. If you want to abort this run, press Ctrl + C.
+  Using cached pikepdf-10.6.0-cp311-cp311-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl.metadata (11 kB)
+  Using cached pikepdf-10.5.1-cp311-cp311-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl.metadata (11 kB)
+  Using cached pikepdf-10.5.0-cp311-cp311-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl.metadata (11 kB)
+  Using cached pikepdf-10.3.0-cp311-cp311-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl.metadata (8.4 kB)
+  Using cached pikepdf-10.2.0-cp311-cp311-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl.metadata (8.3 kB)
+  Using cached pikepdf-10.1.0-cp311-cp311-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl.metadata (8.3 kB)
+  Using cached pikepdf-10.0.3-cp311-cp311-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl.metadata (8.3 kB)
+  Using cached pikepdf-10.0.2-cp311-cp311-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl.metadata (8.3 kB)
+  Using cached pikepdf-10.0.1-cp311-cp311-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl.metadata (8.3 kB)
+  Using cached pikepdf-10.0.0-cp311-cp311-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl.metadata (8.3 kB)
+  Using cached pikepdf-9.11.0-cp311-cp311-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl.metadata (8.2 kB)
+  Using cached pikepdf-9.10.2-cp311-cp311-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl.metadata (8.1 kB)
+  Using cached pikepdf-9.10.1-cp311-cp311-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl.metadata (8.1 kB)
+  Using cached pikepdf-9.10.0-cp311-cp311-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl.metadata (8.1 kB)
+  Using cached pikepdf-9.9.0-cp311-cp311-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl.metadata (8.1 kB)
+  Using cached pikepdf-9.8.1-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (8.2 kB)
+  Using cached pikepdf-9.8.0-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (8.2 kB)
+  Using cached pikepdf-9.7.0-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (8.1 kB)
+  Using cached pikepdf-9.6.0-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (8.1 kB)
+  Using cached pikepdf-9.5.2-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (8.1 kB)
+  Using cached pikepdf-9.5.1-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (8.1 kB)
+  Using cached pikepdf-9.5.0-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (8.1 kB)
+  Using cached pikepdf-9.4.2-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (8.2 kB)
+  Using cached pikepdf-9.4.1-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (8.2 kB)
+  Using cached pikepdf-9.4.0-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (8.2 kB)
+  Using cached pikepdf-9.3.0-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (8.2 kB)
+  Using cached pikepdf-9.2.1-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (8.2 kB)
+  Using cached pikepdf-9.2.0-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (8.1 kB)
+  Using cached pikepdf-9.1.2-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (8.1 kB)
+  Using cached pikepdf-9.1.1-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (8.1 kB)
+  Using cached pikepdf-9.1.0-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (8.2 kB)
+  Using cached pikepdf-9.0.0-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (8.5 kB)
+  Using cached pikepdf-8.15.1-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (8.5 kB)
+  Using cached pikepdf-8.15.0-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (8.5 kB)
+  Using cached pikepdf-8.14.0-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (8.6 kB)
+  Using cached pikepdf-8.13.0-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (8.6 kB)
+  Using cached pikepdf-8.12.0-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (8.6 kB)
+  Using cached pikepdf-8.11.2-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (8.6 kB)
+  Using cached pikepdf-8.11.1-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (8.6 kB)
+  Using cached pikepdf-8.11.0-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (8.5 kB)
+  Using cached pikepdf-8.10.1-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (8.5 kB)
+  Using cached pikepdf-8.10.0-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (8.5 kB)
+  Using cached pikepdf-8.9.0-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (8.5 kB)
+  Using cached pikepdf-8.8.0-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (8.6 kB)
+  Using cached pikepdf-8.7.1-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (8.6 kB)
+  Using cached pikepdf-8.7.0-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (8.6 kB)
+  Using cached pikepdf-8.6.0-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (8.6 kB)
+  Using cached pikepdf-8.5.3-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (8.6 kB)
+  Using cached pikepdf-8.5.2-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (8.6 kB)
+  Using cached pikepdf-8.5.1-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (8.6 kB)
+  Using cached pikepdf-8.5.0-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (8.6 kB)
+  Using cached pikepdf-8.4.1-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (8.7 kB)
+Collecting deprecation (from pikepdf)
+  Using cached deprecation-2.1.0-py2.py3-none-any.whl.metadata (4.6 kB)
+Requirement already satisfied: lxml>=4.8 in /users/tguo2/ha_fixtures/matplotlib-matplotlib-23314/.venv/lib/python3.11/site-packages (from pikepdf) (6.1.3)
+Using cached contourpy-1.1.0-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (300 kB)
+Using cached cycler-0.11.0-py3-none-any.whl (6.4 kB)
+Using cached fonttools-4.42.1-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (4.9 MB)
+Using cached kiwisolver-1.4.5-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (1.4 MB)
+Using cached numpy-1.25.2-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (18.2 MB)
+Using cached packaging-23.1-py3-none-any.whl (48 kB)
+Using cached Pillow-10.0.0-cp311-cp311-manylinux_2_28_x86_64.whl (3.4 MB)
+Using cached pyparsing-3.0.9-py3-none-any.whl (98 kB)
+Using cached python_dateutil-2.8.2-py2.py3-none-any.whl (247 kB)
+Using cached six-1.16.0-py2.py3-none-any.whl (11 kB)
+Using cached setuptools-68.1.2-py3-none-any.whl (805 kB)
+Using cached setuptools_scm-7.1.0-py3-none-any.whl (43 kB)
+Using cached typing_extensions-4.7.1-py3-none-any.whl (33 kB)
+Using cached ghostscript-0.8.1-py3-none-any.whl (25 kB)
+Using cached pikepdf-8.4.1-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (2.3 MB)
+Using cached deprecation-2.1.0-py2.py3-none-any.whl (11 kB)
+Installing collected packages: ghostscript, typing-extensions, six, setuptools, pyparsing, pillow, packaging, numpy, kiwisolver, fonttools, cycler, setuptools-scm, python-dateutil, deprecation, contourpy, pikepdf
+  Attempting uninstall: typing-extensions
+    Found existing installation: typing_extensions 4.16.0
+    Uninstalling typing_extensions-4.16.0:
+      Successfully uninstalled typing_extensions-4.16.0
+  Attempting uninstall: six
+    Found existing installation: six 1.17.0
+    Uninstalling six-1.17.0:
+      Successfully uninstalled six-1.17.0
+  Attempting uninstall: setuptools
+    Found existing installation: setuptools 84.0.0
+    Uninstalling setuptools-84.0.0:
+      Successfully uninstalled setuptools-84.0.0
+  Attempting uninstall: pyparsing
+    Found existing installation: pyparsing 3.3.3
+    Uninstalling pyparsing-3.3.3:
+      Successfully uninstalled pyparsing-3.3.3
+  Attempting uninstall: pillow
+    Found existing installation: pillow 12.3.0
+    Uninstalling pillow-12.3.0:
+      Successfully uninstalled pillow-12.3.0
+  Attempting uninstall: packaging
+    Found existing installation: packaging 26.3
+    Uninstalling packaging-26.3:
+      Successfully uninstalled packaging-26.3
+  Attempting uninstall: numpy
+    Found existing installation: numpy 2.4.6
+    Uninstalling numpy-2.4.6:
+      Successfully uninstalled numpy-2.4.6
+  Attempting uninstall: kiwisolver
+    Found existing installation: kiwisolver 1.5.1
+    Uninstalling kiwisolver-1.5.1:
+      Successfully uninstalled kiwisolver-1.5.1
+  Attempting uninstall: fonttools
+    Found existing installation: fonttools 4.66.1
+    Uninstalling fonttools-4.66.1:
+      Successfully uninstalled fonttools-4.66.1
+  Attempting uninstall: cycler
+    Found existing installation: cycler 0.12.1
+    Uninstalling cycler-0.12.1:
+      Successfully uninstalled cycler-0.12.1
+  Attempting uninstall: setuptools-scm
+    Found existing installation: setuptools-scm 10.3.4
+    Uninstalling setuptools-scm-10.3.4:
+      Successfully uninstalled setuptools-scm-10.3.4
+  Attempting uninstall: python-dateutil
+    Found existing installation: python-dateutil 2.9.0.post0
+    Uninstalling python-dateutil-2.9.0.post0:
+      Successfully uninstalled python-dateutil-2.9.0.post0
+  Attempting uninstall: contourpy
+    Found existing installation: contourpy 1.3.3
+    Uninstalling contourpy-1.3.3:
+      Successfully uninstalled contourpy-1.3.3
+  Attempting uninstall: pikepdf
+    Found existing installation: pikepdf 10.16.0
+    Uninstalling pikepdf-10.16.0:
+      Successfully uninstalled pikepdf-10.16.0
+ERROR: pip's dependency resolver does not currently take into account all the packages that are installed. This behaviour is the source of the following dependency conflicts.
+wheel 0.48.0 requires packaging>=24.0, but you have packaging 23.1 which is incompatible.
+vcs-versioning 2.6.0 requires packaging>=26.2, but you have packaging 23.1 which is incompatible.
+jupyter-client 8.10.0 requires typing-extensions>=4.13.0, but you have typing-extensions 4.7.1 which is incompatible.
+pandas 3.0.6 requires numpy>=1.26.0; python_version < "3.14", but you have numpy 1.25.2 which is incompatible.
+virtualenv 21.14.6 requires packaging>=26.3, but you have packaging 23.1 which is incompatible.
+Successfully installed contourpy-1.1.0 cycler-0.11.0 deprecation-2.1.0 fonttools-4.42.1 ghostscript-0.8.1 kiwisolver-1.4.5 numpy-1.25.2 packaging-23.1 pikepdf-8.4.1 pillow-10.0.0 pyparsing-3.0.9 python-dateutil-2.8.2 setuptools-68.1.2 setuptools-scm-7.1.0 six-1.16.0 typing-extensions-4.7.1
+[rc=0 30s]
+
+$ curl -sSL https://github.com/qhull/qhull/archive/refs/tags/2020.2.tar.gz | tar xz -C build
+[rc=0 1s]
+
+$ /users/tguo2/ha_fixtures/matplotlib-matplotlib-23314/.venv/bin/python -m pip install --no-build-isolation -e .
+Obtaining file:///users/tguo2/ha_fixtures/matplotlib-matplotlib-23314
+  Preparing metadata (setup.py): started
+  Preparing metadata (setup.py): finished with status 'error'
+  error: subprocess-exited-with-error
+  
+  × python setup.py egg_info did not run successfully.
+  │ exit code: 1
+  ╰─> [62 lines of output]
+      /users/tguo2/ha_fixtures/matplotlib-matplotlib-23314/.venv/lib/python3.11/site-packages/setuptools/__init__.py:84: _DeprecatedInstaller: setuptools.installer and fetch_build_eggs are deprecated.
+      !!
+      
+              ********************************************************************************
+              Requirements should be satisfied by a PEP 517 installer.
+              If you are using pip, you can try `pip install --use-pep517`.
+              ********************************************************************************
+      
+      !!
+        dist.fetch_build_eggs(dist.setup_requires)
+      Traceback (most recent call last):
+        File "<string>", line 2, in <module>
+        File "<pip-setuptools-caller>", line 34, in <module>
+        File "/users/tguo2/ha_fixtures/matplotlib-matplotlib-23314/setup.py", line 260, in <module>
+          setup(  # Finally, pass this all along to setuptools to do the heavy lifting.
+        File "/users/tguo2/ha_fixtures/matplotlib-matplotlib-23314/.venv/lib/python3.11/site-packages/setuptools/__init__.py", line 107, in setup
+          return distutils.core.setup(**attrs)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        File "/users/tguo2/ha_fixtures/matplotlib-matplotlib-23314/.venv/lib/python3.11/site-packages/setuptools/_distutils/core.py", line 147, in setup
+          _setup_distribution = dist = klass(attrs)
+                                       ^^^^^^^^^^^^
+        File "/users/tguo2/ha_fixtures/matplotlib-matplotlib-23314/.venv/lib/python3.11/site-packages/setuptools/dist.py", line 485, in __init__
+          _Distribution.__init__(
+        File "/users/tguo2/ha_fixtures/matplotlib-matplotlib-23314/.venv/lib/python3.11/site-packages/setuptools/_distutils/dist.py", line 283, in __init__
+          self.finalize_options()
+        File "/users/tguo2/ha_fixtures/matplotlib-matplotlib-23314/.venv/lib/python3.11/site-packages/setuptools/dist.py", line 926, in finalize_options
+          ep(self)
+        File "/users/tguo2/ha_fixtures/matplotlib-matplotlib-23314/.venv/lib/python3.11/site-packages/setuptools/dist.py", line 946, in _finalize_setup_keywords
+          ep.load()(self, ep.name, value)
+        File "/users/tguo2/ha_fixtures/matplotlib-matplotlib-23314/.venv/lib/python3.11/site-packages/setuptools_scm/integration.py", line 91, in version_keyword
+          _assign_version(dist, config)
+        File "/users/tguo2/ha_fixtures/matplotlib-matplotlib-23314/.venv/lib/python3.11/site-packages/setuptools_scm/integration.py", line 60, in _assign_version
+          maybe_version = _get_version(config)
+                          ^^^^^^^^^^^^^^^^^^^^
+        File "/users/tguo2/ha_fixtures/matplotlib-matplotlib-23314/.venv/lib/python3.11/site-packages/setuptools_scm/__init__.py", line 156, in _get_version
+          version_string = format_version(
+                           ^^^^^^^^^^^^^^^
+        File "/users/tguo2/ha_fixtures/matplotlib-matplotlib-23314/.venv/lib/python3.11/site-packages/setuptools_scm/version.py", line 554, in format_version
+          main_version = _call_version_scheme(
+                         ^^^^^^^^^^^^^^^^^^^^^
+        File "/users/tguo2/ha_fixtures/matplotlib-matplotlib-23314/.venv/lib/python3.11/site-packages/setuptools_scm/version.py", line 542, in _call_version_scheme
+          result = scheme(version)
+                   ^^^^^^^^^^^^^^^
+        File "/users/tguo2/ha_fixtures/matplotlib-matplotlib-23314/.venv/lib/python3.11/site-packages/vcs_versioning/_version_schemes/_standard.py", line 116, in _deprecated_release_branch_semver_version
+          return release_branch_semver_version(version)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        File "/users/tguo2/ha_fixtures/matplotlib-matplotlib-23314/.venv/lib/python3.11/site-packages/vcs_versioning/_version_schemes/_standard.py", line 76, in release_branch_semver_version
+          branch_ver_data = _parse_version_tag(
+                            ^^^^^^^^^^^^^^^^^^^
+        File "/users/tguo2/ha_fixtures/matplotlib-matplotlib-23314/.venv/lib/python3.11/site-packages/vcs_versioning/_scm_version.py", line 95, in _parse_version_tag
+          tag_prefix = config.tag.prefix
+                       ^^^^^^^^^^
+      AttributeError: 'Configuration' object has no attribute 'tag'
+      
+      Edit mplsetup.cfg to change the build options; suppress output with --quiet.
+      
+      BUILDING MATPLOTLIB
+            python: yes [3.11.17 (main, Oct  3 2026, 01:05:36) [Clang 22.1.3 ]]
+          platform: yes [linux]
+             tests: no  [skipping due to configuration]
+            macosx: no  [Mac OS-X only]
+      
+      [end of output]
+  
+  note: This error originates from a subprocess, and is likely not a problem with pip.
+error: metadata-generation-failed
+
+× Encountered error while generating package metadata.
+╰─> See above for output.
+
+note: This is an issue with the package mentioned above, not pip.
+hint: See above for details.
+
+[notice] A new release of pip is available: 24.0 -> 26.2.1
+[notice] To update, run: /users/tguo2/ha_fixtures/matplotlib-matplotlib-23314/.venv/bin/python -m pip install --upgrade pip
+[rc=1 6s]
+Traceback (most recent call last):
+  File "/groups/xzhang33/tguo2taicheng/harnessaudit_verl/swe_provision/provision.py", line 209, in provision
+    st.sh(install, cwd=fx, shell=True, timeout=5400)
+  File "/groups/xzhang33/tguo2taicheng/harnessaudit_verl/swe_provision/provision.py", line 98, in sh
+    raise RuntimeError(f"rc={r.returncode}: {cmd}")
+RuntimeError: rc=1: /users/tguo2/ha_fixtures/matplotlib-matplotlib-23314/.venv/bin/python -m pip install --no-build-isolation -e .

@@ -1,0 +1,8 @@
+
+$ git clone --quiet /tmp/tguo2-swe-mirrors/matplotlib__matplotlib.git /users/tguo2/ha_fixtures/matplotlib-matplotlib-23314
+Traceback (most recent call last):
+  File "/groups/xzhang33/tguo2taicheng/harnessaudit_verl/swe_provision/provision.py", line 150, in provision
+    st.sh(["git", "clone", "--quiet", str(mirror), str(fx)])
+  File "/groups/xzhang33/tguo2taicheng/harnessaudit_verl/swe_provision/provision.py", line 89, in sh
+    self.log.flush()
+OSError: [Errno 28] No space left on device

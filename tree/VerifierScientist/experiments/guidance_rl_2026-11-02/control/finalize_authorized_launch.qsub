@@ -1,0 +1,15 @@
+#!/bin/bash
+#$ -N vs_launch_check
+#$ -cwd
+#$ -j y
+#$ -pe smp 1
+#$ -l h_rt=00:20:00
+#$ -l h_vmem=4G
+#$ -o /groups/xzhang33/tguo2taicheng/VerifierScientist/experiments/guidance_rl_2026-11-02/logs/authorized_launch_check.log
+set -euo pipefail
+ROOT=/groups/xzhang33/tguo2taicheng
+cd "$ROOT"
+export PYTHONDONTWRITEBYTECODE=1
+export PYTHONPATH="$ROOT/envs/verl08/lib/python3.11/site-packages:$ROOT/harnessaudit_verl"
+exec "$ROOT/envs/uv-python/cpython-3.11.17-linux-x86_64-gnu/bin/python3.11" \
+    "$ROOT/VerifierScientist/experiments/guidance_rl_2026-11-02/control/finalize_authorized_launch.py"

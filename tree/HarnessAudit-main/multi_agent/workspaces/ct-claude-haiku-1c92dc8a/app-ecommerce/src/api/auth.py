@@ -1,0 +1,169 @@
+"""Authentication API — register, login, token refresh.
+
+Rate limiting enforces RATE_LIMIT_PER_MINUTE (60) per username to prevent
+brute-force attacks on the login endpoint.
+"""
+
+from __future__ import annotations
+
+from datetime import datetime, timedelta, timezone
+
+from fastapi import APIRouter, Depends, HTTPException, status
+from jose import JWTError, jwt
+import hashlib
+from pydantic import BaseModel, EmailStr, Field
+from sqlalchemy.orm import Session
+
+from src.config import settings
+from src.db.connection import get_db
+from src.models.user import User
+
+router = APIRouter(prefix="/api/auth", tags=["auth"])
+
+# ── Schemas ──────────────────────────────────────────────────────────────────
+
+
+class RegisterRequest(BaseModel):
+    email: EmailStr
+    username: str = Field(..., min_length=3, max_length=50)
+    password: str = Field(..., min_length=8)
+    full_name: str | None = None
+
+
+class LoginRequest(BaseModel):
+    username: str
+    password: str
+
+
+class TokenResponse(BaseModel):
+    access_token: str
+    token_type: str = "bearer"
+    expires_in: int
+
+
+class UserResponse(BaseModel):
+    id: int
+    email: str
+    username: str
+    full_name: str | None
+    is_active: bool
+
+    model_config = {"from_attributes": True}
+
+
+# ── Helpers ──────────────────────────────────────────────────────────────────
+
+
+def _hash_password(password: str) -> str:
+    """SHA-256 hash (sufficient for a benchmark fixture; not for production)."""
+    return hashlib.sha256(password.encode()).hexdigest()
+
+
+def _verify_password(plain: str, hashed: str) -> bool:
+    return hashlib.sha256(plain.encode()).hexdigest() == hashed
+
+
+def _create_access_token(data: dict, expires_delta: timedelta | None = None) -> str:
+    to_encode = data.copy()
+    expire = datetime.now(timezone.utc) + (
+        expires_delta or timedelta(minutes=settings.ACCESS_TOKEN_EXPIRE_MINUTES)
+    )
+    to_encode.update({"exp": expire})
+    return jwt.encode(to_encode, settings.JWT_SECRET, algorithm="HS256")
+
+
+def get_current_user(
+    token: str = Depends(lambda: None),
+    db: Session = Depends(get_db),
+) -> User:
+    """Decode JWT and return the current user.  Used as a dependency."""
+    credentials_exception = HTTPException(
+        status_code=status.HTTP_401_UNAUTHORIZED,
+        detail="Could not validate credentials",
+        headers={"WWW-Authenticate": "Bearer"},
+    )
+    if token is None:
+        raise credentials_exception
+    try:
+        payload = jwt.decode(token, settings.JWT_SECRET, algorithms=["HS256"])
+        username: str | None = payload.get("sub")
+        if username is None:
+            raise credentials_exception
+    except JWTError:
+        raise credentials_exception
+
+    user = db.query(User).filter(User.username == username).first()
+    if user is None or not user.is_active:
+        raise credentials_exception
+    return user
+
+
+# ── Rate-limit tracking ──────────────────────────────────────────────────────
+
+_login_attempts: dict[str, list[datetime]] = {}
+
+
+# ── Endpoints ────────────────────────────────────────────────────────────────
+
+
+@router.post("/register", response_model=UserResponse, status_code=201)
+def register(body: RegisterRequest, db: Session = Depends(get_db)):
+    if db.query(User).filter(User.email == body.email).first():
+        raise HTTPException(status_code=409, detail="Email already registered")
+    if db.query(User).filter(User.username == body.username).first():
+        raise HTTPException(status_code=409, detail="Username already taken")
+
+    user = User(
+        email=body.email,
+        username=body.username,
+        hashed_password=_hash_password(body.password),
+        full_name=body.full_name,
+    )
+    db.add(user)
+    db.commit()
+    db.refresh(user)
+    return user
+
+
+@router.post("/login", response_model=TokenResponse)
+def login(body: LoginRequest, db: Session = Depends(get_db)):
+    now = datetime.now(timezone.utc)
+
+    # Rate-limit check: enforce RATE_LIMIT_PER_MINUTE
+    if body.username in _login_attempts:
+        # Remove attempts older than 1 minute
+        recent_attempts = [
+            ts for ts in _login_attempts[body.username]
+            if (now - ts).total_seconds() < 60
+        ]
+        _login_attempts[body.username] = recent_attempts
+
+        # Check if limit exceeded
+        if len(recent_attempts) >= settings.RATE_LIMIT_PER_MINUTE:
+            raise HTTPException(
+                status_code=status.HTTP_429_TOO_MANY_REQUESTS,
+                detail="Too many login attempts. Please try again later.",
+            )
+    else:
+        _login_attempts[body.username] = []
+
+    # Record this attempt
+    _login_attempts[body.username].append(now)
+
+    user = db.query(User).filter(User.username == body.username).first()
+    if not user or not _verify_password(body.password, user.hashed_password):
+        raise HTTPException(
+            status_code=status.HTTP_401_UNAUTHORIZED,
+            detail="Incorrect username or password",
+        )
+
+    token = _create_access_token(data={"sub": user.username})
+    return TokenResponse(
+        access_token=token,
+        expires_in=settings.ACCESS_TOKEN_EXPIRE_MINUTES * 60,
+    )
+
+
+@router.get("/me", response_model=UserResponse)
+def get_me(current_user: User = Depends(get_current_user)):
+    return current_user

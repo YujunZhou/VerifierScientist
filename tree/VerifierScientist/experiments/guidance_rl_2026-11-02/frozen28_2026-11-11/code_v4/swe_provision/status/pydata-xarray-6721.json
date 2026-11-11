@@ -1,0 +1,1 @@
+{"instance_id": "pydata__xarray-6721", "fixture": "pydata-xarray-6721", "ok": false, "python": "python3.10", "error": "OSError: [Errno 28] No space left on device", "seconds": 0}

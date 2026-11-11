@@ -1,0 +1,19 @@
+{
+  "schema_version": 1,
+  "observed_at": 1793775070.2040997,
+  "sample_count": 720,
+  "unit_cost_p95": 0.003079995,
+  "unit_cost_mean": 0.0016751079166666667,
+  "total_usd": 1.2060777,
+  "models": [
+    "gpt-6-luna"
+  ],
+  "score_protocol": "aligned_v2",
+  "provenance": {
+    "source": "Complete independently reviewed E1: 720 fresh-trajectory judge calls, each one successful attempt",
+    "evidence_path": "/groups/xzhang33/tguo2taicheng/VerifierScientist/experiments/guidance_rl_2026-11-02/adaptive28_2026-11-04/cost_evidence_E1_720.json",
+    "evidence_sha256": "161aa006517212a2d4d4ea0c5bd9d8c9f520e2b57e3adfa3e43f013a34812c41",
+    "review": "/groups/xzhang33/tguo2taicheng/VerifierScientist/experiments/guidance_rl_2026-11-02/audit/claude_full_eval_quality_review_2026-11-03.md",
+    "limitations": "Training distributions change. Same-model generator costs are estimated using judge calls; p95 is not a bound. Shared $50 ledger is the hard cap. Explicit 120h cost validity covers this 72h allocation; observation time is not refreshed."
+  }
+}

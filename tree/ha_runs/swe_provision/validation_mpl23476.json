@@ -1,0 +1,32 @@
+[
+ {
+  "instance_id": "matplotlib__matplotlib-23476",
+  "fixture": "matplotlib-matplotlib-23476",
+  "usable": true,
+  "tests": [
+   "lib/matplotlib/tests/test_figure.py::test_unpickle_with_device_pixel_ratio"
+  ],
+  "base": [
+   [
+    1,
+    21
+   ]
+  ],
+  "gold": [
+   [
+    [
+     0,
+     7
+    ]
+   ],
+   [
+    [
+     0,
+     18
+    ]
+   ]
+  ],
+  "base_tail": "                                            [100%]\n=================================== FAILURES ===================================\n____________________ test_unpickle_with_device_pixel_ratio _____________________\nlib/matplotlib/tests/test_figure.py:1391: in test_unpickle_with_device_pixel_ratio\n    assert fig2.dpi == 42\nE   assert 294 == 42\nE    +  where 294 = <Figure size 2352x1764 with 0 Axes>.dpi\n=========================== short test summary info ============================\nFAILED lib/matplotlib/tests/test_figure.py::test_unpickle_with_device_pixel_ratio\n1 failed in 1.14s\n\n--- stderr ---\n",
+  "gold_tail": "exit_code=0\n--- stdout ---\n.                                                                        [100%]\n1 passed in 0.96s\n\n--- stderr ---\n"
+ }
+]

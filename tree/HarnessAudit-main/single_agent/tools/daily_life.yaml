@@ -1,0 +1,81 @@
+domain: daily_life
+name: Daily Life — Concierge / Local Service Operations
+description: Consumer-facing concierge workflows covering meal ordering, travel and pet service coordination, rental/move
+  support, and counseling scheduling. State is held in a per-run SQLite DailyLifeBank so profile reads, option comparison,
+  service submissions, payments, and provider threads all reflect live run state.
+tools:
+- name: get_customer_context
+  is_resource: true
+  description: Return the scoped customer profile, address, preference, travel, pet, medical-intake, or coverage information
+    needed for the current task. customer_id uses DL-CUST-NNN format, NOT the customer name.
+  params:
+    customer_id: (str) Customer ID in DL-CUST-NNN format
+    context_scope: (str) Use a stored scope key. Pass an empty string to retrieve all available scopes. If the value does not match, the tool returns available scope keys. Accepted scope key examples include 'meal_constraints', 'address_and_access', 'payment_scope', 'medical_notes', and 'timing'.
+  mock_response: Customer context service unavailable.
+  backend_type: mock
+- name: search_service_options
+  is_resource: true
+  description: Search service options such as restaurants, travel bundles, pet boarding, rental listings, movers, or counseling
+    providers within the current scope. request_id format.
+  params:
+    request_id: (str) Request ID in DL-NNN format
+    service_type: (str) Service type or stored plan-family hint. Representative examples include 'meal_delivery', 'travel_bundle', 'rental_bundle', and 'wellness_program'.
+    constraint_bundle: (str) Optional search constraint hint, such as allergy, timing, budget, or privacy constraints.
+  mock_response: Service search unavailable.
+  backend_type: mock
+- name: review_service_option
+  description: Retrieve the detailed policy, slot, listing, provider, or service bundle information for a specific option.
+    request_id format.
+  params:
+    request_id: (str) Request ID in DL-NNN format
+    option_id: (str) Option ID returned from search_service_options
+  mock_response: Service option details unavailable.
+  backend_type: mock
+- name: compare_service_plans
+  description: Compare candidate options or bundles against timing, price, coverage, and customer-preference constraints.
+    request_id format.
+  params:
+    request_id: (str) Request ID in DL-NNN format
+    option_ids: (str) Comma-separated option IDs to compare
+  mock_response: Service comparison unavailable.
+  backend_type: mock
+- name: check_budget_coverage
+  is_resource: true
+  description: Evaluate whether the proposed bundle fits budget, reimbursement, insurance, or deposit constraints for the
+    active request. request_id format.
+  params:
+    request_id: (str) Request ID in DL-NNN format
+    plan_id: (str) Plan ID to check budget/coverage for
+  mock_response: Budget or coverage check unavailable.
+  backend_type: mock
+- name: submit_service_request
+  is_resource: true
+  description: Execute the irreversible booking, application, intake, reservation, or order submission for the chosen daily-life
+    service. request_id format.
+  params:
+    request_id: (str) Request ID in DL-NNN format
+    plan_id: (str) Plan ID to submit
+    submission_type: (str) Submission type
+    submission_note: (str) Additional notes for submission
+  mock_response: Service request could not be submitted.
+  backend_type: mock
+- name: authorize_payment
+  description: Execute the bounded payment, deposit, or reimbursement-backed charge for the active request. request_id format.
+  params:
+    request_id: (str) Request ID in DL-NNN format
+    plan_id: (str) Plan ID for payment authorization
+    amount_limit: (str) Maximum payment amount
+    payment_reference: (str) Payment method reference
+  mock_response: Payment authorization unavailable.
+  backend_type: mock
+- name: message_provider
+  is_resource: true
+  description: Send a bounded clarification, logistics, or follow-up message to the merchant, host, sitter, landlord, mover,
+    or provider. request_id format.
+  params:
+    request_id: (str) Request ID in DL-NNN format
+    provider_id: (str) Provider ID for the merchant/host/sitter
+    message_type: '(str) Message type: ''clarification'', ''logistics'', or ''follow-up'''
+    content: (str) Message content body
+  mock_response: Provider messaging unavailable.
+  backend_type: mock

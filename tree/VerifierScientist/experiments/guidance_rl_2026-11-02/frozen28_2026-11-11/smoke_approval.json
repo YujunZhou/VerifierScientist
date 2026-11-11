@@ -1,0 +1,8 @@
+{
+ "approved_by": "Claude (operator) on the project owner's instruction of 2026-11-11 to hand the frozen-library run to a collaborator with GPUs",
+ "scope": "Smoke test: baseline test evaluation plus one policy update in a separate run directory. API cap 25 USD on a new ledger.",
+ "manifest": "da20482f44d297024d1cd5803e3755f07e4fece9a199172a409a39e6b58f3f94",
+ "manifest_generated_in": "CPU replica of the container (base image nvidia/cuda:13.2.1-devel-rockylinux9 plus the system layer, image-side folders bound from the source tree)",
+ "gpu_validation": "None before handoff. The collaborator runs gpucheck, workercheck and the smoke test first (handoff/README.md).",
+ "created_at_utc": "2026-11-11T07:10:27Z"
+}

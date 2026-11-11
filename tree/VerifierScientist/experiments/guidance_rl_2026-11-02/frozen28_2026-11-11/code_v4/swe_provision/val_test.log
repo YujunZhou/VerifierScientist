@@ -1,0 +1,4 @@
+nohup: ignoring input
+USABLE psf__requests-2931 base=[(1, 4)] gold=[[(0, 3)], [(0, 3)], [(0, 2)], [(0, 2)]] 
+USABLE pytest-dev__pytest-7432 base=[(1, 2)] gold=[[(0, 7)], [(0, 23)], [(0, 7)], [(0, 7)]] 
+2/2 usable

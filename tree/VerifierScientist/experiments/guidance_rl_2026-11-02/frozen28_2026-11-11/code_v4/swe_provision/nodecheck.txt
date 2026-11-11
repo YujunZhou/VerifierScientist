@@ -1,0 +1,8 @@
+qa-a100-004.crc.nd.edu
+gcc (GCC) 11.5.0 20240719 (Red Hat 11.5.0-11)
+g++ (GCC) 11.5.0 20240719 (Red Hat 11.5.0-11)
+git version 2.47.3
+HTTP/2 200 
+HTTP/2 200 
+64
+/dev/sda3       442G   46G  396G  11% /

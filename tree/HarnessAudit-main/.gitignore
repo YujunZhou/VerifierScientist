@@ -1,0 +1,138 @@
+# ── Python bytecode & caches ──────────────────────────────────────
+__pycache__/
+*.py[cod]
+*$py.class
+
+# ── Distribution / packaging (hatchling) ─────────────────────────
+dist/
+build/
+*.egg-info/
+*.egg
+.Python
+*.whl
+
+# ── Virtual environments ─────────────────────────────────────────
+.venv/
+venv/
+env/
+.conda/
+
+# ── Testing (pytest / pytest-asyncio) ────────────────────────────
+.pytest_cache/
+.coverage
+.coverage.*
+htmlcov/
+coverage.xml
+
+# ── Linting & type checking (ruff, mypy) ─────────────────────────
+.ruff_cache/
+.mypy_cache/
+.dmypy.json
+dmypy.json
+
+# ── IDE / editors ────────────────────────────────────────────────
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# ── OS generated ─────────────────────────────────────────────────
+.DS_Store
+Thumbs.db
+
+# ── Jupyter (in case notebooks are added later) ──────────────────
+.ipynb_checkpoints/
+
+# ── Environment variables / secrets ──────────────────────────────
+.env
+.env.*
+
+external_benchmarks/
+
+# ── Paper sources and generated supplement material ───────────────
+paper/
+
+# ── HarnessAudit runtime logs/state ─────────────────────────
+multi_agent/run_all.log
+multi_agent/run_all_stdout.log
+multi_agent/run_all.runinfo
+multi_agent/run_all.heartbeat
+multi_agent/run_all.lock/
+
+# ── Per-run SDE / benchmark workspaces (may contain nested .git) ───
+workspaces/
+.worktrees/
+multi_agent/workspaces/
+
+multi_agent/traces/
+multi_agent/results/
+multi_agent/logs/
+/traces/
+single_agent/traces/
+single_agent/results/
+single_agent/logs/
+
+# ── Local run scripts ─────────────────────────────────────────────
+multi_agent/**/*.sh
+single_agent/**/*.sh
+!multi_agent/run_ma.sh
+!single_agent/run_sa.sh
+
+# ── Generated staging, run artifacts, and local reports ───────────
+scripts/_staging/
+scripts/normal_completion_traces.json
+scripts/normal_completion_traces.txt
+multi_agent/good_traces.txt
+NeurlPS26_Agent_Safety.pdf
+paper/*.pdf
+paper/codes/*.pdf
+paper/codes/data.md
+paper/**/*.zip
+paper/**/output.pdf
+paper/**/output/
+paper/**/.latexmkrc.local
+paper/**/.aux
+paper/**/*.aux
+paper/**/*.bbl
+paper/**/*.blg
+paper/**/*.fdb_latexmk
+paper/**/*.fls
+paper/**/*.log
+paper/**/*.out
+paper/**/*.synctex.gz
+
+# ── Agent-workspace scratch files accidentally created in fixtures ─
+fixtures/**/AGENTS.md
+fixtures/**/HEARTBEAT.md
+fixtures/**/IDENTITY.md
+fixtures/**/SOUL.md
+fixtures/**/TOOLS.md
+fixtures/**/USER.md
+
+# ── Local-only test scratch space ─────────────────────────────────
+tests/tmp/
+
+
+# Local scripts
+/scripts/
+
+# Local scripts
+/scripts/
+
+# Local arXiv paper copy
+2605.14271v1.pdf
+
+# Local planning notes
+single_agent/SCALING_PLAN.md
+
+hf_data/
+
+# ── Lightweight-repo exclusions (added for Training_Trust_Router_Agents) ──
+# Multimodal task image assets (~430M; available via the HF dataset)
+multi_agent/tasks/**/assets/
+# Ingested SWE-bench / external-repo fixtures (reproducible via scripts/ingest_swebench.py).
+# Keep only the two original micro-app fixtures.
+fixtures/*
+!fixtures/app-ecommerce/
+!fixtures/app-admin/

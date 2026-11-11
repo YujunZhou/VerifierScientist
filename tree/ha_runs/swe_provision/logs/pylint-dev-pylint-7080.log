@@ -1,0 +1,282 @@
+
+$ git clone --quiet /tmp/tguo2-swe-mirrors/pylint-dev__pylint.git /users/tguo2/ha_fixtures/pylint-dev-pylint-7080
+[rc=0 13s]
+
+$ git checkout --quiet 3c5eca2ded3dd2b59ebaf23eb289453b5d2930f0
+[rc=0 8s]
+
+$ git apply --whitespace=nowarn _test_patch.diff
+[rc=0 0s]
+
+$ /groups/xzhang33/tguo2taicheng/envs/swetools/bin/uv venv --seed --python /groups/xzhang33/tguo2taicheng/envs/uv-python/cpython-3.9.25-linux-x86_64-gnu/bin/python3.9 /users/tguo2/ha_fixtures/pylint-dev-pylint-7080/.venv
+Using CPython 3.9.25 interpreter at: /groups/xzhang33/tguo2taicheng/envs/uv-python/cpython-3.9.25-linux-x86_64-gnu/bin/python3.9
+Creating virtual environment with seed packages at: /users/tguo2/ha_fixtures/pylint-dev-pylint-7080/.venv
+warning: Failed to hardlink files; falling back to full copy. This may lead to degraded performance.
+         If the cache and target directories are on different filesystems, hardlinking may not be supported.
+         If this is intentional, set `export UV_LINK_MODE=copy` or use `--link-mode=copy` to suppress this warning.
+ + packaging==26.3
+ + pip==26.0.1
+ + setuptools==82.0.1
+ + wheel==0.48.0
+Activate with: source /users/tguo2/ha_fixtures/pylint-dev-pylint-7080/.venv/bin/activate
+[rc=0 2s]
+
+$ /users/tguo2/ha_fixtures/pylint-dev-pylint-7080/.venv/bin/python -m pip install --disable-pip-version-check -q --upgrade pip<24.1 wheel
+[rc=0 18s]
+
+$ /users/tguo2/ha_fixtures/pylint-dev-pylint-7080/.venv/bin/python -m pip install --disable-pip-version-check -r /users/tguo2/ha_fixtures/pylint-dev-pylint-7080/requirements_test.txt
+Obtaining file:///users/tguo2/ha_fixtures/pylint-dev-pylint-7080
+  Preparing metadata (setup.py): started
+  Preparing metadata (setup.py): finished with status 'done'
+Collecting black==22.3.0 (from -r /users/tguo2/ha_fixtures/pylint-dev-pylint-7080/requirements_test_pre_commit.txt (line 3))
+  Using cached black-22.3.0-cp39-cp39-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (45 kB)
+Collecting flake8==4.0.1 (from -r /users/tguo2/ha_fixtures/pylint-dev-pylint-7080/requirements_test_pre_commit.txt (line 4))
+  Using cached flake8-4.0.1-py2.py3-none-any.whl.metadata (4.0 kB)
+Collecting flake8-typing-imports==1.12.0 (from -r /users/tguo2/ha_fixtures/pylint-dev-pylint-7080/requirements_test_pre_commit.txt (line 5))
+  Using cached flake8_typing_imports-1.12.0-py2.py3-none-any.whl.metadata (5.0 kB)
+Collecting isort==5.10.1 (from -r /users/tguo2/ha_fixtures/pylint-dev-pylint-7080/requirements_test_pre_commit.txt (line 6))
+  Using cached isort-5.10.1-py3-none-any.whl.metadata (12 kB)
+Collecting mypy==0.961 (from -r /users/tguo2/ha_fixtures/pylint-dev-pylint-7080/requirements_test_pre_commit.txt (line 7))
+  Downloading mypy-0.961-cp39-cp39-manylinux_2_5_x86_64.manylinux1_x86_64.manylinux_2_12_x86_64.manylinux2010_x86_64.whl.metadata (1.8 kB)
+Collecting astroid==2.11.6 (from -r /users/tguo2/ha_fixtures/pylint-dev-pylint-7080/requirements_test_min.txt (line 3))
+  Downloading astroid-2.11.6-py3-none-any.whl.metadata (4.7 kB)
+Collecting typing-extensions~=4.2 (from -r /users/tguo2/ha_fixtures/pylint-dev-pylint-7080/requirements_test_min.txt (line 4))
+  Using cached typing_extensions-4.16.0-py3-none-any.whl.metadata (3.3 kB)
+Collecting pytest~=7.1 (from -r /users/tguo2/ha_fixtures/pylint-dev-pylint-7080/requirements_test_min.txt (line 5))
+  Using cached pytest-7.4.4-py3-none-any.whl.metadata (7.9 kB)
+Collecting pytest-benchmark~=3.4 (from -r /users/tguo2/ha_fixtures/pylint-dev-pylint-7080/requirements_test_min.txt (line 6))
+  Using cached pytest_benchmark-3.4.1-py2.py3-none-any.whl.metadata (22 kB)
+Collecting pytest-timeout~=2.1 (from -r /users/tguo2/ha_fixtures/pylint-dev-pylint-7080/requirements_test_min.txt (line 7))
+  Using cached pytest_timeout-2.4.0-py3-none-any.whl.metadata (20 kB)
+Collecting requests (from -r /users/tguo2/ha_fixtures/pylint-dev-pylint-7080/requirements_test_min.txt (line 8))
+  Using cached requests-2.32.5-py3-none-any.whl.metadata (4.9 kB)
+Collecting coveralls~=3.3 (from -r /users/tguo2/ha_fixtures/pylint-dev-pylint-7080/requirements_test.txt (line 3))
+  Using cached coveralls-3.3.1-py2.py3-none-any.whl.metadata (5.0 kB)
+Collecting coverage~=6.4 (from -r /users/tguo2/ha_fixtures/pylint-dev-pylint-7080/requirements_test.txt (line 4))
+  Using cached coverage-6.5.0-cp39-cp39-manylinux_2_5_x86_64.manylinux1_x86_64.manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (8.8 kB)
+Collecting pre-commit~=2.19 (from -r /users/tguo2/ha_fixtures/pylint-dev-pylint-7080/requirements_test.txt (line 5))
+  Using cached pre_commit-2.21.0-py2.py3-none-any.whl.metadata (1.6 kB)
+Collecting tbump~=6.9.0 (from -r /users/tguo2/ha_fixtures/pylint-dev-pylint-7080/requirements_test.txt (line 6))
+  Using cached tbump-6.9.0-py3-none-any.whl.metadata (9.2 kB)
+Collecting contributors-txt>=0.7.3 (from -r /users/tguo2/ha_fixtures/pylint-dev-pylint-7080/requirements_test.txt (line 7))
+  Using cached contributors_txt-1.1.3-py3-none-any.whl.metadata (3.0 kB)
+Collecting pytest-cov~=3.0 (from -r /users/tguo2/ha_fixtures/pylint-dev-pylint-7080/requirements_test.txt (line 8))
+  Using cached pytest_cov-3.0.0-py3-none-any.whl.metadata (24 kB)
+Collecting pytest-profiling~=1.7 (from -r /users/tguo2/ha_fixtures/pylint-dev-pylint-7080/requirements_test.txt (line 9))
+  Using cached pytest_profiling-1.8.1-py3-none-any.whl.metadata (15 kB)
+Collecting pytest-xdist~=2.5 (from -r /users/tguo2/ha_fixtures/pylint-dev-pylint-7080/requirements_test.txt (line 10))
+  Using cached pytest_xdist-2.5.0-py3-none-any.whl.metadata (21 kB)
+Collecting types-pkg_resources==0.1.3 (from -r /users/tguo2/ha_fixtures/pylint-dev-pylint-7080/requirements_test.txt (line 12))
+  Using cached types_pkg_resources-0.1.3-py2.py3-none-any.whl.metadata (902 bytes)
+Collecting tox>=3 (from -r /users/tguo2/ha_fixtures/pylint-dev-pylint-7080/requirements_test.txt (line 13))
+  Using cached tox-4.30.3-py3-none-any.whl.metadata (3.6 kB)
+Collecting click>=8.0.0 (from black==22.3.0->-r /users/tguo2/ha_fixtures/pylint-dev-pylint-7080/requirements_test_pre_commit.txt (line 3))
+  Using cached click-8.1.8-py3-none-any.whl.metadata (2.3 kB)
+Collecting platformdirs>=2 (from black==22.3.0->-r /users/tguo2/ha_fixtures/pylint-dev-pylint-7080/requirements_test_pre_commit.txt (line 3))
+  Using cached platformdirs-4.4.0-py3-none-any.whl.metadata (12 kB)
+Collecting pathspec>=0.9.0 (from black==22.3.0->-r /users/tguo2/ha_fixtures/pylint-dev-pylint-7080/requirements_test_pre_commit.txt (line 3))
+  Using cached pathspec-1.1.1-py3-none-any.whl.metadata (14 kB)
+Collecting mypy-extensions>=0.4.3 (from black==22.3.0->-r /users/tguo2/ha_fixtures/pylint-dev-pylint-7080/requirements_test_pre_commit.txt (line 3))
+  Using cached mypy_extensions-1.1.0-py3-none-any.whl.metadata (1.1 kB)
+Collecting tomli>=1.1.0 (from black==22.3.0->-r /users/tguo2/ha_fixtures/pylint-dev-pylint-7080/requirements_test_pre_commit.txt (line 3))
+  Using cached tomli-2.5.0-py3-none-any.whl.metadata (10 kB)
+Collecting mccabe<0.7.0,>=0.6.0 (from flake8==4.0.1->-r /users/tguo2/ha_fixtures/pylint-dev-pylint-7080/requirements_test_pre_commit.txt (line 4))
+  Using cached mccabe-0.6.1-py2.py3-none-any.whl.metadata (4.3 kB)
+Collecting pycodestyle<2.9.0,>=2.8.0 (from flake8==4.0.1->-r /users/tguo2/ha_fixtures/pylint-dev-pylint-7080/requirements_test_pre_commit.txt (line 4))
+  Using cached pycodestyle-2.8.0-py2.py3-none-any.whl.metadata (31 kB)
+Collecting pyflakes<2.5.0,>=2.4.0 (from flake8==4.0.1->-r /users/tguo2/ha_fixtures/pylint-dev-pylint-7080/requirements_test_pre_commit.txt (line 4))
+  Using cached pyflakes-2.4.0-py2.py3-none-any.whl.metadata (3.9 kB)
+Collecting lazy-object-proxy>=1.4.0 (from astroid==2.11.6->-r /users/tguo2/ha_fixtures/pylint-dev-pylint-7080/requirements_test_min.txt (line 3))
+  Using cached lazy_object_proxy-1.12.0-cp39-cp39-manylinux_2_5_x86_64.manylinux1_x86_64.manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (5.1 kB)
+Collecting wrapt<2,>=1.11 (from astroid==2.11.6->-r /users/tguo2/ha_fixtures/pylint-dev-pylint-7080/requirements_test_min.txt (line 3))
+  Using cached wrapt-1.17.3-cp39-cp39-manylinux1_x86_64.manylinux_2_28_x86_64.manylinux_2_5_x86_64.whl.metadata (6.4 kB)
+Requirement already satisfied: setuptools>=20.0 in ./.venv/lib/python3.9/site-packages (from astroid==2.11.6->-r /users/tguo2/ha_fixtures/pylint-dev-pylint-7080/requirements_test_min.txt (line 3)) (82.0.1)
+Collecting dill>=0.2 (from pylint==2.15.0.dev0)
+  Using cached dill-0.4.1-py3-none-any.whl.metadata (10 kB)
+Collecting tomlkit>=0.10.1 (from pylint==2.15.0.dev0)
+  Using cached tomlkit-0.15.1-py3-none-any.whl.metadata (3.3 kB)
+Collecting iniconfig (from pytest~=7.1->-r /users/tguo2/ha_fixtures/pylint-dev-pylint-7080/requirements_test_min.txt (line 5))
+  Using cached iniconfig-2.1.0-py3-none-any.whl.metadata (2.7 kB)
+Requirement already satisfied: packaging in ./.venv/lib/python3.9/site-packages (from pytest~=7.1->-r /users/tguo2/ha_fixtures/pylint-dev-pylint-7080/requirements_test_min.txt (line 5)) (26.3)
+Collecting pluggy<2.0,>=0.12 (from pytest~=7.1->-r /users/tguo2/ha_fixtures/pylint-dev-pylint-7080/requirements_test_min.txt (line 5))
+  Using cached pluggy-1.6.0-py3-none-any.whl.metadata (4.8 kB)
+Collecting exceptiongroup>=1.0.0rc8 (from pytest~=7.1->-r /users/tguo2/ha_fixtures/pylint-dev-pylint-7080/requirements_test_min.txt (line 5))
+  Using cached exceptiongroup-1.3.1-py3-none-any.whl.metadata (6.7 kB)
+Collecting py-cpuinfo (from pytest-benchmark~=3.4->-r /users/tguo2/ha_fixtures/pylint-dev-pylint-7080/requirements_test_min.txt (line 6))
+  Using cached py_cpuinfo-9.0.0-py3-none-any.whl.metadata (794 bytes)
+Collecting charset_normalizer<4,>=2 (from requests->-r /users/tguo2/ha_fixtures/pylint-dev-pylint-7080/requirements_test_min.txt (line 8))
+  Using cached charset_normalizer-3.5.2-cp39-cp39-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (46 kB)
+Collecting idna<4,>=2.5 (from requests->-r /users/tguo2/ha_fixtures/pylint-dev-pylint-7080/requirements_test_min.txt (line 8))
+  Using cached idna-3.20-py3-none-any.whl.metadata (7.2 kB)
+Collecting urllib3<3,>=1.21.1 (from requests->-r /users/tguo2/ha_fixtures/pylint-dev-pylint-7080/requirements_test_min.txt (line 8))
+  Using cached urllib3-2.6.3-py3-none-any.whl.metadata (6.9 kB)
+Collecting certifi>=2017.4.17 (from requests->-r /users/tguo2/ha_fixtures/pylint-dev-pylint-7080/requirements_test_min.txt (line 8))
+  Using cached certifi-2026.7.22-py3-none-any.whl.metadata (2.5 kB)
+Collecting docopt>=0.6.1 (from coveralls~=3.3->-r /users/tguo2/ha_fixtures/pylint-dev-pylint-7080/requirements_test.txt (line 3))
+  Using cached docopt-0.6.2-py2.py3-none-any.whl
+Collecting cfgv>=2.0.0 (from pre-commit~=2.19->-r /users/tguo2/ha_fixtures/pylint-dev-pylint-7080/requirements_test.txt (line 5))
+  Using cached cfgv-3.4.0-py2.py3-none-any.whl.metadata (8.5 kB)
+Collecting identify>=1.0.0 (from pre-commit~=2.19->-r /users/tguo2/ha_fixtures/pylint-dev-pylint-7080/requirements_test.txt (line 5))
+  Using cached identify-2.6.15-py2.py3-none-any.whl.metadata (4.4 kB)
+Collecting nodeenv>=0.11.1 (from pre-commit~=2.19->-r /users/tguo2/ha_fixtures/pylint-dev-pylint-7080/requirements_test.txt (line 5))
+  Using cached nodeenv-1.11.0-py2.py3-none-any.whl.metadata (40 kB)
+Collecting pyyaml>=5.1 (from pre-commit~=2.19->-r /users/tguo2/ha_fixtures/pylint-dev-pylint-7080/requirements_test.txt (line 5))
+  Using cached pyyaml-6.0.3-cp39-cp39-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (2.4 kB)
+Collecting virtualenv>=20.10.0 (from pre-commit~=2.19->-r /users/tguo2/ha_fixtures/pylint-dev-pylint-7080/requirements_test.txt (line 5))
+  Using cached virtualenv-21.14.6-py3-none-any.whl.metadata (4.1 kB)
+Collecting cli-ui>=0.10.3 (from tbump~=6.9.0->-r /users/tguo2/ha_fixtures/pylint-dev-pylint-7080/requirements_test.txt (line 6))
+  Using cached cli_ui-0.19.0-py3-none-any.whl.metadata (3.3 kB)
+Collecting schema<0.8.0,>=0.7.1 (from tbump~=6.9.0->-r /users/tguo2/ha_fixtures/pylint-dev-pylint-7080/requirements_test.txt (line 6))
+  Using cached schema-0.7.8-py2.py3-none-any.whl.metadata (34 kB)
+Collecting six (from pytest-profiling~=1.7->-r /users/tguo2/ha_fixtures/pylint-dev-pylint-7080/requirements_test.txt (line 9))
+  Using cached six-1.17.0-py2.py3-none-any.whl.metadata (1.7 kB)
+Collecting gprof2dot (from pytest-profiling~=1.7->-r /users/tguo2/ha_fixtures/pylint-dev-pylint-7080/requirements_test.txt (line 9))
+  Using cached gprof2dot-2025.4.14-py3-none-any.whl.metadata (19 kB)
+Collecting execnet>=1.1 (from pytest-xdist~=2.5->-r /users/tguo2/ha_fixtures/pylint-dev-pylint-7080/requirements_test.txt (line 10))
+  Using cached execnet-2.1.2-py3-none-any.whl.metadata (2.9 kB)
+Collecting pytest-forked (from pytest-xdist~=2.5->-r /users/tguo2/ha_fixtures/pylint-dev-pylint-7080/requirements_test.txt (line 10))
+  Using cached pytest_forked-1.6.0-py3-none-any.whl.metadata (3.5 kB)
+Collecting cachetools>=6.1 (from tox>=3->-r /users/tguo2/ha_fixtures/pylint-dev-pylint-7080/requirements_test.txt (line 13))
+  Using cached cachetools-6.2.6-py3-none-any.whl.metadata (5.6 kB)
+Collecting chardet>=5.2 (from tox>=3->-r /users/tguo2/ha_fixtures/pylint-dev-pylint-7080/requirements_test.txt (line 13))
+  Using cached chardet-5.2.0-py3-none-any.whl.metadata (3.4 kB)
+Collecting colorama>=0.4.6 (from tox>=3->-r /users/tguo2/ha_fixtures/pylint-dev-pylint-7080/requirements_test.txt (line 13))
+  Using cached colorama-0.4.6-py2.py3-none-any.whl.metadata (17 kB)
+Collecting filelock>=3.18 (from tox>=3->-r /users/tguo2/ha_fixtures/pylint-dev-pylint-7080/requirements_test.txt (line 13))
+  Using cached filelock-3.19.1-py3-none-any.whl.metadata (2.1 kB)
+Collecting pyproject-api>=1.9.1 (from tox>=3->-r /users/tguo2/ha_fixtures/pylint-dev-pylint-7080/requirements_test.txt (line 13))
+  Using cached pyproject_api-1.9.1-py3-none-any.whl.metadata (2.7 kB)
+Collecting pyenchant~=3.2 (from pylint==2.15.0.dev0)
+  Using cached pyenchant-3.3.0-py3-none-any.whl.metadata (3.4 kB)
+Collecting gitpython>3 (from pylint==2.15.0.dev0)
+  Using cached gitpython-3.2.0-py3-none-any.whl.metadata (13 kB)
+Collecting tabulate<0.10.0,>=0.9.0 (from cli-ui>=0.10.3->tbump~=6.9.0->-r /users/tguo2/ha_fixtures/pylint-dev-pylint-7080/requirements_test.txt (line 6))
+  Using cached tabulate-0.9.0-py3-none-any.whl.metadata (34 kB)
+Collecting unidecode<2.0.0,>=1.3.6 (from cli-ui>=0.10.3->tbump~=6.9.0->-r /users/tguo2/ha_fixtures/pylint-dev-pylint-7080/requirements_test.txt (line 6))
+  Using cached Unidecode-1.4.0-py3-none-any.whl.metadata (13 kB)
+Collecting gitdb<5,>=4.0.1 (from gitpython>3->pylint==2.15.0.dev0)
+  Using cached gitdb-4.0.12-py3-none-any.whl.metadata (1.2 kB)
+Collecting distlib<1,>=0.4.3 (from virtualenv>=20.10.0->pre-commit~=2.19->-r /users/tguo2/ha_fixtures/pylint-dev-pylint-7080/requirements_test.txt (line 5))
+  Using cached distlib-0.4.3-py2.py3-none-any.whl.metadata (5.3 kB)
+Collecting python-discovery>=1.6.1 (from virtualenv>=20.10.0->pre-commit~=2.19->-r /users/tguo2/ha_fixtures/pylint-dev-pylint-7080/requirements_test.txt (line 5))
+  Using cached python_discovery-1.6.1-py3-none-any.whl.metadata (5.1 kB)
+Collecting py (from pytest-forked->pytest-xdist~=2.5->-r /users/tguo2/ha_fixtures/pylint-dev-pylint-7080/requirements_test.txt (line 10))
+  Using cached py-1.11.0-py2.py3-none-any.whl.metadata (2.8 kB)
+Collecting smmap<6,>=3.0.1 (from gitdb<5,>=4.0.1->gitpython>3->pylint==2.15.0.dev0)
+  Using cached smmap-5.0.3-py3-none-any.whl.metadata (4.6 kB)
+WARNING: The candidate selected for download or install is a yanked version: 'types-pkg-resources' candidate (version 0.1.3 at https://files.pythonhosted.org/packages/e9/97/a24ffd614ac2962dabbd599afbed00adf6464604a53b96b5f48301518a5f/types_pkg_resources-0.1.3-py2.py3-none-any.whl (from https://pypi.org/simple/types-pkg-resources/))
+Reason for being yanked: Use types-setuptools instead
+Using cached black-22.3.0-cp39-cp39-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (1.5 MB)
+Using cached flake8-4.0.1-py2.py3-none-any.whl (64 kB)
+Using cached flake8_typing_imports-1.12.0-py2.py3-none-any.whl (8.1 kB)
+Using cached isort-5.10.1-py3-none-any.whl (103 kB)
+Downloading mypy-0.961-cp39-cp39-manylinux_2_5_x86_64.manylinux1_x86_64.manylinux_2_12_x86_64.manylinux2010_x86_64.whl (18.1 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 18.1/18.1 MB 146.9 MB/s eta 0:00:00
+Downloading astroid-2.11.6-py3-none-any.whl (251 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 251.0/251.0 kB 119.4 MB/s eta 0:00:00
+Using cached types_pkg_resources-0.1.3-py2.py3-none-any.whl (4.8 kB)
+Using cached typing_extensions-4.16.0-py3-none-any.whl (45 kB)
+Using cached pytest-7.4.4-py3-none-any.whl (325 kB)
+Using cached pytest_benchmark-3.4.1-py2.py3-none-any.whl (50 kB)
+Using cached pytest_timeout-2.4.0-py3-none-any.whl (14 kB)
+Using cached requests-2.32.5-py3-none-any.whl (64 kB)
+Using cached coveralls-3.3.1-py2.py3-none-any.whl (14 kB)
+Using cached coverage-6.5.0-cp39-cp39-manylinux_2_5_x86_64.manylinux1_x86_64.manylinux_2_17_x86_64.manylinux2014_x86_64.whl (212 kB)
+Using cached pre_commit-2.21.0-py2.py3-none-any.whl (201 kB)
+Using cached tbump-6.9.0-py3-none-any.whl (33 kB)
+Using cached contributors_txt-1.1.3-py3-none-any.whl (17 kB)
+Using cached pytest_cov-3.0.0-py3-none-any.whl (20 kB)
+Using cached pytest_profiling-1.8.1-py3-none-any.whl (9.9 kB)
+Using cached pytest_xdist-2.5.0-py3-none-any.whl (41 kB)
+Using cached tox-4.30.3-py3-none-any.whl (175 kB)
+Using cached cachetools-6.2.6-py3-none-any.whl (11 kB)
+Using cached certifi-2026.7.22-py3-none-any.whl (136 kB)
+Using cached cfgv-3.4.0-py2.py3-none-any.whl (7.2 kB)
+Using cached chardet-5.2.0-py3-none-any.whl (199 kB)
+Using cached charset_normalizer-3.5.2-cp39-cp39-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (271 kB)
+Using cached cli_ui-0.19.0-py3-none-any.whl (13 kB)
+Using cached click-8.1.8-py3-none-any.whl (98 kB)
+Using cached colorama-0.4.6-py2.py3-none-any.whl (25 kB)
+Using cached dill-0.4.1-py3-none-any.whl (120 kB)
+Using cached exceptiongroup-1.3.1-py3-none-any.whl (16 kB)
+Using cached execnet-2.1.2-py3-none-any.whl (40 kB)
+Using cached filelock-3.19.1-py3-none-any.whl (15 kB)
+Using cached gitpython-3.2.0-py3-none-any.whl (228 kB)
+Using cached identify-2.6.15-py2.py3-none-any.whl (99 kB)
+Using cached idna-3.20-py3-none-any.whl (69 kB)
+Using cached lazy_object_proxy-1.12.0-cp39-cp39-manylinux_2_5_x86_64.manylinux1_x86_64.manylinux_2_17_x86_64.manylinux2014_x86_64.whl (66 kB)
+Using cached mccabe-0.6.1-py2.py3-none-any.whl (8.6 kB)
+Using cached mypy_extensions-1.1.0-py3-none-any.whl (5.0 kB)
+Using cached nodeenv-1.11.0-py2.py3-none-any.whl (34 kB)
+Using cached pathspec-1.1.1-py3-none-any.whl (57 kB)
+Using cached platformdirs-4.4.0-py3-none-any.whl (18 kB)
+Using cached pluggy-1.6.0-py3-none-any.whl (20 kB)
+Using cached pycodestyle-2.8.0-py2.py3-none-any.whl (42 kB)
+Using cached pyenchant-3.3.0-py3-none-any.whl (58 kB)
+Using cached pyflakes-2.4.0-py2.py3-none-any.whl (69 kB)
+Using cached pyproject_api-1.9.1-py3-none-any.whl (13 kB)
+Using cached pyyaml-6.0.3-cp39-cp39-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (750 kB)
+Using cached schema-0.7.8-py2.py3-none-any.whl (19 kB)
+Using cached tomli-2.5.0-py3-none-any.whl (14 kB)
+Using cached tomlkit-0.15.1-py3-none-any.whl (49 kB)
+Using cached urllib3-2.6.3-py3-none-any.whl (131 kB)
+Using cached virtualenv-21.14.6-py3-none-any.whl (5.5 MB)
+Using cached wrapt-1.17.3-cp39-cp39-manylinux1_x86_64.manylinux_2_28_x86_64.manylinux_2_5_x86_64.whl (81 kB)
+Using cached gprof2dot-2025.4.14-py3-none-any.whl (37 kB)
+Using cached iniconfig-2.1.0-py3-none-any.whl (6.0 kB)
+Using cached py_cpuinfo-9.0.0-py3-none-any.whl (22 kB)
+Using cached pytest_forked-1.6.0-py3-none-any.whl (4.9 kB)
+Using cached six-1.17.0-py2.py3-none-any.whl (11 kB)
+Using cached distlib-0.4.3-py2.py3-none-any.whl (470 kB)
+Using cached gitdb-4.0.12-py3-none-any.whl (62 kB)
+Using cached python_discovery-1.6.1-py3-none-any.whl (38 kB)
+Using cached tabulate-0.9.0-py3-none-any.whl (35 kB)
+Using cached Unidecode-1.4.0-py3-none-any.whl (235 kB)
+Using cached py-1.11.0-py2.py3-none-any.whl (98 kB)
+Using cached smmap-5.0.3-py3-none-any.whl (24 kB)
+Installing collected packages: types-pkg_resources, schema, py-cpuinfo, mccabe, docopt, distlib, wrapt, urllib3, unidecode, typing-extensions, tomlkit, tomli, tabulate, smmap, six, pyyaml, pyflakes, pyenchant, pycodestyle, py, pluggy, platformdirs, pathspec, nodeenv, mypy-extensions, lazy-object-proxy, isort, iniconfig, idna, identify, gprof2dot, filelock, execnet, dill, coverage, contributors-txt, colorama, click, charset_normalizer, chardet, cfgv, certifi, cachetools, requests, python-discovery, pyproject-api, mypy, gitdb, flake8, exceptiongroup, cli-ui, black, astroid, virtualenv, tbump, pytest, pylint, gitpython, flake8-typing-imports, coveralls, tox, pytest-timeout, pytest-profiling, pytest-forked, pytest-cov, pytest-benchmark, pre-commit, pytest-xdist
+  Running setup.py develop for pylint
+Successfully installed astroid-2.11.6 black-22.3.0 cachetools-6.2.6 certifi-2026.7.22 cfgv-3.4.0 chardet-5.2.0 charset_normalizer-3.5.2 cli-ui-0.19.0 click-8.1.8 colorama-0.4.6 contributors-txt-1.1.3 coverage-6.5.0 coveralls-3.3.1 dill-0.4.1 distlib-0.4.3 docopt-0.6.2 exceptiongroup-1.3.1 execnet-2.1.2 filelock-3.19.1 flake8-4.0.1 flake8-typing-imports-1.12.0 gitdb-4.0.12 gitpython-3.2.0 gprof2dot-2025.4.14 identify-2.6.15 idna-3.20 iniconfig-2.1.0 isort-5.10.1 lazy-object-proxy-1.12.0 mccabe-0.6.1 mypy-0.961 mypy-extensions-1.1.0 nodeenv-1.11.0 pathspec-1.1.1 platformdirs-4.4.0 pluggy-1.6.0 pre-commit-2.21.0 py-1.11.0 py-cpuinfo-9.0.0 pycodestyle-2.8.0 pyenchant-3.3.0 pyflakes-2.4.0 pylint-2.15.0.dev0 pyproject-api-1.9.1 pytest-7.4.4 pytest-benchmark-3.4.1 pytest-cov-3.0.0 pytest-forked-1.6.0 pytest-profiling-1.8.1 pytest-timeout-2.4.0 pytest-xdist-2.5.0 python-discovery-1.6.1 pyyaml-6.0.3 requests-2.32.5 schema-0.7.8 six-1.17.0 smmap-5.0.3 tabulate-0.9.0 tbump-6.9.0 tomli-2.5.0 tomlkit-0.15.1 tox-4.30.3 types-pkg_resources-0.1.3 typing-extensions-4.16.0 unidecode-1.4.0 urllib3-2.6.3 virtualenv-21.14.6 wrapt-1.17.3
+[rc=0 47s]
+
+$ /users/tguo2/ha_fixtures/pylint-dev-pylint-7080/.venv/bin/python -m pip install -e .
+Obtaining file:///users/tguo2/ha_fixtures/pylint-dev-pylint-7080
+  Preparing metadata (setup.py): started
+  Preparing metadata (setup.py): finished with status 'done'
+Requirement already satisfied: dill>=0.2 in ./.venv/lib/python3.9/site-packages (from pylint==2.15.0.dev0) (0.4.1)
+Requirement already satisfied: platformdirs>=2.2.0 in ./.venv/lib/python3.9/site-packages (from pylint==2.15.0.dev0) (4.4.0)
+Requirement already satisfied: astroid<=2.12.0-dev0,>=2.11.6 in ./.venv/lib/python3.9/site-packages (from pylint==2.15.0.dev0) (2.11.6)
+Requirement already satisfied: isort<6,>=4.2.5 in ./.venv/lib/python3.9/site-packages (from pylint==2.15.0.dev0) (5.10.1)
+Requirement already satisfied: mccabe<0.8,>=0.6 in ./.venv/lib/python3.9/site-packages (from pylint==2.15.0.dev0) (0.6.1)
+Requirement already satisfied: tomlkit>=0.10.1 in ./.venv/lib/python3.9/site-packages (from pylint==2.15.0.dev0) (0.15.1)
+Requirement already satisfied: typing-extensions>=3.10.0 in ./.venv/lib/python3.9/site-packages (from pylint==2.15.0.dev0) (4.16.0)
+Requirement already satisfied: tomli>=1.1.0 in ./.venv/lib/python3.9/site-packages (from pylint==2.15.0.dev0) (2.5.0)
+Requirement already satisfied: lazy-object-proxy>=1.4.0 in ./.venv/lib/python3.9/site-packages (from astroid<=2.12.0-dev0,>=2.11.6->pylint==2.15.0.dev0) (1.12.0)
+Requirement already satisfied: wrapt<2,>=1.11 in ./.venv/lib/python3.9/site-packages (from astroid<=2.12.0-dev0,>=2.11.6->pylint==2.15.0.dev0) (1.17.3)
+Requirement already satisfied: setuptools>=20.0 in ./.venv/lib/python3.9/site-packages (from astroid<=2.12.0-dev0,>=2.11.6->pylint==2.15.0.dev0) (82.0.1)
+Installing collected packages: pylint
+  Attempting uninstall: pylint
+    Found existing installation: pylint 2.15.0.dev0
+    Uninstalling pylint-2.15.0.dev0:
+      Successfully uninstalled pylint-2.15.0.dev0
+  Running setup.py develop for pylint
+Successfully installed pylint-2.15.0.dev0
+
+[notice] A new release of pip is available: 24.0 -> 26.0.1
+[notice] To update, run: /users/tguo2/ha_fixtures/pylint-dev-pylint-7080/.venv/bin/python -m pip install --upgrade pip
+[rc=0 13s]
+
+$ /users/tguo2/ha_fixtures/pylint-dev-pylint-7080/.venv/bin/python -c import pytest
+[rc=0 1s]
+
+$ git init --quiet
+[rc=0 0s]
+
+$ git add -A
+[rc=0 22s]
+
+$ git ls-files -o -i --exclude-standard -z -- . ':!.venv' ':!**/__pycache__/**' ':!build/**' ':!*.pyc' ':!*.o' | xargs -0 -r git add -f --
+[rc=0 1s]
+
+$ git -c user.email=a@b.c -c user.name=ingest commit --quiet -m init
+[rc=0 5s]

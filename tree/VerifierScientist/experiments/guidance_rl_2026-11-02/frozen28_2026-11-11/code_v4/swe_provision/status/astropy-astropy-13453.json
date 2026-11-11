@@ -1,0 +1,1 @@
+{"instance_id": "astropy__astropy-13453", "fixture": "astropy-astropy-13453", "ok": false, "python": "python3.9", "error": "OSError: [Errno 28] No space left on device", "seconds": 0}

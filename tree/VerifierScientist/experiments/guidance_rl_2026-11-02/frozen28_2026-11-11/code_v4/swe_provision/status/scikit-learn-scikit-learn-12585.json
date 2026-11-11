@@ -1,0 +1,1 @@
+{"instance_id": "scikit-learn__scikit-learn-12585", "fixture": "scikit-learn-scikit-learn-12585", "ok": false, "python": "python3.8", "error": "OSError: [Errno 28] No space left on device", "seconds": 0}

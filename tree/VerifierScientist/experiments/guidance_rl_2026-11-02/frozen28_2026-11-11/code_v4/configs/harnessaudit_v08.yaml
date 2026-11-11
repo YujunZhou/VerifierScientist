@@ -1,0 +1,60 @@
+# verl >= 0.8 trainer config for HarnessAudit multi-turn rollouts (agent loop).
+#
+# Counterpart of harnessaudit_multiturn_grpo.yaml for the verl08 env. Composed
+# on top of the installed verl's ppo_trainer.yaml via the hydra searchpath, so
+# it must be launched with the verl08 python; pass
+# --config-path=<this dir> --config-name=harnessaudit_v08.
+#
+# Differences from the 0.4 config, all forced by the 0.8 refactor:
+# - multi_turn.max_turns -> max_assistant_turns (still the baseline's 30).
+# - multi_turn.format selects the agent loop's tool-call parser; Qwen3.5's chat
+#   template emits the XML tool format parsed by "qwen3_coder".
+# - max_tool_response_length defaults to 256 chars in 0.8 — silently truncating
+#   HarnessAudit documents mid-episode. Raised so the context window, not this,
+#   is the binding constraint (the oai baseline never truncates tool output).
+# - custom_reward_function moved under the reward group (set on the CLI).
+hydra:
+  searchpath:
+    - pkg://verl.trainer.config
+
+defaults:
+  - ppo_trainer
+  - _self_
+
+data:
+  max_prompt_length: 8192
+  max_response_length: 24000
+  train_batch_size: 8
+  filter_overlong_prompts: True
+  truncation: error
+  return_raw_chat: True
+
+actor_rollout_ref:
+  hybrid_engine: True
+  actor:
+    use_dynamic_bsz: True
+    ppo_max_token_len_per_gpu: 36000
+    ppo_mini_batch_size: ${data.train_batch_size}
+  ref:
+    log_prob_use_dynamic_bsz: True
+  rollout:
+    log_prob_use_dynamic_bsz: True
+    name: sglang
+    max_model_len: 32768
+    # CUDA graph capture of Qwen3.5's GDN kernels deadlocks on sm86 (A40):
+    # jobs 1339133/1339223 hung in "Capture cuda graph" with zero Triton cache
+    # writes. Eager mode trades throughput for actually running.
+    enforce_eager: True
+    agent:
+      # 0.8 routes every sample to `single_turn_agent` unless the dataset has
+      # an agent_name column — one generation, no tools in the template, no
+      # tool execution. Job 1339391 produced pseudo-code "tool calls" in a
+      # markdown fence this way. The multi-turn tool loop must be opted into.
+      default_agent_loop: tool_agent
+    multi_turn:
+      enable: True
+      max_assistant_turns: 30
+      format: qwen3_coder
+      max_tool_response_length: 32768
+      tool_response_truncate_side: middle
+      tokenization_sanity_check_mode: disable

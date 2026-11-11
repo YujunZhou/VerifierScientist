@@ -1,0 +1,1 @@
+{"instance_id": "sphinx-doc__sphinx-9591", "fixture": "sphinx-doc-sphinx-9591", "ok": false, "python": "python3.9", "error": "OSError: [Errno 28] No space left on device", "seconds": 0}

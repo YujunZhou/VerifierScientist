@@ -1,0 +1,13 @@
+{
+  "tasks": {
+    "propose": 30,
+    "select": 10,
+    "confirm": 20,
+    "train_u": 140,
+    "test": 60
+  },
+  "train_rows": 178,
+  "test_rows": 60,
+  "historical_trajectories": 240,
+  "note": "Initial pool mixes historical policy versions. Fresh current-policy calibration replaces this after each segment."
+}

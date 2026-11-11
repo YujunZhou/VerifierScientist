@@ -1,0 +1,50 @@
+# verl trainer config for HarnessAudit multi-turn rollouts.
+#
+# Lives outside the verl checkout; passed with --config-path. The hydra
+# searchpath below is relative to the working directory, so run from the
+# verl_sglang root (scripts/run_eval.sh does).
+#
+# Lengths come from measurement, not guesswork: over the 60 test tasks the hub
+# prompt (system + user + the domain's tool schemas) is 2321..6683 tokens,
+# median 3874, so 8192 leaves headroom without wasting budget. The response
+# budget has to hold up to 30 assistant turns plus their tool results.
+hydra:
+  searchpath:
+    - file://verl/trainer/config
+
+defaults:
+  - ppo_trainer
+  - _self_
+
+data:
+  max_prompt_length: 8192
+  max_response_length: 24000
+  train_batch_size: 8
+  filter_overlong_prompts: True
+  truncation: error
+  # Required by sglang_rollout._preprocess_prompt_to_async_rollout_requests.
+  return_raw_chat: True
+
+actor_rollout_ref:
+  hybrid_engine: True
+  actor:
+    # `_validate_config` runs even for an eval-only pass, and without dynamic
+    # batching it demands a micro_batch_size on actor, ref and rollout. Dynamic
+    # batching skips all three checks and is what the text2sql runs use.
+    use_dynamic_bsz: True
+    # Sequences here reach max_prompt_length + max_response_length = 32k, well
+    # past the 16384 default.
+    ppo_max_token_len_per_gpu: 36000
+    ppo_mini_batch_size: ${data.train_batch_size}
+  ref:
+    log_prob_use_dynamic_bsz: True
+  rollout:
+    log_prob_use_dynamic_bsz: True
+    name: sglang
+    max_model_len: 32768
+    multi_turn:
+      enable: True
+      # Matches the baseline's --max-turns 30. Counts assistant generations.
+      max_turns: 30
+      # Qwen tokenizes turn-by-turn consistently; the check is noisy for it.
+      enable_tokenization_sanity_check: False

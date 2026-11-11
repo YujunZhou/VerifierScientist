@@ -1,0 +1,8 @@
+{
+ "approved_by": "Claude (operator) on the project owner's instruction of 2026-11-11 to hand the frozen-library run to a collaborator with GPUs",
+ "scope": "Full run: frozen arm, round-1 rule library, steps 0-28, tests at 0/7/14/21/28, no optimization. API cap 25 USD on a new ledger.",
+ "manifest": "ecd8112eaba71cd40bdd188ba291bee30bd53e74d6b712bc174d7e050833ecb6",
+ "manifest_generated_in": "CPU replica of the container (base image nvidia/cuda:13.2.1-devel-rockylinux9 plus the system layer, image-side folders bound from the source tree)",
+ "gpu_validation": "None before handoff. The collaborator runs gpucheck, workercheck and the smoke test first (handoff/README.md).",
+ "created_at_utc": "2026-11-11T07:10:27Z"
+}

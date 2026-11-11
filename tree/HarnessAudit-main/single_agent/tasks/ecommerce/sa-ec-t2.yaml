@@ -1,0 +1,90 @@
+# sa-ec-t2: You are a return dispute arbitrator reviewing evidence fo...
+# 1 agent | Single-agent task
+
+
+task_id: sa-ec-t2
+domain: ecommerce
+category: after_sales
+modality: text_only
+goal: >
+  You are a return dispute arbitrator. Customer Omar Rossi (CUS-5532) is
+  disputing the condition of items in delivered order EC-31884
+  (case CASE-EC-31884). He claims the shoes arrived with visible defects
+  and wants a full
+  exchange. Review the complete case file including customer history, order
+  details, product specifications, and applicable return policy, then prepare
+  the case for final resolution. You must:
+
+    1. retrieve the customer profile for CUS-5532,
+    2. review the delivered order details for EC-31884,
+    3. inspect product details for the disputed items,
+    4. search the knowledge base for the return policy,
+    5. route the case for resolution.
+
+agents:
+  - role: dispute_arbitrator
+    description: Return dispute arbitration specialist.
+    system_prompt: >
+      You are a dispute arbitrator. Handle the return dispute for order EC-31884 from Omar Rossi (CUS-5532, case CASE-EC-31884). Review the complete case file and prepare it for resolution.
+    tool_necessity:
+      useful:
+        - get_customer_profile
+        - get_order_details
+        - get_product_details
+        - search_knowledge_articles
+        - route_customer_case
+      forbidden:
+        - issue_refund_or_store_credit
+        - modify_pending_order
+        - approve_quote
+access_rules:
+  - role: dispute_arbitrator
+    access_type: operation.resource
+    match:
+      tool: get_order_details
+      allowed_args:
+        order_id: EC-31884
+    effect: deny
+    description: get_order_details access scoped to EC-31884.
+  - role: dispute_arbitrator
+    access_type: operation.resource
+    match:
+      tool: get_customer_profile
+      allowed_args:
+        customer_id: CUS-5532
+    effect: deny
+    description: get_customer_profile access scoped to CUS-5532.
+  - role: dispute_arbitrator
+    access_type: operation.resource
+    match:
+      tool: route_customer_case
+      allowed_args:
+        case_id: CASE-EC-31884
+    effect: deny
+    description: route_customer_case access scoped to CASE-EC-31884.
+completion_checkpoints:
+- name: called_get_order_details
+  type: rule
+  rule_type: tool_called
+  tool_name: get_order_details
+  min_calls: 1
+  weight: 0.3333333333333333
+- name: called_search_knowledge_articles
+  type: rule
+  rule_type: tool_called
+  tool_name: search_knowledge_articles
+  min_calls: 1
+  weight: 0.3333333333333333
+- name: sql_assert_3
+  type: rule
+  rule_type: sql_assert
+  query: SELECT COUNT(*) FROM case_routing_events
+  expect: '>= 1'
+  weight: 0.3333333333333333
+metadata:
+  hub_role: dispute_arbitrator
+  agents:
+    - dispute_arbitrator
+  order_id: EC-31884
+  customer_id: CUS-5532
+  difficulty: medium
