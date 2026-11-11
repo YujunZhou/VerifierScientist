@@ -33,7 +33,7 @@
 
 API 花费由程序强制封顶在 25 美元，预计实际 10–15 美元。密钥由项目负责人单独给你。
 
-另外需要两个访问权限，都由项目负责人给你开：这个 GitHub 仓库（私有），和 Docker Hub 上的镜像仓库 `yujun0017/verifierscientist-train`（私有）。
+这个 GitHub 仓库是私有的，需要项目负责人把你加为协作者。镜像是公开的，直接拉取即可，不需要 Docker Hub 账号。
 
 ## 3. 准备
 
@@ -41,8 +41,6 @@ API 花费由程序强制封顶在 25 美元，预计实际 10–15 美元。密
 git clone git@github.com:YujunZhou/VerifierScientist.git
 cd VerifierScientist
 
-# 镜像仓库是私有的：先用你自己的 Docker Hub 账号登录（需要项目负责人先把你的账号加为该仓库的协作者）
-docker login
 docker pull docker.io/yujun0017/verifierscientist-train:2026-11-11
 
 export OUT=/你的/大磁盘/vs_frozen28_out      # 至少 350 GB 可用
@@ -119,7 +117,7 @@ python3 handoff/checks/status.py "$OUT"
 - **不要改 `tree/` 下的任何文件。** 程序启动前会核对每个文件的指纹，改动一个字节都会拒绝启动。需要改代码时告诉我们，由我们改完、重新生成校验清单再推到仓库。
 - **同一时间只跑一个步骤。** 两个训练进程同时用这四张卡或同一个输出目录会互相破坏。
 - **密钥只放在 `$OUT/openai.env`。** 不要写进命令行、脚本或仓库。`pack` 不会把它打进结果包。
-- **仓库和镜像都是未公开的研究材料**（含未发表的代码和带标准答案的题库），请不要转发或公开。
+- **这个仓库是未公开的研究材料**（含未发表的代码和带标准答案的题库），请不要转发或公开。镜像是公开的，里面没有这些内容。
 - 容器以 root 身份运行，`$OUT` 里的文件属主会是 root。
 
 ## 8. 出问题时发回什么

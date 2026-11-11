@@ -35,9 +35,13 @@
 
 ## 已推送的镜像
 
-- 名称：`docker.io/yujun0017/verifierscientist-train:2026-11-11`（私有仓库）
+- 名称：`docker.io/yujun0017/verifierscientist-train:2026-11-11`（公开仓库，2026-11-11 由私有改为公开）
 - 指纹：`sha256:fd411f339cd73834659de70567d63b9de404d8c1ad247ec80b85d95713c92d50`
 - 17 层（底座 11 层加上表的 6 层），压缩后约 23.8 GB，解开约 50 GB。
 - 推送后核对过：仓库里 6 个新增层的指纹与本地做过验证的层逐一相同。
 
 拉取后可以用 `docker inspect --format '{{index .RepoDigests 0}}' docker.io/yujun0017/verifierscientist-train:2026-11-11` 核对指纹。
+
+## 公开前的检查
+
+镜像改为公开之前，对解开后的全部内容做过一次密钥扫描：没有真实的密钥。命中的只有题库故意放在各任务代码库里的假密钥文件、开源包自带的测试密钥和官方文档里的示例密钥。
