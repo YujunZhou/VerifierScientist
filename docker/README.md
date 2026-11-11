@@ -32,3 +32,12 @@
 没有任何 API 密钥；没有训练代码、题库和配置（这些在本仓库的 `tree/` 下，运行时铺进去）。
 
 各层打好后还做了一次独立验证：把六个层解到一个全新的底座副本里（不借用原机器上的任何目录），配合从 Git 克隆下来的本仓库，重跑 `envcheck` 和 `verify`，两项都通过，约 4 万个文件的指纹与审核时一致。
+
+## 已推送的镜像
+
+- 名称：`docker.io/yujun0017/verifierscientist-train:2026-11-11`（私有仓库）
+- 指纹：`sha256:fd411f339cd73834659de70567d63b9de404d8c1ad247ec80b85d95713c92d50`
+- 17 层（底座 11 层加上表的 6 层），压缩后约 23.8 GB，解开约 50 GB。
+- 推送后核对过：仓库里 6 个新增层的指纹与本地做过验证的层逐一相同。
+
+拉取后可以用 `docker inspect --format '{{index .RepoDigests 0}}' docker.io/yujun0017/verifierscientist-train:2026-11-11` 核对指纹。
